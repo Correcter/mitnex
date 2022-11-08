@@ -1,0 +1,9 @@
+{
+    "request": {
+        "urlPath": "/directa24/redirect",
+        "method": "POST"
+    },
+    "response": {
+        "status": 200
+    }
+}

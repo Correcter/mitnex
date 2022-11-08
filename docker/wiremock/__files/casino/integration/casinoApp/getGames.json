@@ -1,0 +1,82 @@
+{
+  "totalPages": 1,
+  "totalElements": 2,
+  "page": 1,
+  "elements": [
+    {
+      "id": 5,
+      "position": 1,
+      "name": "blackjack",
+      "productType": "casino",
+      "hasLobby": false,
+      "hasDemo": true,
+      "hasBonusMode": true,
+      "image": "/some-image",
+      "externalId": "gsdr8fNg",
+      "category": 1,
+      "badges": ["new"],
+      "provider": {
+        "id": 2,
+        "name": "softgaming",
+        "title": "provider_title",
+        "position": 1,
+        "image": "provider_image",
+        "banner": "provider_banner"
+      },
+      "features": [1,2],
+      "genres": [],
+      "tags": [],
+      "currencyLimit": {
+        "min": 54.4,
+        "max": null
+      },
+      "minBalanceLimit": 34,
+      "gameInfo": {
+        "id": 5,
+        "name": "Dolphins pearl deluxe",
+        "externalId": "gsdr8fNg",
+        "category": 1,
+        "source": "slotegrator"
+      },
+      "productType": "casino"
+    },
+    {
+      "id": 54,
+      "position": 2,
+      "name": "blackjack45",
+      "productType": "casino",
+      "title": "provider_title",
+      "hasLobby": false,
+      "hasDemo": true,
+      "hasBonusMode": true,
+      "image": "/some-image",
+      "externalId": "absr89dr8fNg",
+      "category": 1,
+      "badges": [],
+      "provider": {
+        "id": 2,
+        "name": "softgaming",
+        "title": "provider_title",
+        "position": 1,
+        "image": "provider_image",
+        "banner": "provider_banner"
+      },
+      "features": [1,2],
+      "genres": [],
+      "tags": [],
+      "currencyLimit": {
+        "min": 54.4,
+        "max": null
+      },
+      "minBalanceLimit": 34,
+      "gameInfo": {
+        "id": 54,
+        "name": "blackjack45",
+        "externalId": "gsdr8fNg",
+        "category": 1,
+        "source": "slotegrator"
+      },
+      "productType": "casino"
+    }
+  ]
+}

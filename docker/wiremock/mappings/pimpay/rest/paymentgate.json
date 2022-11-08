@@ -1,0 +1,12 @@
+{
+    "request": {
+      "urlPath": "/pimpay/rest/paymentgate/simple/",
+      "bodyPatterns": [],
+      "method": "POST"
+    },
+    "response": {
+      "status": 200,
+      "bodyFileName": "pimpay/rest/paymentgate.json",
+      "transformers": ["response-template"]
+    }
+}

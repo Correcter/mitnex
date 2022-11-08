@@ -1,0 +1,11 @@
+{
+    "request": {
+        "urlPath": "/directa24/v3/deposits/3000000001",
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "directa24/good_callback_pen.json",
+        "transformers": ["response-template"]
+    }
+}

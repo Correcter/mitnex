@@ -1,0 +1,14 @@
+{
+    "request" : {
+        "url" : "/pay4fun/api/1.0/payin/transaction/",
+        "method" : "POST"
+    },
+    "response" : {
+        "status" : 200,
+        "headers": {
+            "Content-Type": "text/json"
+        },
+        "body" : "[\n{\n\"transactionId\": 31,\n\"merchantInvoiceId\": \"120414\",\n\"status\": \"Verified\",\n\"sign\": \"CC0B3C6139DA91869F885E8B4F0982688F529109A373F2ED4C54033A0F546836\",\n\"amount\": 7.25,\n\"customerEmail\": \"customer@email.com\",\n\"liquidationDate\": \"2019-02-25\"\n}\n]"
+    }
+
+}

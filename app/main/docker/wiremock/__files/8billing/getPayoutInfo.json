@@ -1,0 +1,14 @@
+{
+    "jsonrpc": "2.0",
+    "result": {
+        "1000018": {
+            "gateway": "PerfectMoneyEVoucher",
+            "payment_system": "perfect_money_e_voucher",
+            "provider_data": {
+                "voucher_number": 123456,
+                "voucher_code": "code_of_voucher"
+            }
+        }
+    },
+    "id": null
+}

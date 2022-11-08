@@ -1,0 +1,45 @@
+[prod]
+h1-mostbet
+h2-mostbet
+h3-mostbet
+h4-mostbet inventory_crontab_host=true inventory_migration_host=true inventory_supervisor_host=true
+h5-mostbet
+h6-mostbet
+h7-mostbet
+h8-mostbet
+h9-mostbet inventory_supervisor_host=true
+h10-mostbet
+h11-mostbet
+h12-mostbet inventory_supervisor_host=true
+h13-mostbet
+h14-mostbet
+h15-mostbet
+h17-mostbet
+h18-mostbet inventory_supervisor_host=true
+h19-mostbet inventory_supervisor_host=true
+h20-mostbet
+h21-mostbet
+h22-mostbet
+h23-mostbet
+h24-mostbet
+h25-mostbet
+h26-mostbet
+h27-mostbet
+h28-mostbet
+h29-mostbet
+h30-mostbet
+h31-mostbet
+h32-mostbet
+h33-mostbet
+
+[ru_prod]
+h2-mostbet-ru
+h1-mostbet-ru
+h3-mostbet-ru inventory_crontab_host=true inventory_migration_host=true
+h4-mostbet-ru
+
+[pps_prod]
+h2-mostbet-ru
+h1-mostbet-ru
+h3-mostbet-ru inventory_crontab_host=true inventory_migration_host=true
+h4-mostbet-ru

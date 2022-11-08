@@ -1,0 +1,11 @@
+{
+    "request": {
+        "urlPath": "/ussd-wallets-web/resources/payments/new",
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "megapayments/response.json",
+        "transformers": ["response-template"]
+    }
+}

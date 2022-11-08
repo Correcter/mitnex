@@ -1,0 +1,10 @@
+{
+  "request" : {
+    "url" : "/cupis/frontend-api/api/deposit/channels",
+    "method" : "POST"
+  },
+  "response" : {
+    "status" : 200,
+    "bodyFileName": "cupis/frontend-api/deposit-channels.json"
+  }
+}

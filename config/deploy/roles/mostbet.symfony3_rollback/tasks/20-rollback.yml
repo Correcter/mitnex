@@ -1,0 +1,2 @@
+- name: Change symlink to old release.
+  file: state=link src="{{symfony_old_release_dir}}" path="{{symfony_project_root}}/current"

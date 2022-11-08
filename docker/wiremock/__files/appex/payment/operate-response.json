@@ -1,0 +1,7 @@
+{
+    "transIDrecurring": 1{{randomValue length=8 type='NUMERIC'}},
+    "method": "POST",
+    "url": "https://ecommerce.appexmoney.com/api/payment/operate",
+    "errorcode": 0,
+    "errortext": ""
+}

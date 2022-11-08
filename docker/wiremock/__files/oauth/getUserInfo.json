@@ -1,0 +1,8 @@
+{
+  "user_id":"{{cut request.headers.Authorization 'Bearer '}}",
+  "firstname":"bratyun",
+  "lastname":"Ivanov",
+  "name":"Ivan",
+  "email":"{{cut request.headers.Authorization 'Bearer '}}",
+  "profile_image_url_https":"some/picture/path.jpg"
+}

@@ -1,0 +1,9 @@
+{
+    "data": {
+        "account_number": "201499111111",
+        "email": "wiremock@gmail.com"
+    },
+    "error_code": 0,
+    "message": "Ok",
+    "result": true
+}

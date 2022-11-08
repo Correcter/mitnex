@@ -1,0 +1,11 @@
+{
+    "request": {
+        "urlPath": "/bestpay/checkout/initialize",
+        "method": "POST"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "bestpay/refill/init-refill-other.json",
+        "transformers": ["response-template"]
+    }
+}

@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+<form method="POST" id="payment" action="/zetpay/verify">
+    <input type="hidden" name="session_id" value="2b37b45fdf284cf88e062220a3517eee">
+    <input type="hidden" name="card_number" value="1111222233334444">
+    <input type="hidden" name="card_holder" value="TEST TESTOV">
+    <input type="hidden" name="expiry_month" value="03">
+    <input type="hidden" name="expiry_year" value="28">
+    <input type="hidden" name="cvv" value="123">
+    <input type="hidden" name="form_token" value="022995887f0247cba6afc273d8b839ac">
+    <input type="hidden" name="sign" value="de3cdfe7759f57752885ac583fe736efa555ef1bdfc6c3c549ea276730ccd6cb">
+</form>
+<script type="text/javascript">
+    window.onload = function(){document.forms[0].submit();}
+</script>
+</body>
+
+</html>

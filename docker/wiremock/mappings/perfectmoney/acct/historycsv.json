@@ -1,0 +1,10 @@
+{
+  "request" : {
+    "url" : "/perfectmoney/acct/historycsv.asp",
+    "method" : "POST"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "Time,Type,Batch,Currency,Amount,Fee,Payer Account,Payee Account,Payment ID,Memo\n08/28/2019 11:50,Income,278682947,EUR,1.00,0.00,U21447914,U21447914,,E-voucher #4241846785 activation via API.\n"
+  }
+}

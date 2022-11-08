@@ -1,0 +1,62 @@
+{
+  "channels": [
+    {
+      "channel": "YM",
+      "minAmount": 10.00,
+      "maxAmount": 15000.00,
+      "currency": "RUR",
+      "used": [
+        {
+          "accountName": "410018125200821",
+          "accountCode": "a3eg5nvq"
+        }
+      ],
+      "createAccount": "deny",
+      "iframe": "none",
+      "paymentType": "pull"
+    },
+    {
+      "channel": "CARD",
+      "minAmount": 100.00,
+      "maxAmount": 60000.00,
+      "currency": "RUR",
+      "used": [
+        {
+          "accountName": "220220******2188",
+          "accountCode": "fugxdhnj"
+        },
+        {
+          "accountName": "427601******9074",
+          "accountCode": "ipktuwiu"
+        }
+      ],
+      "createAccount": "deny",
+      "iframe": "iframe",
+      "paymentType": "pull"
+    },
+    {
+      "channel": "BANK_ACCOUNT",
+      "minAmount": 0.01,
+      "maxAmount": 60000.00,
+      "currency": "RUR",
+      "createAccount": "allow",
+      "iframe": "iframe",
+      "paymentType": "pull"
+    },
+    {
+      "channel": "WALLET",
+      "minAmount": 0.00,
+      "maxAmount": 60000.00,
+      "currency": "RUR",
+      "used": [
+        {
+          "accountName": "WALLET",
+          "accountCode": "p9qxto5k"
+        }
+      ],
+      "createAccount": "deny",
+      "iframe": "none",
+      "paymentType": "both"
+    }
+  ]
+}

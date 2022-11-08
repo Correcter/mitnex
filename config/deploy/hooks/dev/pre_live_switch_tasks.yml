@@ -1,0 +1,42 @@
+---
+- name: Remove cache dir manually env=prod.
+  file: state=absent path={{symfony_current_release_dir}}/app/cache/prod
+  when: symfony_project_warmup_prod|default("")|trim == "yes"
+
+
+- name: Warmup sf cache env=prod.
+  shell: cd {{symfony_current_release_dir}} && export SYMFONY_APP={{symfony_project_app}}; {{symfony_project_php_path}} {{symfony_console_without_env}} --env=prod {{symfony_project_cache_command}} {{symfony_project_console_opts}}
+  when: symfony_project_warmup_prod|default("")|trim == "yes"
+  async: 3600
+  poll: 15
+
+- name: Clear crontab
+  action: shell crontab -r
+  ignore_errors: yes
+
+- name: Wait for cron processes
+  action: shell bash -c 'flock /tmp/crontab_app_harvest_betradar-odds-live-cycle echo && flock /tmp/crontab_expire-pregame-lines echo'
+
+- name: Migrate database
+  action: shell export SYMFONY_APP={{symfony_project_app}} && {{symfony_project_php_path}} {{symfony_console}} doctrine:migrations:migrate --no-interaction
+
+- name: Install crontab
+  action: shell echo SYMFONY_ENV=prod | cat - {{symfony_current_release_dir}}{{symfony_project_crontab}} | crontab
+
+- name: Copy node_modules from previous release
+  shell: '[ -d "{{symfony_project_root}}/current/node_modules" ] && cp -a {{symfony_project_root}}/current/node_modules {{symfony_current_release_dir}}/ || echo "Nothing to copy"'
+  when: symfony_project_copy_vendor == True and symfony_project_skip_old_frontend == False
+
+- name: Run frontend assets builder
+  shell: '{{symfony_current_release_dir}}/frontend.sh desktop,mobile prod,dev chdir={{symfony_current_release_dir}}'
+  register: frontend_sh
+  failed_when: frontend_sh.rc != 0
+  async: 3600
+  poll: 15
+  when: symfony_project_skip_old_frontend == False
+
+- name: Run lexik stuff
+  shell: 'export SYMFONY_APP={{symfony_project_app}} && {{symfony_project_php_path}} {{symfony_console}} lexik:translations:import --case-insensitive --domains=FOSUserBundle,HWIOAuthBundle,locales,slinewidget,messages,refill_method,security,validators,promo --no-interaction'
+  when: symfony_project_skip_translations|default("")|trim == ""
+  async: 3600
+  poll: 15

@@ -1,0 +1,20 @@
+[
+    {
+        "payment_currency": "RUB",
+        "amount": 500,
+        "shop": "string",
+        "card_token": "0a748f37-9423-492c-a713-f006d3ab14bf",
+        "pan_bin": "string",
+        "pan_mask_short": "1234",
+        "wallet": "{{randomValue length=10 type='NUMERIC'}}",
+        "token": "{{request.query.order_token}}",
+        "number": "{{request.query.order_number}}",
+        "status": "success",
+        "created_date": "2019-08-24T14:15:22Z",
+        "pan_mask": "string",
+        "payment_type": "string",
+        "payment_account": "string",
+        "binding_token": "token_{{randomValue length=10 type='NUMERIC'}}",
+        "payment_account_detail": { }
+    }
+]

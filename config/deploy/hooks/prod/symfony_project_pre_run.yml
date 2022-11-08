@@ -1,0 +1,5 @@
+#- include: hooks/prod/symfony_project_pre_run/git_fetch.yml
+
+#- include: hooks/prod/symfony_project_pre_run/validate.yml
+
+- include: hooks/prod/symfony_project_pre_run/start_notification.yml

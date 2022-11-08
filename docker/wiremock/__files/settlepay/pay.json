@@ -1,0 +1,24 @@
+{
+    "error": {
+        "code": 0,
+        "title": "Success"
+    },
+    "response": {
+        "account_id": 5885,
+        "amount": 100000,
+        "amount_currency": "UAH",
+        "external_customer_id": "38",
+        "external_order_id": "1319",
+        "external_transaction_id": "1319",
+        "id": 614064897,
+        "is_sandbox": true,
+        "is_test": true,
+        "point_id": 5650,
+        "result": {
+            "pay_url": "https://pay.4bill.io/public/cards/ua/ab68c83a-8354-11ec-b442-ae91fac111ac"
+        },
+        "service_id": 2,
+        "status": 0,
+        "wallet_id": 6964
+    }
+}

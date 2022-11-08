@@ -1,0 +1,54 @@
+{
+  "success": true,
+  "data": [
+    {
+      "id": "5ccb113bfb7dd075ecac7b53",
+      "sportId": "59bb3769212c0004bd9202a0",
+      "sportName": "Volleyball",
+      "league": "Men. Russian Super League",
+      "matchName": "Zenit Kazan - Kuzbass Kemerovo",
+      "homeTeam": "Zenit Kazan",
+      "awayTeam": "Kuzbass Kemerovo",
+      "starttime": "1556811000000",
+      "videoURL": "https://sportsmedia.tech/embed/5c80e54ed784b328bd5d64d0/5ccb113bfb7dd075ecac7b53",
+      "betradar_id": "23",
+      "tbs_id": "23",
+      "type": "SPORTSMEDIA",
+      "backup": [
+        "https://sportsmedia.tech/embed/5c80e54ed784b328bd5d64d0/5ccb0aa6a2c8e40cd8eabfb1"
+      ]
+    },
+    {
+      "id": "5ccb5a598388352433e300ca",
+      "sportId": "59bb3769212c0004bd920288",
+      "sportName": "Tennis",
+      "league": "ATP World Tour 250. Estoril. Clay. Portugal",
+      "matchName": "Francis Tiafoe - Yoshihito Nishioka",
+      "homeTeam": "Francis Tiafoe",
+      "awayTeam": "Yoshihito Nishioka",
+      "starttime": "1556823300000",
+      "videoURL": "https://sportsmedia.tech/embed/5c80e54ed784b328bd5d64d0/5ccb5a598388352433e300ca",
+      "betradar_id": "5",
+      "tbs_id": "3",
+      "type": "SPORTSMEDIA",
+      "backup": [
+        "https://sportsmedia.tech/embed/5c80e54ed784b328bd5d64d0/5ccb5a5c8388352433e300cf"
+      ]
+    },
+    {
+      "id": "5ccb5a598388352433e300cb",
+      "sportId": "59bb3769212c0004bd92028d",
+      "sportName": "Basketball",
+      "league": "Men. Bulgaria. BGO Software League",
+      "matchName": "MIX - Foot Court",
+      "homeTeam": "MIX",
+      "awayTeam": "Foot Court",
+      "starttime": "1556824800000",
+      "videoURL": "https://sportsmedia.tech/embed/5c80e54ed784b328bd5d64d0/5ccb5a598388352433e300cb",
+      "betradar_id": "2",
+      "tbs_id": "7",
+      "type": "YOUTUBE",
+      "stream_id": "QRovPOPOuTA"
+    }
+  ]
+}

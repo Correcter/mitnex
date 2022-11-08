@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+
+PROJECT_PATH="`dirname \"$0\"`"
+PROJECT_PATH="`realpath \"$PROJECT_PATH/..\"`"
+TMP_PATH="$PROJECT_PATH/tmp"
+
+SF="$PROJECT_PATH/bin/console"
+
+PRODUCTION_DB_HOST=h2-mostbet
+PRODUCTION_DB_DATABASE_NAME=mostbet
+PRODUCTION_MYSQLDUMP_ARGS="--host=db2-mostbet --port=3306 --set-gtid-purged=OFF --single-transaction"
+
+LOCAL_DB_HOST=localhost
+LOCAL_DB_DATABASE_NAME=mostbet
+
+help()
+{
+	echo "Usage:"
+	echo "$0 download_prod_database                         Download production database directly through ssh pipe"
+	echo "$0 download_prod_database_rsync                   Download production database using rsync and temporary dump"
+	echo
+}
+
+
+case $1 in
+download_prod_database)
+    ssh ${PRODUCTION_DB_HOST} "mysqldump mostbet --set-gtid-purged=OFF --single-transaction | gzip -cf -8" | gzip -dc | pv > ${TMP_PATH}/prod-db-dump.sql
+    ;;
+download_prod_database_rsync)
+    PRODUCTION_DB_TEMPORARY_DUMP=/var/tmp/prod-db-dump.sql
+    echo "`date -Is` Creating dump..."
+	ssh ${PRODUCTION_DB_HOST} "mysqldump $PRODUCTION_MYSQLDUMP_ARGS $PRODUCTION_DB_DATABASE_NAME > $PRODUCTION_DB_TEMPORARY_DUMP; du -h $PRODUCTION_DB_TEMPORARY_DUMP"
+	echo "`date -Is` Downloading..."
+	rsync -z --progress ${PRODUCTION_DB_HOST}:${PRODUCTION_DB_TEMPORARY_DUMP} ${TMP_PATH}/prod-db-dump.sql
+	ssh ${PRODUCTION_DB_HOST} "rm $PRODUCTION_DB_TEMPORARY_DUMP"
+	echo "`date -Is` Done"
+    ;;
+import_prod_database)
+    echo "`date -Is` Start import"
+    pv < ${TMP_PATH}/prod-db-dump.sql | mysql --host=${LOCAL_DB_HOST} ${LOCAL_DB_DATABASE_NAME}
+    echo "`date -Is` Done"
+    ;;
+test)
+    echo ${PROJECT_PATH}
+    echo ${TMP_PATH}
+    ;;
+*)
+	help
+	;;
+esac
+exit 0

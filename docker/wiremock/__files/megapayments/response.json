@@ -1,0 +1,6 @@
+{
+    "status": "OK",
+    "transactionId": "123",
+    "type": "payin",
+    "wallet": "1234567"
+}

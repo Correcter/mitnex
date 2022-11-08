@@ -1,0 +1,14 @@
+{
+    "request": {
+        "urlPathPattern": "/paysys/ru/ajax/card_to_card/sms/confirm",
+        "method": "POST"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Set-Cookie": ["ci_session=lqdmqso4i94r1fp5srllpc533s4a7ist; path=/; Secure; HttpOnly"]
+        },
+        "bodyFileName": "paysys/check.json",
+        "transformers": ["response-template"]
+    }
+}

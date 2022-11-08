@@ -1,0 +1,13 @@
+---
+- name: hook | Reload php-fpm
+  shell: sudo /etc/init.d/php7.1-fpm reload
+
+- name: hook | Reload nginx
+  shell: sudo systemctl reload nginx.service
+
+- name: hook | Reload mixer workers
+  shell: 'export SYMFONY_APP={{symfony_project_app}} && {{symfony_project_php_path}} {{symfony_console}} command_bus:mixer_worker:restart'
+  ignore_errors: yes
+
+- name: hook | Replace environment for supervisor commands
+  shell: 'sed -i "s/ -e prod/ -e stage/g; s/ --env=prod/ --env=stage/g" /var/www/mostbet/current/app/config/supervisor*/*.conf'

@@ -1,0 +1,231 @@
+[dev]
+dev-mostbet
+
+[dev2]
+dev2-mostbet
+
+[dev3]
+dev3-mostbet    inventory_app_env=ru
+
+[dev4]
+dev4-mostbet
+
+[dev5]
+dev5-mostbet
+
+[dev6]
+dev6-mostbet
+
+[dev7]
+dev7-mostbet
+
+[dev8]
+dev8-mostbet
+
+[dev9]
+dev9-mostbet
+
+[dev10]
+dev10-mostbet
+
+[dev11]
+dev11-mostbet
+
+[dev12]
+dev12-mostbet   inventory_app_env=ru
+
+[dev13]
+dev13-mostbet
+
+[dev14]
+dev14-mostbet
+
+[devi]
+devi-mostbet
+
+[dev15]
+dev15-mostbet   inventory_warmup_prod=yes   inventory_skip_translations=yes inventory_skip_old_frontend=True inventory_ignore_old_release=y owner_chat_id="-1001780512420"
+
+[dev16]
+dev16-mostbet
+
+[dev17]
+dev17-mostbet
+
+[dev18]
+dev18-mostbet
+
+[dev19]
+dev19-mostbet
+
+[dev20]
+dev20-mostbet
+
+[dev21]
+dev21-mostbet
+
+[dev22]
+dev22-mostbet   inventory_warmup_prod=yes   inventory_skip_translations=yes inventory_skip_old_frontend=True inventory_ignore_old_release=y owner_chat_id="-1001780512420"
+
+[dev23]
+dev23-mostbet
+
+[dev24]
+dev24-mostbet   inventory_app_env=ru
+
+[dev25]
+dev25-mostbet
+
+[dev26]
+dev26-mostbet
+
+[dev27]
+dev27-mostbet
+
+[dev28]
+dev28-mostbet
+
+[dev29]
+dev29-mostbet
+
+[dev30]
+dev30-mostbet
+
+[dev31]
+dev31-mostbet
+
+[dev32]
+dev32-mostbet
+
+[dev33]
+dev33-mostbet
+
+[dev34]
+dev34-mostbet
+
+[dev37]
+dev37-mostbet
+
+[dev38]
+dev38-mostbet
+
+[dev39]
+dev39-mostbet
+
+[dev40]
+dev40-mostbet
+
+[dev41]
+dev41-mostbet
+
+[dev42]
+dev42-mostbet
+
+[dev43]
+dev43-mostbet
+
+[dev44]
+dev44-mostbet
+
+[dev45]
+dev45-mostbet
+
+[dev46]
+dev46-mostbet
+
+[dev47]
+dev47-mostbet
+
+[dev48]
+dev48-mostbet
+
+[dev49]
+dev49-mostbet
+
+[dev50]
+dev50-mostbet
+
+[dev51]
+dev51-mostbet
+
+[dev52]
+dev52-mostbet
+
+[dev53]
+dev53-mostbet
+
+[dev54]
+dev54-mostbet
+
+[dev55]
+dev55-mostbet
+
+[dev56]
+dev56-mostbet
+
+[dev57]
+dev57-mostbet
+
+[dev58]
+dev58-mostbet
+
+[dev59]
+dev59-mostbet
+
+[dev60]
+dev60-mostbet
+
+[dev-ru]
+dev-mostbet-ru
+
+[dev2-ru]
+dev2-mostbet-ru inventory_app_user=mostbet      inventory_app_env=ru
+
+[dev3-ru]
+dev3-mostbet-ru inventory_app_user=mostbet      inventory_app_env=ru
+
+[mixer35]
+dev35-mostbet   inventory_skip_translations=yes inventory_warmup_prod=yes   inventory_skip_old_frontend=True inventory_ignore_old_release=y owner_chat_id="-1001780512420"
+
+[mixer36]
+dev36-mostbet   inventory_skip_translations=yes inventory_warmup_prod=yes   inventory_skip_old_frontend=True inventory_ignore_old_release=y owner_chat_id="-1001780512420"
+
+[mixer15]
+dev15-mostbet   inventory_warmup_prod=yes   inventory_skip_translations=yes inventory_skip_old_frontend=True inventory_ignore_old_release=y owner_chat_id="-1001780512420"
+dev6-mostbet-ru inventory_app_env=ru        inventory_warmup_prod=yes   inventory_skip_translations=yes inventory_ignore_old_release=y owner_chat_id="-1001780512420" inventory_skip_old_frontend=True
+dev2-mostbet-ru inventory_app_user=pps      inventory_app_env=pps       inventory_warmup_prod=yes   inventory_skip_translations=yes inventory_ignore_old_release=y owner_chat_id="-1001780512420"
+
+[mixer22]
+dev22-mostbet   inventory_warmup_prod=yes   inventory_skip_translations=yes inventory_skip_old_frontend=True inventory_ignore_old_release=y owner_chat_id="-1001780512420"
+dev7-mostbet-ru inventory_app_env=ru        inventory_warmup_prod=yes   inventory_skip_translations=yes inventory_ignore_old_release=y owner_chat_id="-1001780512420" inventory_skip_old_frontend=True
+dev3-mostbet-ru inventory_app_user=pps      inventory_app_env=pps       inventory_warmup_prod=yes   inventory_skip_translations=yes inventory_ignore_old_release=y owner_chat_id="-1001780512420"
+
+[pps_dev4_mostbet_ru]
+pps-dev4.mostbet.ru inventory_app_user=pps      inventory_app_env=pps
+
+[pps_dev5_mostbet_ru]
+pps-dev5.mostbet.ru inventory_app_user=pps      inventory_app_env=pps
+
+[pps_dev6_mostbet_ru]
+pps-dev6.mostbet.ru inventory_app_user=pps      inventory_app_env=pps
+
+[pps_dev7_mostbet_ru]
+pps-dev7.mostbet.ru inventory_app_user=pps      inventory_app_env=pps
+
+[pps-qa2]
+pps-qa2.mostbet.ru inventory_app_user=pps      inventory_app_env=pps    inventory_warmup_prod=yes
+
+[pps-qa4]
+pps-qa4.mostbet.ru inventory_app_user=pps      inventory_app_env=pps    inventory_warmup_prod=yes
+
+[pps-qa]
+pps-qa.mostbet.ru inventory_app_user=pps      inventory_app_env=pps    inventory_warmup_prod=yes
+
+[dev5-ru]
+dev5-mostbet-ru inventory_app_env=ru inventory_skip_translations=yes inventory_ignore_old_release=y
+
+[dev6-ru]
+dev6-mostbet-ru inventory_app_env=ru        inventory_warmup_prod=yes   inventory_skip_translations=yes inventory_ignore_old_release=y owner_chat_id="-1001780512420" inventory_skip_old_frontend=True
+
+[dev7-ru]
+dev7-mostbet-ru inventory_app_env=ru        inventory_warmup_prod=yes   inventory_skip_translations=yes inventory_ignore_old_release=y owner_chat_id="-1001780512420" inventory_skip_old_frontend=True

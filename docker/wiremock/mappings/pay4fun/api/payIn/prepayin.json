@@ -1,0 +1,13 @@
+{
+    "request" : {
+        "url" : "/pay4fun/api/payIn/prepayin/",
+        "method" : "POST"
+    },
+    "response" : {
+        "status" : 200,
+        "headers": {
+            "Content-Type": "text/json"
+        },
+        "body" : "{\n\"code\": 201,\n\"message\": \"success message\",\n\"url\": \"http://mostbet.local/pay4fun/api/payin/process/<KEY>\"\n}"
+    }
+}

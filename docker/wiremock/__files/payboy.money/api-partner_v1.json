@@ -1,0 +1,13 @@
+{
+    "PARTNER_ID": "number1",
+    "DT": "abc",
+    "PARTNER_ORDER": "aaabbbccc",
+    "PB_ORDER": {{randomValue length=10 type='NUMERIC'}},
+    "PAYMETHOD_LIST": {
+       "PAYMETHOD": {
+           "method": {
+                "URL_PB": "http://123.com"
+            }
+        }
+    }
+}

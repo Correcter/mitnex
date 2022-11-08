@@ -1,0 +1,19 @@
+{
+    "request": {
+        "url": "/api/v2/guest/p2p/pay",
+        "bodyPatterns": [
+            {
+                "matchesJsonPath": "$.code"
+            }
+        ],
+        "method": "POST"
+    },
+    "response": {
+        "headers": {
+            "Content-Type": "APPLICATION/JSON;charset=\"utf-8\""
+        },
+        "status": 200,
+        "bodyFileName": "joyda/check_sms.json",
+        "transformers": ["response-template"]
+    }
+}

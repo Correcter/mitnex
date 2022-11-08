@@ -1,0 +1,18 @@
+- fail: msg="Checking git tag emptiness."
+  when: symfony_project_branch == ""
+  run_once: true
+
+- name: Set symfony_current_release_dir.
+  set_fact: current_release_dir="{{symfony_project_root}}/current"
+
+- name: Checking git tag existence in master.
+  shell: cd {{current_release_dir}} && git branch -a --contains tags/{{symfony_project_branch}} | grep "remotes/origin/master"
+  register: git_tag_exists_in_master
+  failed_when: git_tag_exists_in_master.rc == 1 or git_tag_exists_in_master.rc == 2
+  run_once: true
+
+- name: Checking git tag existence.
+  shell: cd {{current_release_dir}} && git ls-remote --tags | grep "refs/tags/{{symfony_project_branch}}$"
+  register: git_tag_existence
+  failed_when: git_tag_existence.rc == 1 or git_tag_existence.rc == 2
+  run_once: true

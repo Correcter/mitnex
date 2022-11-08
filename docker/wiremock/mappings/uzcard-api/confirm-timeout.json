@@ -1,0 +1,23 @@
+{
+    "request": {
+        "urlPath": "/api/public/get/pay/kod.api.php",
+        "queryParameters" : {
+            "kod" : {
+                "matches" : "^000[0-9][0-9][0-9]$"
+            }
+        },
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "fixedDelayMilliseconds": 20000,
+        "jsonBody": {
+            "error": true,
+            "m_id": "0",
+            "message": null
+        },
+        "headers": {
+            "Content-Type": "application/json"
+        }
+    }
+}

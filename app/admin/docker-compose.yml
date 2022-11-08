@@ -1,0 +1,95 @@
+version: '3.8'
+services:
+  mitnex_php_admin:
+    container_name: mitnex_php_admin
+    build:
+      context: .
+      dockerfile: ./docker/php-fpm/Dockerfile
+    environment:
+      XDEBUG_CONFIG: ${ADMIN_XDEBUG_CONFIG}
+      PHP_IDE_CONFIG: serverName=${ADMIN_PHP_IDE_SERVER_NAME}
+    env_file: ./docker/php-fpm/com.env
+    depends_on:
+      - mitnex_db_admin
+      - mitnex_redis_admin
+    volumes:
+      - ./:/var/www/admin
+
+
+  ### Admin database ################################################
+  mitnex_db_admin:
+    container_name: mitnex_db_admin
+    build:
+      context: ./docker/postgres
+      args:
+        - POSTGRES_VERSION=${ADMIN_POSTGRES_VERSION}
+    command:
+      - "postgres"
+      - "-c"
+      - "max_connections=100"
+      - "-c"
+      - "shared_buffers=1624MB"
+      - "-c"
+      - "listen_addresses=*"
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: ${ADMIN_POSTGRES_HOST_AUTH_METHOD}
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ¨¨
+      POSTGRES_DB: db_admin
+      PGDATA: /data/postgres
+    volumes:
+      - ./docker/postgres/data:/data/postgres
+    ports:
+      - ${ADMIN_POSTGRES_PORT}:5432
+    networks:
+      - mitnex-docker-network
+
+  mitnex_php_admin_queue:
+    container_name: mitnex_php_admin_queue
+    build:
+      context: .
+      dockerfile: ./docker/queue/Dockerfile
+    depends_on:
+      - mitnex_php_admin
+    networks:
+      - mitnex-docker-network
+    volumes:
+      - ./:/var/www/admin
+
+  ### Admin Redis ################################################
+  mitnex_redis_admin:
+    container_name: mitnex_redis_admin
+    build:
+      context: ./docker/redis
+      args:
+        - REDIS_VERSION=${ADMIN_REDIS_VERSION}
+    volumes:
+      - ./docker/redis/data:/data
+      - ./docker/redis/conf:/usr/local/etc/redis
+    ports:
+      - ${ADMIN_REDIS_PORT}:6379
+    networks:
+      - mitnex-docker-network
+
+  mitnex_wiremock_admin:
+    container_name: mitnex_wiremock_admin
+    image: rodolpheche/wiremock
+    volumes:
+      - ./docker/wiremock:/home/wiremock
+    expose:
+      - 80
+    ports:
+      - ${ADMIN_WIREMOCK_PORT}:80
+    command:
+      - "java"
+      - "-cp"
+      - "/var/wiremock/lib/*:/var/wiremock/extensions/*"
+      - "com.github.tomakehurst.wiremock.standalone.WireMockServerRunner"
+      - "--local-response-templating"
+      - "--port"
+      - "80"
+      - "--verbose"
+
+networks:
+  mitnex-docker-network:
+    driver: ${NETWORKS_DRIVER}

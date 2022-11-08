@@ -1,0 +1,11 @@
+{
+    "request": {
+        "url": "/uzcardpay/pay",
+        "method": "POST"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "uzcard_pay/pay.json",
+        "transformers": ["response-template","body-transformer"]
+    }
+}

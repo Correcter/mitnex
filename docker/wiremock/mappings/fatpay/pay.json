@@ -1,0 +1,11 @@
+{
+    "request": {
+        "urlPath": "/fatpay/pay",
+        "method": "POST"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "fatpay/pay.json",
+        "transformers": ["response-template"]
+    }
+}

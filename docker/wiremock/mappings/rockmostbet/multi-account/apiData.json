@@ -1,0 +1,10 @@
+{
+    "request": {
+        "urlPath": "/Api_data/mults_april",
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "rockmostbet/multi-account/apiData.json"
+    }
+}

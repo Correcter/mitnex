@@ -1,0 +1,19 @@
+{
+    "request": {
+        "urlPath": "/8billing/api/v1/",
+        "bodyPatterns": [
+            {
+                "matchesJsonPath": {
+                    "expression": "$.method",
+                    "equalTo": "getPayoutInfo"
+                }
+            }
+        ],
+        "method": "POST"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "8billing/getPayoutInfo.json",
+        "transformers": ["response-template"]
+    }
+}

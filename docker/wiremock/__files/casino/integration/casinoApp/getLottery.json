@@ -1,0 +1,33 @@
+{
+  "id": 1,
+  "name": "some_lottery",
+  "title": "lottery prize!!",
+  "firstDrawingDate": "2020-06-17T09:22:48.000+0000",
+  "drawingTimeInterval": 5,
+  "drawings": [
+    {
+      "id": 1,
+      "date": "2020-06-10T09:23:04.000+0000",
+      "winners": [
+        {
+          "number": 2,
+          "name": "pavel"
+        },
+        {
+          "number": 1,
+          "name": "semen"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "date": "2020-06-11T09:23:24.000+0000",
+      "winners": [
+        {
+          "number": 1,
+          "name": "ivan"
+        }
+      ]
+    }
+  ]
+}

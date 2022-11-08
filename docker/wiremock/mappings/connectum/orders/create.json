@@ -1,0 +1,14 @@
+{
+    "request": {
+      "urlPath": "/connectum/orders/create",
+      "method": "POST"
+    },
+    "response": {
+      "status": 200,
+      "headers": {
+          "Location": "http://localhost.connectum/pay/1{{randomValue length=10 type='NUMERIC'}}"
+      },
+        "bodyFileName": "connectum/orders/create.json",
+        "transformers": ["response-template"]
+    }
+}

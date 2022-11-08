@@ -1,0 +1,11 @@
+{
+    "request": {
+        "urlPath": "/azerpay/api/deposit/create",
+        "method": "POST"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "Azerpay/Refill/deposit-create.json",
+        "transformers": ["response-template"]
+    }
+}

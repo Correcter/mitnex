@@ -1,0 +1,10 @@
+{
+    "request" : {
+        "url" : "/cupis/binding-api/api/v5/bind/prepare",
+        "method" : "POST"
+    },
+    "response" : {
+        "status" : 200,
+        "body" : "{\"state\":\"unknown\"}"
+    }
+}

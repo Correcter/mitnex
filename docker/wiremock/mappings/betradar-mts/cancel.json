@@ -1,0 +1,10 @@
+{
+  "request" : {
+    "urlPath" : "/betradar-mts/cancel",
+    "method" : "POST"
+  },
+  "response" : {
+    "status" : 200,
+    "bodyFileName": "betradar-mts/cancel.json"
+  }
+}

@@ -1,0 +1,39 @@
+{
+    "RESULT": "OK",
+    "MESSAGE": "Success: cheque exists<br>Success: pay - платеж успешно проведен",
+    "ACCOUNT": [
+        {
+            "title": "Описание",
+            "value": "Перевод средств"
+        },
+        {
+            "title": "Сумма платежа",
+            "value": "5 050.00 сум"
+        },
+        {
+            "title": "Номер карты",
+            "value": "8600 00** **** 0000 "
+        },
+        {
+            "title": "Дата оплаты",
+            "value": "21.11.2019 18:39"
+        },
+        {
+            "name": "card",
+            "title": "Карта получателя",
+            "value": "860000******0000",
+            "raw": "8600000000000000"
+        },
+        {
+            "name": "owner",
+            "title": "Получатель",
+            "value": "IVANOV IVAN IVANOVICH"
+        },
+        {
+            "name": "commission",
+            "title": "Стоимость услуги",
+            "value": "50.00 сум"
+        }
+    ],
+    "ACCOUNT_DATA": "YTo3OntpOjA7YToyOntzOjU6InRpdGxlIjtzOjE2OiLQntC/0LjRgdCw0L3QuNC1IjtzOjU6InZhbHVlIjtzOjI5OiLQn9C10YDQtdCy0L7QtCDRgdGA0LXQtNGB0YLQsiI7fWk6MTthOjI6e3M6NToidGl0bGUiO3M6MjU6ItCh0YPQvNC80LAg0L/Qu9Cw0YLQtdC20LAiO3M6NToidmFsdWUiO3M6MTU6IjUgMDUwLjAwINGB0YPQvCI7fWk6MjthOjI6e3M6NToidGl0bGUiO3M6MjE6ItCd0L7QvNC10YAg0LrQsNGA0YLRiyI7czo1OiJ2YWx1ZSI7czoyMDoiODYwMCAwMCoqICoqKiogMDAwMCAiO31pOjM7YToyOntzOjU6InRpdGxlIjtzOjIxOiLQlNCw0YLQsCDQvtC/0LvQsNGC0YsiO3M6NToidmFsdWUiO3M6MTY6IjIxLjExLjIwMTkgMTg6MzkiO31pOjQ7YTo0OntzOjQ6Im5hbWUiO3M6NDoiY2FyZCI7czo1OiJ0aXRsZSI7czozMToi0JrQsNGA0YLQsCDQv9C+0LvRg9GH0LDRgtC10LvRjyI7czo1OiJ2YWx1ZSI7czoxNjoiODYwMDAwKioqKioqMDAwMCI7czozOiJyYXciO3M6MTI6Ijg2MDAwMDAwMDAwMCI7fWk6NTthOjM6e3M6NDoibmFtZSI7czo1OiJvd25lciI7czo1OiJ0aXRsZSI7czoyMDoi0J/QvtC70YPRh9Cw0YLQtdC70YwiO3M6NToidmFsdWUiO3M6MjE6IklWQU5PViBJVkFOIElWQU5PVklDSCI7fWk6NjthOjM6e3M6NDoibmFtZSI7czoxMDoiY29tbWlzc2lvbiI7czo1OiJ0aXRsZSI7czozMToi0KHRgtC+0LjQvNC+0YHRgtGMINGD0YHQu9GD0LPQuCI7czo1OiJ2YWx1ZSI7czoxMjoiNTAuMDAg0YHRg9C8Ijt9fQ=="
+}

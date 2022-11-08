@@ -1,0 +1,4 @@
+{
+    "order_token": "order_{{randomValue length=10 type='NUMERIC'}}",
+    "redirect_url": "http://localhost.pimpay/"
+}

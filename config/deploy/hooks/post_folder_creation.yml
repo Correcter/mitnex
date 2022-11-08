@@ -1,0 +1,14 @@
+---
+- name: hook | Fix rights of managed folders
+  acl: name={{symfony_current_release_dir}}/{{item[0].path}} state=present default=no recursive=yes entity={{item[1]}} permissions=rwx etype=user
+  with_nested:
+    - "{{symfony_project_managed_folders}}"
+    - "{{symfony_project_user}}"
+  when: symfony_project_user
+
+- name: hook | Set default rights of managed folders
+  acl: name={{symfony_current_release_dir}}/{{item[0].path}} state=present default=yes recursive=yes entity={{item[1]}} permissions=rwx etype=user
+  with_nested:
+    - "{{symfony_project_managed_folders}}"
+    - "{{symfony_project_user}}"
+  when: symfony_project_user

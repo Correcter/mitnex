@@ -1,0 +1,11 @@
+{
+    "request": {
+        "urlPath": "/kesspay/refill/create",
+        "method": "POST"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "kesspay/refill.json",
+        "transformers": ["response-template"]
+    }
+}

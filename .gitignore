@@ -1,0 +1,32 @@
+.env
+/docker-compose.yml
+docker-compose.override.yml
+.php_cs
+
+### PhpStorm ###
+# User-specific stuff:
+/.idea/
+/mostbet.iml
+.DS_Store
+.vscode/*
+error.log
+/build/
+/tmp
+.phpintel
+composer.phar
+/app/config/docker/personal/*
+/etc/
+
+/bin/*
+!bin/console
+!bin/symfony_requirements
+!bin/pre-commit.dist
+!/bin/after_bugs_fix.sh
+!/bin/init_db.sh
+!/bin/disable_thp.sh
+!/bin/do
+!/bin/nfs_docker_osx.sh
+!/bin/rm_cache.sh
+!/bin/update_parameters.sh
+!/bin/create-tag.sh
+!/bin/spa.sh

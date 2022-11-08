@@ -1,0 +1,10 @@
+{
+  "request" : {
+    "urlPattern" : "/google/safebrowsing\\?key=(.*)",
+    "method" : "POST"
+  },
+  "response" : {
+    "status" : 200,
+    "bodyFileName": "google/safebrowsing.json"
+  }
+}

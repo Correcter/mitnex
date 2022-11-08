@@ -1,0 +1,11 @@
+{
+    "request": {
+        "urlPath": "/paysafecard/create",
+        "method": "POST"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "eupago/paysafecard.json",
+        "transformers": ["response-template"]
+    }
+}

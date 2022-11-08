@@ -1,0 +1,13 @@
+{
+    "resultCode": 0,
+    "resultMsg": "Success",
+    "resultData": {
+        "paymentForm": {
+            "action": "https:\/\/cpay.tranzzo.com\/api\/v1\/checkout\/d0868092-ebf3-4e57-a1f4-07c7c44692cf\/form",
+            "method": "get",
+            "parameters": {
+                "x-request-id": "4f028946-dee1-4b6d-835a-556756747554"
+            }
+        }
+    }
+}

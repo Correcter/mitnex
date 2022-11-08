@@ -1,0 +1,84 @@
+{
+    "title":"casino.tourney.test_fantasy.media.title",
+    "organizer":"mostbet",
+    "status": "finished",
+    "description":"casino.tourney.test_fantasy.media.description",
+    "secondDescription":"casino.tourney.test_fantasy.media.secondDescription",
+    "thirdDescription":"casino.tourney.test_fantasy.media.thirdDescription",
+    "rules":"casino.tourney.test_fantasy.media.rules",
+    "startDate":"2021-08-12T11:12:14.000+00:00",
+    "endDate":"2021-08-18T11:12:16.000+00:00",
+    "landingImage":"/cdn/uploads/casino/tourney/85/landing_1628688349.png",
+    "theme":"fantasy_sport",
+    "settings": {
+        "hidePrizes":false,
+        "visibleForAll":true,
+        "prizePool": {
+            "count":5000,
+            "type":"EUR",
+            "image":""
+        },
+        "userListId":null,
+        "minCoefficient":null,
+        "badges":[],
+        "productTypeList":["fantasy_sport"],
+        "enabledCurrencies":["EUR","USD","RUB"],
+        "checkCurrency":false,
+        "needConfirmation":false,
+        "broadcast":{
+            "enabled":false,
+            "facebookUrl":null,
+            "instagramUrl":null
+        },
+        "registrationStartDate":"2021-08-11T11:12:11.000+00:00",
+        "link": null,
+        "showSatellite": null,
+        "satelliteList": [
+            {
+                "name": "test",
+                "buyIn": 5,
+                "guarantee": "ddasd",
+                "startAt": "2017-01-01T00:00:00Z",
+                "endAt": "2017-02-05T00:00:00Z"
+            }
+        ]
+    },
+    "prizes":[
+        {
+            "place":2,
+            "count":300,
+            "type":"EUR",
+            "title":"casino.tourney.test_fantasy.prize.2",
+            "range":[]
+        },
+        {
+            "place":3,
+            "count":200,
+            "type":"EUR",
+            "title":"casino.tourney.test_fantasy.prize.3",
+            "range":[]
+        },
+        {
+            "place":1,
+            "count":500,
+            "type":"EUR",
+            "title":"casino.tourney.test_fantasy.prize.1",
+            "range":[]
+        }
+    ],
+    "games":[],
+    "leadersBoard":[],
+    "winners":[],
+    "media": {
+        "title":"casino.tourney.test_fantasy.media.title",
+        "description":"casino.tourney.test_fantasy.media.description",
+        "rules":"casino.tourney.test_fantasy.media.rules",
+        "secondDescription":"casino.tourney.test_fantasy.media.secondDescription",
+        "thirdDescription":"casino.tourney.test_fantasy.media.thirdDescription",
+        "bannerImage":"/cdn/uploads/casino/tourney/85/ban_1628688349.png",
+        "landingImage":"/cdn/uploads/casino/tourney/85/landing_1628688349.png",
+        "desktopStepImage":"/cdn/uploads/casino/tourney/85/desktop_step_1628688350.png",
+        "mobileStepImage":"/cdn/uploads/casino/tourney/85/mobile_step_1628688350.png",
+        "descriptionImage":"/cdn/uploads/casino/tourney/85/description_1628688350.png"
+    }
+}

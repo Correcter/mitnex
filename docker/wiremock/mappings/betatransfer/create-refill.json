@@ -1,0 +1,15 @@
+{
+    "request": {
+        "urlPath": "/betatransfer/payment",
+        "method": "POST"
+    },
+    "response": {
+        "status": 200,
+        "jsonBody": {
+            "status": "SUCCESS",
+            "id": 0,
+            "url": "http://betatransfer/test/url/create",
+            "urlPayment": "string"
+        }
+    }
+}

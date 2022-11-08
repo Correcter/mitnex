@@ -1,0 +1,290 @@
+{
+    "tournaments": [
+        {
+            "id": 40,
+            "name": "test111",
+            "media": {
+                "title":"casino.tourney.test_fantasy.media.title",
+                "description":"casino.tourney.test_fantasy.media.description",
+                "rules":"casino.tourney.test_fantasy.media.rules",
+                "secondDescription":"casino.tourney.test_fantasy.media.secondDescription",
+                "thirdDescription":"casino.tourney.test_fantasy.media.thirdDescription",
+                "bannerImage":"/cdn/uploads/casino/tourney/85/ban_1628688349.png",
+                "landingImage":"/cdn/uploads/casino/tourney/85/landing_1628688349.png",
+                "desktopStepImage":"/cdn/uploads/casino/tourney/85/desktop_step_1628688350.png",
+                "mobileStepImage":"/cdn/uploads/casino/tourney/85/mobile_step_1628688350.png",
+                "descriptionImage":"/cdn/uploads/casino/tourney/85/description_1628688350.png"
+            },
+            "status": "published",
+            "organizer": "mostbet",
+            "theme": "casino",
+            "prizes": [
+                {
+                    "place": null,
+                    "count": 100,
+                    "type": "EUR",
+                    "title": "casino.tourney.test111.prize.null",
+                    "range": [
+                        1,
+                        5
+                    ]
+                },
+                {
+                    "place": 6,
+                    "count": 50,
+                    "type": "EUR",
+                    "title": "casino.tourney.test111.prize.6",
+                    "range": []
+                },
+                {
+                    "place": 7,
+                    "count": 30,
+                    "type": "EUR",
+                    "title": "casino.tourney.test111.prize.7",
+                    "range": []
+                },
+                {
+                    "place": null,
+                    "count": 40,
+                    "type": "EUR",
+                    "title": "casino.tourney.test111.prize.null",
+                    "range": [
+                        11,
+                        32
+                    ]
+                },
+                {
+                    "place": null,
+                    "count": 20,
+                    "type": "EUR",
+                    "title": "casino.tourney.test111.prize.null",
+                    "range": [
+                        8,
+                        10
+                    ]
+                }
+            ],
+            "pointsMethod": "BY_BETS_COUNT",
+            "currencySettings": [
+                {
+                    "currency": "RUB",
+                    "onePointFor": 1.0,
+                    "betAmount": 10.0
+                }
+            ],
+            "games": {
+                "identifiers": [
+                    1
+                ]
+            },
+            "qualified": false,
+            "startDate": "2020-06-26T16:08:01.000+0000",
+            "endDate": "2020-06-29T11:49:00.000+0000",
+            "settings": {
+                "hidePrizes": false,
+                "prizePool": null,
+                "badges": [
+                    "Exclusive",
+                    "VIP"
+                ],
+                "checkCurrency": true,
+                "enabledCurrencies": [
+                    "USD"
+                ]
+            },
+            "createdAt": "2020-06-22T11:50:14.000+0000",
+            "updatedAt": "2020-06-25T11:30:46.000+0000",
+            "leadersBoard": []
+        },
+        {
+            "id": 41,
+            "name": "test001",
+            "media": {
+                "title": "casino.tourney.test111.media.title",
+                "description": "casino.tourney.test111.media.description",
+                "secondDescription":"casino.tourney.test111.media.secondDescription",
+                "thirdDescription":"casino.tourney.test111.media.thirdDescription",
+                "rules": "casino.tourney.test111.media.rules",
+                "bannerImage":"/cdn/uploads/casino/tourney/85/ban_1628688349.png",
+                "landingImage":"/cdn/uploads/casino/tourney/85/landing_1628688349.png",
+                "desktopStepImage":"/cdn/uploads/casino/tourney/85/desktop_step_1628688350.png",
+                "mobileStepImage":"/cdn/uploads/casino/tourney/85/mobile_step_1628688350.png",
+                "descriptionImage":"/cdn/uploads/casino/tourney/85/description_1628688350.png"
+            },
+            "status": "published",
+            "organizer": "mostbet",
+            "theme": "casino",
+            "prizes": [
+                {
+                    "place": null,
+                    "count": 100,
+                    "type": "EUR",
+                    "title": "casino.tourney.test001.prize.null",
+                    "range": [
+                        1,
+                        5
+                    ]
+                },
+                {
+                    "place": 6,
+                    "count": 50,
+                    "type": "EUR",
+                    "title": "casino.tourney.test001.prize.6",
+                    "range": []
+                },
+                {
+                    "place": null,
+                    "count": 40,
+                    "type": "EUR",
+                    "title": "casino.tourney.test001.prize.null",
+                    "range": [
+                        11,
+                        32
+                    ]
+                },
+                {
+                    "place": 7,
+                    "count": 30,
+                    "type": "EUR",
+                    "title": "casino.tourney.test001.prize.7",
+                    "range": []
+                },
+                {
+                    "place": null,
+                    "count": 20,
+                    "type": "EUR",
+                    "title": "casino.tourney.test001.prize.null",
+                    "range": [
+                        8,
+                        10
+                    ]
+                }
+            ],
+            "pointsMethod": "BY_BETS_COUNT",
+            "currencySettings": [
+                {
+                    "currency": "RUB",
+                    "onePointFor": 1.0,
+                    "betAmount": 10.0
+                }
+            ],
+            "games": {
+                "identifiers": [
+                    1
+                ]
+            },
+            "qualified": false,
+            "startDate": "2020-06-26T16:08:01.000+0000",
+            "endDate": "2020-06-29T11:49:00.000+0000",
+            "settings": {
+                "hidePrizes": false,
+                "prizePool": {
+                    "count": 15,
+                    "type": "EUR"
+                },
+                "badges": null,
+                "checkCurrency": false,
+                "enabledCurrencies": []
+            },
+            "createdAt": "2020-06-22T11:50:14.000+0000",
+            "updatedAt": "2020-06-25T11:30:46.000+0000",
+            "leadersBoard": []
+        },
+        {
+            "id": 42,
+            "name": "test003",
+            "media": {
+                "title": "casino.tourney.test111.media.title",
+                "description": "casino.tourney.test111.media.description",
+                "secondDescription":"casino.tourney.test111.media.secondDescription",
+                "thirdDescription":"casino.tourney.test111.media.thirdDescription",
+                "rules": "casino.tourney.test111.media.rules",
+                "bannerImage":"/cdn/uploads/casino/tourney/85/ban_1628688349.png",
+                "landingImage":"/cdn/uploads/casino/tourney/85/landing_1628688349.png",
+                "desktopStepImage":"/cdn/uploads/casino/tourney/85/desktop_step_1628688350.png",
+                "mobileStepImage":"/cdn/uploads/casino/tourney/85/mobile_step_1628688350.png",
+                "descriptionImage":"/cdn/uploads/casino/tourney/85/description_1628688350.png"
+            },
+            "status": "published",
+            "organizer": "mostbet",
+            "theme": "casino",
+            "prizes": [
+                {
+                    "place": 6,
+                    "count": 50,
+                    "type": "EUR",
+                    "title": "casino.tourney.test003.prize.6",
+                    "range": []
+                },
+                {
+                    "place": null,
+                    "count": 20,
+                    "type": "EUR",
+                    "title": "casino.tourney.test003.prize.null",
+                    "range": [
+                        8,
+                        10
+                    ]
+                },
+                {
+                    "place": null,
+                    "count": 40,
+                    "type": "EUR",
+                    "title": "casino.tourney.test003.prize.null",
+                    "range": [
+                        11,
+                        32
+                    ]
+                },
+                {
+                    "place": null,
+                    "count": 100,
+                    "type": "EUR",
+                    "title": "casino.tourney.test003.prize.null",
+                    "range": [
+                        1,
+                        5
+                    ]
+                },
+                {
+                    "place": 7,
+                    "count": 30,
+                    "type": "EUR",
+                    "title": "casino.tourney.test003.prize.7",
+                    "range": []
+                }
+            ],
+            "pointsMethod": "BY_BETS_COUNT",
+            "currencySettings": [
+                {
+                    "currency": "RUB",
+                    "onePointFor": 1.0,
+                    "betAmount": 10.0
+                }
+            ],
+            "games": {
+                "identifiers": [
+                    1
+                ]
+            },
+            "qualified": false,
+            "startDate": "2020-06-26T16:08:01.000+0000",
+            "endDate": "2020-06-29T11:49:00.000+0000",
+            "settings": {
+                "hidePrizes": false,
+                "prizePool": {
+                    "count": null,
+                    "type": "TRANSLATE_KEY"
+                },
+                "badges": [
+                    "Exclusive"
+                ],
+                "checkCurrency": false,
+                "enabledCurrencies": []
+            },
+            "createdAt": "2020-06-22T11:50:14.000+0000",
+            "updatedAt": "2020-06-25T11:30:46.000+0000",
+            "leadersBoard": []
+        }
+    ]
+}

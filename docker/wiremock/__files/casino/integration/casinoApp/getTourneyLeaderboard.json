@@ -1,0 +1,28 @@
+{
+    "items": [
+        {
+            "userId": 5050304,
+            "tourneyId": 163,
+            "score": 49.6,
+            "betAmount": "2480.0000",
+            "currency": "RUB"
+        },
+        {
+            "userId": 238279,
+            "tourneyId": 163,
+            "score": 6.34,
+            "betAmount": "317.4000",
+            "currency": "RUB"
+        },
+        {
+            "userId": 6565346,
+            "tourneyId": 163,
+            "score": 0.4,
+            "betAmount": "20.0000",
+            "currency": "RUB"
+        }
+    ],
+    "totalPages": 2,
+    "totalElements": 14,
+    "page": 1
+}

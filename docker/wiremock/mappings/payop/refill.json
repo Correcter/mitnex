@@ -1,0 +1,14 @@
+{
+  "request": {
+    "url": "/payop/invoices/create",
+    "method": "POST"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "identifier": "{{randomValue length=6 type='NUMERIC'}}"
+    },
+    "bodyFileName": "payop/invoices_create.json",
+    "transformers": ["response-template"]
+  }
+}

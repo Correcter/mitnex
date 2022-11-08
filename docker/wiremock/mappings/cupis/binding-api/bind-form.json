@@ -1,0 +1,10 @@
+{
+    "request" : {
+        "url" : "/cupis/binding-api/api/bind/form",
+        "method" : "POST"
+    },
+    "response" : {
+        "status" : 200,
+        "body" : "{\"state\":\"ok\", \"error\":\"TooManyRequests\", \"description\":\"TooManyRequests description\"}"
+    }
+}

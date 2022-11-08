@@ -1,0 +1,14 @@
+{
+    "request": {
+        "urlPath": "/functional-test/freelanceme/api/v3.3/gateway/pay",
+        "method": "POST"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "freelanceme/create-refill.json",
+        "transformers": ["response-template"],
+        "headers": {
+            "Content-Type": "application/json"
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "request": {
+        "urlPattern": "/v1/rewards/campaign/([a-z]*)/participate/([0-9]*)",
+        "method": "PUT"
+    },
+    "response": {
+        "status": 200
+    }
+}

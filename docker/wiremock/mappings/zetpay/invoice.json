@@ -1,0 +1,11 @@
+{
+    "request": {
+        "urlPath": "/zetpay/invoice",
+        "method": "POST"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "zetpay/invoice.json",
+        "transformers": ["response-template"]
+    }
+}

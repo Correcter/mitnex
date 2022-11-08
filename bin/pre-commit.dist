@@ -1,0 +1,128 @@
+#!/usr/bin/env bash
+
+compose_service=php
+interactive=0
+
+fixer_check_command="bin/php-cs-fixer fix --quiet --dry-run --stop-on-violation --using-cache=no -"
+fixer_fix_command="bin/php-cs-fixer fix -v --diff --diff-format=udiff --using-cache=no"
+
+msg_prefix="[PRE-COMMIT]"
+
+msg () {
+    echo -n "$msg_prefix $1"
+}
+
+msgln () {
+    msg "$1"; echo
+}
+
+containerize_commands () {
+    local container_id
+
+    container_id=$(docker-compose ps -q $compose_service)
+
+    if [ -z "$container_id" ]; then
+        msgln "Compose service \"$compose_service\" not found."
+        exit 1
+    fi
+
+    if [[ $(docker inspect -f '{{.State.Running}}' "$container_id") != "true" ]]; then
+        msgln "Compose serive \"$compose_service\" is not running."
+        exit 1
+    fi
+
+    fixer_check_command="docker exec -i --user=www-data $container_id php $fixer_check_command"
+    fixer_fix_command="docker exec -t --user=www-data $container_id php $fixer_fix_command"
+}
+
+check_files () {
+    msg "Performing php-cs-fixer dry-run... "
+
+    local fix_needed
+    fix_needed=0
+
+    for f in $(git diff --cached --name-only --diff-filter=ACM | grep --color=no -e '\.php$'); do
+        if ! git cat-file -p :"$f" | $fixer_check_command; then
+            fix_needed=1
+            files+=($f)
+        fi
+    done
+
+    echo "finished."
+
+    if [ $fix_needed -eq 1 ]; then
+        msgln ""
+        msgln "SOME FILES NEED FIXING! (Or maybe you just need to stage previous fixes.)"
+        msgln ""
+    else
+        msgln "All files are ready for commit."
+    fi
+
+    return $fix_needed
+}
+
+fix_files () {
+    local command
+
+    for f in "$@"; do
+        command="$fixer_fix_command -- $f"
+        if ! ($command); then
+            msgln "Sorry, some error occured!"
+            msgln "Offending command: $command"
+
+            exit 1
+        fi
+    done
+
+
+    msgln "Fixed! Review, re-stage and re-commit!"
+}
+
+read_decision () {
+    read -r yn
+
+    if [[ $yn == "" ]];
+        then yn="Y"
+    fi
+
+    echo $yn
+}
+
+main () {
+    if [ -n "$compose_service" ]; then
+        containerize_commands
+    fi
+
+    declare -a files
+
+    if ! check_files; then
+        if [ $interactive -eq 1 ]; then
+            # Allows us to read user input below, assigns stdin to keyboard
+            exec < /dev/tty
+
+            while true; do
+                msg "Perform fix? [Y = fix and exit; n = commit anyway] "
+                case $(read_decision) in
+                    [Yy] )
+                        fix_files "${files[@]}"
+                        return 1;
+                        ;;
+                    [Nn] )
+                        return 0
+                        ;;
+                    * )
+                        msgln 'Please answer "y" or "n" for "yes" or "no"'
+                        ;;
+                esac
+            done
+
+            # Close STDIN
+            exec <&-
+        else
+            fix_files "${files[@]}"
+            return 1
+        fi
+    fi
+}
+
+main

@@ -1,0 +1,6 @@
+{
+    "data":"",
+    "error_code": 1,
+    "message": "Invalid request: 'success_url' is not set",
+    "result": false
+}

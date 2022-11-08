@@ -1,0 +1,24 @@
+{
+    "request": {
+        "urlPath": "/api/public/get/pay/kod.api.php",
+        "queryParameters" : {
+            "kod" : {
+                "matches" : "^111[0-9][0-9][0-9]$"
+            }
+        },
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "jsonBody": {
+            "error": false,
+            "status": "success",
+            "message": "Успешно",
+            "opid": "{{randomValue length=6 type='NUMERIC'}}"
+        },
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "transformers": ["response-template"]
+    }
+}

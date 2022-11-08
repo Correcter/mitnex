@@ -1,0 +1,25 @@
+{
+    "request": {
+        "urlPath": "/api/channels",
+        "method": "POST"
+    },
+    "response": {
+        "status": 201,
+        "jsonBody": {
+            "data": {
+                "customer_id": "e98b0091-a6f2-4fd4-abc7-f1a8e12f0369",
+                "id": "{{randomValue type='UUID'}}",
+                "name": "{{jsonPath request.body '$.name'}}",
+                "description": "{{jsonPath request.body '$.description'}}",
+                "receiver_currency": "{{jsonPath request.body '$.receiver_currency'}}",
+                "pay_currency": "{{jsonPath request.body '$.pay_currency'}}",
+                "address": "MTPxKqL4muzW1WQJY5khpYQwpjANZkScBU",
+                "project_id": "36ba46e2-2cd9-4d9f-a740-9dac7e75eead",
+                "custom_id": "{{jsonPath request.body '$.custom_id'}}",
+                "uri": "{{{pickRandom 'bitcoin' 'litecoin' 'ethereum'}}}:MTPxKqL4muzW1WQJY5khpYQwpjANZkScBU",
+                "hosted_page_url":"https:\/\/business-hosted.cryptopay.me\/channels\/e98b0091-a6f2-4fd4-abc7-f1a8e12f0369"
+            }
+        },
+        "transformers": ["response-template"]
+    }
+}

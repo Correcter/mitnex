@@ -1,0 +1,96 @@
+{
+  "items": [
+    {
+      "id": 5,
+      "type": "TRIGGER",
+      "detail": "freespin.campaign.default.description.key",
+      "title": "trigger campaign 1",
+      "source": "slotegrator",
+      "status": "COMPLETED",
+      "wageringPeriodInDays": 72,
+      "startDate": "2020-01-24T21:00:00.000+0000",
+      "endDate": "2020-05-12T21:00:00.000+0000",
+      "parameters": {
+        "count": 5,
+        "betAmount": 1.3,
+        "linesCount": 4,
+        "multiplicator": 1,
+        "denomination": 2,
+        "wager": 40,
+        "wageringTime": 72,
+        "payout": 1,
+        "daysToActivate": 4,
+        "offer": "DEPOSIT",
+        "delayHours": 2,
+        "winAmountLimitsEnabled": true,
+        "winAmountLimits": {
+          "RUB": 300,
+          "USD": 10
+        }
+      },
+      "games": [
+        {
+          "id": 1,
+          "externalId": "015f33aa30a1c420f4792e40064e9c90e9b9b33c",
+          "source": "slotegrator",
+          "name": "golden axe",
+          "image": "/uploads/axe.jpg",
+          "hasDemo": false
+        },
+        {
+          "id": 2,
+          "externalId": "015f33aa30a1c420f4792e40064e9c90e9b9b33c",
+          "source": "slotegrator",
+          "name": "kick master",
+          "image": "/uploads/kick_master.jpg",
+          "hasDemo": true
+        }
+      ],
+      "description": null,
+      "createdAt": "2020-04-10T04:56:09.000+0000",
+      "updatedAt": "2020-05-08T03:50:51.000+0000"
+    },
+    {
+      "id": 6,
+      "type": "TRIGGER",
+      "detail": "freespin.campaign.default.description.key",
+      "title": "trigger campaign 2",
+      "source": "slotegrator",
+      "status": "COMPLETED",
+      "wageringPeriodInDays": 72,
+      "startDate": "2020-01-24T21:00:00.000+0000",
+      "endDate": "2020-05-12T21:00:00.000+0000",
+      "parameters": {
+        "count": 5,
+        "betAmount": 1.3,
+        "linesCount": 4,
+        "multiplicator": 1,
+        "denomination": 2,
+        "wager": 40,
+        "wageringTime": 72,
+        "payout": 1,
+        "daysToActivate": 4,
+        "offer": "DEPOSIT",
+        "delayHours": 1,
+        "winAmountLimitsEnabled": false,
+        "winAmountLimits": {
+          "RUB": 300,
+          "USD": 10
+        }
+      },
+      "games": [
+        {
+          "id": 1,
+          "externalId": "015f33aa30a1c420f4792e40064e9c90e9b9b33c",
+          "source": "slotegrator",
+          "name": "kick master",
+          "image": "/uploads/kick_master.jpg",
+          "hasDemo": true
+        }
+      ],
+      "description": null,
+      "createdAt": "2020-04-10T04:56:09.000+0000",
+      "updatedAt": "2020-05-08T03:50:51.000+0000"
+    }
+  ]
+}

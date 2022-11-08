@@ -1,0 +1,12 @@
+{
+    "request": {
+        "urlPath": "/payboy.money/api-partner/v1",
+        "bodyPatterns": [],
+        "method": "POST"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "payboy.money/api-partner_v1.json",
+        "transformers": ["response-template"]
+    }
+}

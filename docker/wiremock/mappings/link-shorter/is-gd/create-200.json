@@ -1,0 +1,11 @@
+{
+  "priority": 2,
+  "request": {
+    "urlPattern": "/is-gd/create.php\\?format=(.*)&url=(.*)",
+    "method": "POST"
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "link-shorter/is-gd/create.json"
+  }
+}

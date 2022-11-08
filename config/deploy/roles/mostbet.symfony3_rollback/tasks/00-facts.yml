@@ -1,0 +1,20 @@
+- name: Get previous migration version.
+  shell: "cat {{symfony_project_root}}/current/OLD_MIGRATION_VERSION"
+  register: symfony_old_migration_version_output
+
+- name: Get previous version directory.
+  shell: "cat {{symfony_project_root}}/current/OLD_RELEASE_DIRECTORY"
+  register: symfony_old_release_dir_output
+
+- name: Get current version directory.
+  shell: "readlink -f {{symfony_project_root}}/current"
+  register: symfony_current_release_dir_output
+
+- name: Set previous migration version.
+  set_fact: symfony_old_migration_version={{symfony_old_migration_version_output.stdout}}
+
+- name: Set previous version directory.
+  set_fact: symfony_old_release_dir={{symfony_old_release_dir_output.stdout}}
+
+- name: Set current release version
+  set_fact: symfony_current_release={{symfony_current_release_dir_output.stdout}}

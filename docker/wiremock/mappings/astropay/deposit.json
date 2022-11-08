@@ -1,0 +1,12 @@
+{
+    "request": {
+        "urlPath": "/astropay/deposit/init",
+        "method": "POST"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "astropay/deposit.json",
+        "fixedDelayMilliseconds": 800,
+        "transformers": ["response-template"]
+    }
+}

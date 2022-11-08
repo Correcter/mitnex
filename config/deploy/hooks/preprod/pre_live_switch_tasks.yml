@@ -1,0 +1,37 @@
+---
+#- name: Clear crontab
+#  action: shell crontab -r
+#  ignore_errors: yes
+#
+#- name: Wait for cron processes
+#  action: shell bash -c 'flock /tmp/crontab_app_harvest_betradar-odds-live-cycle echo && flock /tmp/crontab_expire-pregame-lines echo'
+#
+#- name: Check for primary host
+#  action: shell grep -Eq 'eth0:.+' /run/network/ifstate || grep -q 'h2-mostbet-ru' /etc/hostname
+#  register: is_primary_host
+#  ignore_errors: yes
+
+#- name: Migrate database
+#  action: shell {{symfony_project_php_path}} {{symfony_console}} doctrine:migrations:migrate --no-interaction
+#  when: is_primary_host is success or inventory_hostname == "dev-mostbet"
+#
+#- name: Install crontab
+#  action: shell echo SYMFONY_ENV=prod | cat - {{symfony_current_release_dir}}{{symfony_project_crontab}} | crontab
+#  when: is_primary_host is success
+
+- name: Copy node_modules from previous release - remove
+  file: path={{symfony_current_release_dir}}/node_modules state=absent
+  when: symfony_project_copy_vendor == True
+
+- name: Copy node_modules from previous release - copy
+  shell: '[ -d "{{symfony_project_root}}/current/node_modules" ] && cp -r {{symfony_project_root}}/current/node_modules {{symfony_current_release_dir}}/ || echo "Nothing to copy"'
+  when: symfony_project_copy_vendor == True
+
+- name: Run frontend desktop assets builder
+  action: shell {{symfony_current_release_dir}}/frontend.sh desktop,mobile prod chdir={{symfony_current_release_dir}}
+  register: frontend_sh
+  failed_when: frontend_sh.rc != 0
+
+#- name: Run lexik stuff
+#  action: shell {{symfony_project_php_path}} {{symfony_console}} lexik:translations:import --case-insensitive --domains=FOSUserBundle,HWIOAuthBundle,locales,slinewidget,messages,refill_method,security,validators,promo --no-interaction
+#  when: is_primary_host is success

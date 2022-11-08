@@ -1,0 +1,11 @@
+{
+    "request": {
+        "url": "/commerce_gate_new/api/payment_form/configure",
+        "method": "POST"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "commerce_gate_new/create.json",
+        "transformers": ["response-template"]
+    }
+}

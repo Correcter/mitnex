@@ -1,0 +1,11 @@
+{
+  "request" : {
+    "urlPath" : "/oauth/userinfo",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "transformers": ["response-template"],
+    "bodyFileName": "oauth/getUserInfo.json"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "request": {
+    "urlPath": "/reward-service/v1/rewards",
+    "method": "GET"
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "reward/adapter/rewardsList.json"
+  }
+}

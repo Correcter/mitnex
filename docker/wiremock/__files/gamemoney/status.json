@@ -1,0 +1,21 @@
+{
+    "project": 1,
+    "type": "skinpay",
+    "wallet": "88326736363",
+    "net_amount": "1000.0000",
+    "amount": "1000.0000",
+    "recieved_amount": "1000.0000",
+    "time": "1636115287",
+    "invoice": "7238479374",
+    "user": "3632",
+    "project_invoice": "2648",
+    "currency_project": "RUB",
+    "currency_user": "RUB",
+    "date_create": "2021-11-05 15:28:07",
+    "date_pay": "2021-11-05 15:28:07",
+    "state": "success",
+    "rand": "4c278d54694ce79b18f961be98cb845464c32950ff7f8f66",
+    "paid": 1,
+    "status": "Paid",
+    "signature": "yvA7L1zeYqIpwa9eP3jr5BCho4vm0+KfywTddGS4BnwBV8w6xT8E8bi6Cy\/vRxj25RnuA+Y1K0wh8ppwjN2cdLaNbVDE5VlOTJtf0p0O+URlHSE+HwSYeohKw1xhEMCWPaDCrgpuOWklLorVDLO8aUH7+BatRCn\/vVpHweEGn3\/qU7+TQcQ2Y2KyYRz9hoZdgg1nSt87RYy6Lrw9m7ygIcGvL8Y5oOlflrmS24GLngRr8GzDSDqK4pSSKJqdfh5Qf0ltptXcW1tEfOq2hRSyb+pDSHYlvuQoXeYr4MH\/a4vUfjOuHkNqx6YwLgnZgbLGgAmRfBK3HEEwccqfuaNWBg=="
+}

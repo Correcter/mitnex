@@ -1,0 +1,11 @@
+{
+    "request": {
+        "urlPath": "/user/balance",
+        "bodyPatterns": [],
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "mostbet-bonus/bonus/get_balance_list.json"
+    }
+}

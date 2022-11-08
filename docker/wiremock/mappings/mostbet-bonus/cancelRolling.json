@@ -1,0 +1,11 @@
+{
+  "request": {
+    "urlPattern" : "/bonus/(.*)/rolling",
+    "bodyPatterns": [],
+    "method": "DELETE"
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "mostbet-bonus/cancelRolling.json"
+  }
+}

@@ -1,0 +1,10 @@
+{
+    "request": {
+        "urlPattern": "^\/v1\/tourneys\/([a-z]*)\/leaderboard\\?page=([0-9]*)&itemsOnPage=([0-9]*)",
+        "method": "GET"
+  },
+    "response": {
+        "status": 200,
+        "bodyFileName": "casino/integration/casinoApp/getTourneyLeaderboard.json"
+    }
+}

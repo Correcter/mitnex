@@ -1,0 +1,4 @@
+{
+    "status": true,
+    "process_id": "{{randomValue length=12 type='ALPHANUMERIC'}}"
+}

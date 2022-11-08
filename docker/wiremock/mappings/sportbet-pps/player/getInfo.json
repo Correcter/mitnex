@@ -1,0 +1,11 @@
+{
+  "request": {
+    "urlPath": "/playerinfo",
+    "bodyPatterns": [],
+    "method": "GET"
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "sportbet-pps/player/getInfo.json"
+  }
+}

@@ -1,0 +1,11 @@
+{
+    "request": {
+        "urlPath": "/interkassa/refill/create",
+        "method": "POST"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "interkassa/refill_alias.json",
+        "transformers": ["response-template"]
+    }
+}

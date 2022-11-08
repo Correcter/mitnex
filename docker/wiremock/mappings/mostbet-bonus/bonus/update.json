@@ -1,0 +1,10 @@
+{
+    "request": {
+        "urlPattern": "/bonus/(.*)",
+        "method": "DELETE"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "mostbet-bonus/bonus/successResponse.json"
+    }
+}

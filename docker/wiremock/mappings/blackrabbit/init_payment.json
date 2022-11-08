@@ -1,0 +1,10 @@
+{
+  "request": {
+    "urlPath": "/blackrabbit/pspay/init_payment",
+    "method": "POST"
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "blackrabbit/init_payment.xml"
+  }
+}

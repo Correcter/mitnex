@@ -1,0 +1,21 @@
+{
+    "error": {
+        "code": 0,
+        "description": null
+    },
+    "response": {
+        "id": "2001",
+        "merchant_id": "{{jsonPath request.body '$.merchant_id'}}",
+        "status": 2,
+        "client_id": "{{jsonPath request.body '$.client.id'}}",
+        "amount": {{jsonPath request.body '$.payment_amount'}},
+        "currency": "UZS",
+        "external_transaction_id": "ui19259",
+        "pay_url": "<iframe src=\"https://freelanceme.kz/payment/pay/checking?token=42beab09ed3e565de00f997a9599ca25\"></iframe>",
+        "iframe_url": "https://freelanceme.kz/payment/pay/checking?token=42beab09ed3e565de00f997a9599ca25",
+        "lifetime": "7200",
+        "created_at": 1605607974,
+        "is_test": 0,
+        "lang": "uz-UZ"
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "status": true,
+    "statusCode": 200,
+    "statusMessage": "Wiremock payment result uzcard_pay",
+    "receiverName": "Great and Terrible",
+    "chequeID": "{{randomValue length=4 type='NUMERIC'}}",
+    "paymentID": "{{randomValue length=4 type='NUMERIC'}}"
+}

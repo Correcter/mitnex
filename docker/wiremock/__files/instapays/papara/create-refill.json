@@ -1,0 +1,6 @@
+{
+    "status" : "success",
+    "code" : 100,
+    "redirect_url" : "https://instacheckout.co?transaction_id={{formData request.body 'form' urlDecode=true}}{{form.transaction_id}}&hash={{form.hash}}",
+    "message" : "Request saved successfully."
+}

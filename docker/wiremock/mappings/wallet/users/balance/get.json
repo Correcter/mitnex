@@ -1,0 +1,10 @@
+{
+    "request": {
+        "urlPattern": "/wallet/api/domains/null/users/null/accounts/null/units/null/balance",
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "wallet/users/balance/get.json"
+    }
+}

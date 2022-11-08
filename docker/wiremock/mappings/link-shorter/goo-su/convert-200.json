@@ -1,0 +1,11 @@
+{
+  "priority": 2,
+  "request": {
+    "urlPattern": "/goo-su/api/convert\\?url=(.*)&token=(.*)",
+    "method": "POST"
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "link-shorter/goo-su/convert.json"
+  }
+}

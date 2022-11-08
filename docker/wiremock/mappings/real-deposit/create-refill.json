@@ -1,0 +1,17 @@
+{
+    "request": {
+        "urlPath": "/real_deposit/init-checkout",
+        "method": "POST"
+    },
+    "response": {
+        "status": 200,
+        "jsonBody": {
+            "status":0,
+            "description":"some-descrption",
+            "redirect_url":"some-redirect-url",
+            "auth_token":"some-auth-token",
+            "version":1.2,
+            "signature":"ae9b01a9ff196e175a69435895f3c34e47901b4e5b9cc2a9f412235acec61d0ddb0d0e9901d19885678e4efd07524ed5"
+        }
+    }
+}

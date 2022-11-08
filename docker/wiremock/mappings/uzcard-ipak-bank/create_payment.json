@@ -1,0 +1,14 @@
+{
+    "request": {
+        "method": "POST",
+        "url": "/webapi/fast-pay/go-p2p-pay",
+        "bodyPatterns": [{
+            "matches": ".*code.*"
+        }]
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "uzcard-ipak-bank/create_payment.json",
+        "transformers": ["response-template"]
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "request": {
+      "urlPath": "/appex_recurrent_set/rest/start",
+      "method": "POST"
+    },
+    "response": {
+      "status": 200,
+      "bodyFileName": "appex/payment/start-response.json",
+      "transformers": ["response-template"]
+    }
+}

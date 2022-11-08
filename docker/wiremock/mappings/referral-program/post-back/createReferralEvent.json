@@ -1,0 +1,16 @@
+{
+    "request": {
+        "urlPath": "/referral-program/post-back",
+        "method": "POST",
+        "headers": {
+            "projectUUID": {
+                "equalTo": "44ef2811-5927-423d-bc9f-f69bbaf7773e"
+            }
+        }
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "referral-program/participant/createReferralEvent.json",
+        "transformers": ["response-template"]
+    }
+}

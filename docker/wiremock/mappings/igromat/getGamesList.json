@@ -1,0 +1,10 @@
+{
+  "request": {
+    "urlPath": "/igromat/game/list",
+    "method": "GET"
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "igromat/gamesList.json"
+  }
+}

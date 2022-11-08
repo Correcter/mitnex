@@ -1,0 +1,11 @@
+{
+    "request": {
+        "urlPath": "/transaction/create",
+        "method": "POST"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "settlepay/pay.json",
+        "transformers": ["response-template"]
+    }
+}

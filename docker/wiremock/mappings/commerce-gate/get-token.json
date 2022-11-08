@@ -1,0 +1,11 @@
+{
+    "request": {
+        "urlPath": "/commerce-gate/get-token",
+        "bodyPatterns": [],
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "body" : "token"
+    }
+}

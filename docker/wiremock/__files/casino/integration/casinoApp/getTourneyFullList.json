@@ -1,0 +1,89 @@
+{
+    "tournaments": [
+        {
+            "name": "test7",
+            "mediaTitle": "casino.tourney.test7.media.title",
+            "startDate": "2020-07-01T12:57:57.000+0000",
+            "endDate": "2020-12-30T12:49:00.000+0000",
+            "settings": {
+                "hidePrizes": true,
+                "visibleForAll": true,
+                "prizePool": {
+                    "count": 20,
+                    "type": "FS"
+                },
+                "userListId": 1,
+                "badges": [
+                    "Exclusive",
+                    "VIP"
+                ]
+            }
+        },
+        {
+            "name": "porshe",
+            "mediaTitle": "casino.tourney.porshe.media.title",
+            "startDate": "2020-09-02T09:24:45.000+0000",
+            "endDate": "2020-12-31T09:22:52.000+0000",
+            "settings": {
+                "hidePrizes": false,
+                "visibleForAll": false,
+                "prizePool": {
+                    "count": null,
+                    "type": "TRANSLATE_KEY"
+                },
+                "userListId": null,
+                "badges": []
+            }
+        },
+        {
+            "name": "test9",
+            "mediaTitle": "casino.tourney.test9.media.title",
+            "startDate": "2020-09-15T09:20:41.000+0000",
+            "endDate": "2020-09-30T09:20:43.000+0000",
+            "settings": {
+                "hidePrizes": false,
+                "visibleForAll": false,
+                "prizePool": {
+                    "count": null,
+                    "type": "EUR"
+                },
+                "userListId": null,
+                "badges": [
+                    "Exclusive"
+                ]
+            }
+        },
+        {
+            "name": "101luckyman",
+            "mediaTitle": "casino.tourney.101luckyman.media.title",
+            "startDate": "2020-07-20T15:15:45.000+0000",
+            "endDate": "2020-11-26T15:04:25.000+0000",
+            "settings": {
+                "hidePrizes": false,
+                "visibleForAll": false,
+                "prizePool": {
+                    "count": 695,
+                    "type": "USD"
+                },
+                "userListId": null,
+                "badges": []
+            }
+        },
+        {
+            "name": "qwer",
+            "mediaTitle": "casino.tourney.qwer.media.title",
+            "startDate": "2020-07-28T14:55:14.000+0000",
+            "endDate": "2020-08-27T14:50:15.000+0000",
+            "settings": {
+                "hidePrizes": false,
+                "visibleForAll": false,
+                "prizePool": {
+                    "count": null,
+                    "type": "EUR"
+                },
+                "userListId": null,
+                "badges": null
+            }
+        }
+    ]
+}

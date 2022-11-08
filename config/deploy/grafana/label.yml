@@ -1,0 +1,57 @@
+---
+- hosts: 127.0.0.1
+  connection: local
+  gather_facts: no
+
+  vars_prompt:
+    - name: application
+      prompt: "Choose application\n[1] - com\n[2] - ru\n[3] - pps\n"
+      private: no
+    - name: message
+      prompt: "Enter message"
+      private: no
+
+  vars_files:
+    - credentials.yml
+
+  tasks:
+    - name: Checking option COM...
+      set_fact: app=com
+      when: ( application == "1" )
+
+    - name: Checking option RU...
+      set_fact: app=ru
+      when: ( application == "2" )
+
+    - name: Checking option PPS...
+      set_fact: app=pps
+      when: ( application == "3" )
+
+    - name: Checking option validity...
+      fail: msg="Option is not supported"
+      when: app is not defined
+
+    - command: whoami
+      register: local_username
+      ignore_errors: yes
+
+    - command: hostname
+      register: local_hostname
+      ignore_errors: yes
+
+    - name: Send label to Grafana
+      ignore_errors: yes
+      uri:
+        url: "{{item.url}}"
+        method: POST
+        headers:
+          Authorization: "{{item.token}}"
+        body:
+          text: '{{ local_username.stdout }}@{{ local_hostname.stdout }}: {{ message }}'
+          tags:
+            - 'manual_interruption'
+            - 'mostbet_{{ app }}'
+        body_format: json
+        status_code: 200
+      with_items:
+        - {url: "{{ grafana_url }}", token: "{{ grafana_token }}"}

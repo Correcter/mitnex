@@ -1,0 +1,28 @@
+{
+    "request": {
+        "urlPath": "/api/public/get/pay/api.php",
+        "queryParameters" : {
+            "a" : {
+                "matches" : "^1[3-9][0-9][0-9][0-9](.[0]+)?$"
+            }
+        },
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "jsonBody": {
+            "error": false,
+            "opid": "{{randomValue length=6 type='NUMERIC'}}",
+            "m_id": "",
+            "status": "success",
+            "name": "IVAN IVANOV",
+            "phone": "+99893*****53",
+            "message": "Код успешно отправлен!",
+            "receiver": "1234567890123456"
+        },
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "transformers": ["response-template"]
+    }
+}

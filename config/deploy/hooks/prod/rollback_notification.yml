@@ -1,0 +1,32 @@
+- command: whoami
+  register: local_username
+  delegate_to: localhost
+  ignore_errors: yes
+  tags:
+    - rollback
+
+- command: hostname
+  register: local_hostname
+  delegate_to: localhost
+  ignore_errors: yes
+  tags:
+    - rollback
+
+- name: Notificate grafana about rollback
+  delegate_to: localhost
+  ignore_errors: yes
+  uri:
+    url: "{{item.url}}"
+    method: POST
+    headers:
+      Authorization: "{{item.token}}"
+    body:
+      text: '{{ local_username.stdout }}@{{ local_hostname.stdout }}: rollback from {{ symfony_current_release }} to {{ symfony_old_release_dir }}'
+      tags:
+          - 'rollback'
+          - '{{ inventory_hostname }}'
+          - 'mostbet_{{ mostbet_app }}'
+    body_format: json
+    status_code: 200
+  with_items:
+    - {url: "{{ grafana_url }}", token: "{{ grafana_token }}"}

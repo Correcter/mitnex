@@ -1,0 +1,8 @@
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODM2YzI0M2FmODk0NWRmYjFjMjgwZWZhNTIxMjM1ZSIsImF1ZCI6IndhbGxldCIsIm5iZiI6MTYzOTA3OTE0NCwicmVzb3VyY2UiOiJBUFAiLCJyb2xlcyI6WyJBUFBfQUNDRVNTIl0sImd1aWQiOiI4NzM3MzdjYmZkZTk0OGRkOWFkNDhmMmIzNTQ1NGRlYiIsImV4cCI6MTYzOTA4MDk0NCwianRpIjoiYzgzNWI0OTItYzI1Ny00Y2MwLTljNzAtYmE0MmJjMjg5ZDc3In0.LF-0fFNfYaQTV5_Q3q6u4gmeJzt21xZZa1_3ZE8RnsYd4nlpDq0Jd4FG9-2yBHUIZNTGzKS-wanIdmCyTaK5rg",
+    "redirectUrl": "https://sandbox-checkout.luqapay.com/init-payment?token=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODM2YzI0M2FmODk0NWRmYjFjMjgwZWZhNTIxMjM1ZSIsImF1ZCI6IndhbGxldCIsIm5iZiI6MTYzOTA3OTE0NCwicmVzb3VyY2UiOiJBUFAiLCJyb2xlcyI6WyJBUFBfQUNDRVNTIl0sImd1aWQiOiI4NzM3MzdjYmZkZTk0OGRkOWFkNDhmMmIzNTQ1NGRlYiIsImV4cCI6MTYzOTA4MDk0NCwianRpIjoiYzgzNWI0OTItYzI1Ny00Y2MwLTljNzAtYmE0MmJjMjg5ZDc3In0.LF-0fFNfYaQTV5_Q3q6u4gmeJzt21xZZa1_3ZE8RnsYd4nlpDq0Jd4FG9-2yBHUIZNTGzKS-wanIdmCyTaK5rg&successRedirectUrl=http%3A%2F%2Fmostbet.dev%2Ffinance%2Frefill_account%3Fstatus%3Dsuccess&failRedirectUrl=http%3A%2F%2Fmostbet.dev%2Ffinance%2Frefill_account%3Fstatus%3Dfailure",
+    "transactionId": "{{randomValue length=32 type='ALPHANUMERIC'}}",
+    "code": "00000",
+    "message": "APPROVED",
+    "status": "APPROVED"
+}

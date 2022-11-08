@@ -1,0 +1,67 @@
+{
+  "channels": [
+    {
+      "channel": "WALLET_OK",
+      "minAmount": 100,
+      "maxAmount": 41270,
+      "currency": "RUR",
+      "iframe": "none",
+      "paymentType": "both",
+      "title": "Кошелек ЦУПИС (тест ok)"
+    },
+    {
+      "channel": "WALLET_FAIL",
+      "minAmount": 100,
+      "maxAmount": 41270,
+      "currency": "RUR",
+      "iframe": "none",
+      "paymentType": "both",
+      "title": "Кошелек ЦУПИС (тест fail)"
+    },
+    {
+      "channel": "CARD_OK",
+      "minAmount": 100,
+      "maxAmount": 41270,
+      "currency": "RUR",
+      "iframe": "iframe",
+      "paymentType": "pull",
+      "title": "Банковская карта (тест ok)"
+    },
+    {
+      "channel": "CARD_FAIL",
+      "minAmount": 100,
+      "maxAmount": 41270,
+      "currency": "RUR",
+      "iframe": "iframe",
+      "paymentType": "both",
+      "title": "Банковская карта (тест fail)"
+    },
+    {
+      "channel": "CARD_OK_FAIL",
+      "minAmount": 100,
+      "maxAmount": 41270,
+      "currency": "RUR",
+      "iframe": "iframe",
+      "paymentType": "both",
+      "title": "Банковская карта (тест ok|fail)"
+    },
+    {
+      "channel": "CARD",
+      "minAmount": 100,
+      "maxAmount": 41270,
+      "currency": "RUR",
+      "iframe": "iframe",
+      "paymentType": "both",
+      "title": "Банковская карта"
+    },
+    {
+      "channel": "WALLET",
+      "minAmount": 100,
+      "maxAmount": 41270,
+      "currency": "RUR",
+      "iframe": "none",
+      "paymentType": "both",
+      "title": "Кошелек ЦУПИС"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+    "jsonrpc":"2.0",
+    "result": {
+            "1000018":{"id":1000018,"check_status":"accepted"}
+    },
+    "id":null
+}

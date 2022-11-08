@@ -1,0 +1,16 @@
+{
+    "request": {
+        "urlPath": "/eupago/payment",
+        "method": "POST"
+    },
+    "response": {
+        "status": 200,
+        "jsonBody": {
+            "sucesso": true,
+            "estado": 0,
+            "resposta": "OK",
+            "valor": "3.00000",
+            "referencia": "000001236"
+        }
+    }
+}

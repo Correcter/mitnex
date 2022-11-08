@@ -1,0 +1,10 @@
+{
+  "priority": 1,
+  "request": {
+    "urlPattern": "/goo-su/api/convert\\?url=cannot-shorten.com&token=(.*)",
+    "method": "POST"
+  },
+  "response": {
+    "status": 400
+  }
+}

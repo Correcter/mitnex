@@ -1,0 +1,9 @@
+[program:licensing_consumer]
+command=/var/www/mostbet/current/bin/console --no-interaction --env=prod rabbitmq:consumer -l255 -m10000 licensing_payout --without-signals
+process_name=%(process_num)s
+numprocs=3
+user=mostbet
+autorestart=true
+startretries=20
+redirect_stderr=true
+stdout_logfile=/var/log/project_log/licensing_rabbitmq_payout_consumer.log

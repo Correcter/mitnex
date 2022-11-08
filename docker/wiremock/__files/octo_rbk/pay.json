@@ -1,0 +1,13 @@
+{
+    "error": 0,
+    "errMessage": null,
+    "data": {
+        "referenceId": "{{jsonPath request.body '$.referenceId'}}",
+        "status": "otp_wait",
+        "maskedPhone": "998*****{{randomValue length=4 type='NUMERIC'}}",
+        "otpTtl": 120,
+        "commissionAmount": 0,
+        "totalAmount": "{{jsonPath request.body '$.amount'}}",
+        "receiverName": "IVAN IVANOVICH"
+    }
+}

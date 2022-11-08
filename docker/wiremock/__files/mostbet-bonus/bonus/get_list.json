@@ -1,0 +1,34 @@
+{
+    "data": [
+        {
+            "identifier": "5da70f8bf152512",
+            "status": "FROZEN",
+            "balance": 1200,
+            "rollingBalance": 0,
+            "requiredRollingBalance": 6250,
+            "type": "FIRST_REFILL_SPORT",
+            "applicationType": "SPORT",
+            "config": {
+                "wager": 1,
+                "coefficientPayout": "3"
+            },
+            "expirationDate": "2019-11-21 01:19:03",
+            "createdAt": "2019-10-22 01:19:03"
+        },
+        {
+            "identifier": "5da70f8bf152512",
+            "status": "ACTIVE",
+            "balance": 1600,
+            "rollingBalance": 0,
+            "requiredRollingBalance": 6250,
+            "type": "FIRST_REFILL_CASINO",
+            "applicationType": "SPORT",
+            "config": {
+                "wager": 1.01,
+                "coefficientPayout": "3.2"
+            },
+            "expirationDate": "2019-11-21 01:19:03",
+            "createdAt": "2019-10-22 01:19:03"
+        }
+    ]
+}

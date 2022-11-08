@@ -1,0 +1,13 @@
+{
+    "request": {
+        "url": "/api/v2/guest/p2p/prepayment",
+        "method": "POST"
+    },
+    "response": {
+        "headers": {
+            "Content-Type": "APPLICATION/JSON;charset=\"utf-8\""
+        },
+        "status": 200,
+        "bodyFileName": "joyda/prepayment.json"
+    }
+}

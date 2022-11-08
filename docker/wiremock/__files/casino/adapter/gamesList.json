@@ -1,0 +1,22 @@
+{
+  "elements": [
+    {
+      "uuid": "301202",
+      "title": "Game 1",
+      "image": "/url/to/img1.png",
+      "provider": "Provider 1",
+      "source": "b2b",
+      "extraParams": {
+          "id": 5,
+          "name": "text extra params"
+      }
+    },
+    {
+      "uuid": "371762",
+      "title": "Game 2",
+      "image": "/url/to/img2.png",
+      "provider": "Provider 2",
+      "source": "b2b"
+    }
+  ]
+}

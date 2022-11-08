@@ -1,0 +1,20 @@
+{
+  "elements": [
+    {
+      "name": "Пет***",
+      "currency": "rub",
+      "amount": 100.0000,
+      "gameId": 1,
+      "gameName": "pokerok",
+      "gameImage": "image"
+    },
+    {
+      "name": "Vas***",
+      "currency": "rub",
+      "amount": 560.0000,
+      "gameId": 2,
+      "gameName": "some_game",
+      "gameImage": "image"
+    }
+  ]
+}

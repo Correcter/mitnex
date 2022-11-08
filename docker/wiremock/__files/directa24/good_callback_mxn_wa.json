@@ -1,0 +1,35 @@
+{
+    "user_id": "11",
+    "deposit_id": 600000019,
+    "invoice_id": "989409592",
+    "country": "MX",
+    "currency": "MXN",
+    "local_amount": 1000.00,
+    "usd_amount": 1000.00,
+    "bonus_amount": 100.00,
+    "bonus_relative": "false",
+    "payment_method": "WA",
+    "payment_type": "VOUCHER",
+    "status": "COMPLETED",
+    "payer": {
+        "document": "17532655253",
+        "document_type": "CURP",
+        "email": "johnSmith1@directa24.com",
+        "first_name": "John",
+        "last_name": "Smith",
+        "address": {
+            "city": "Sao Paulo",
+            "state": "SP",
+            "street": "John Street 2453",
+            "zip_code": "938475-234"
+        }
+    },
+    "fee_amount": 2.50,
+    "fee_currency": "USD",
+    "card_detail": {
+        "card_holder": "John Smith",
+        "brand": "Visa",
+        "masked_card": "1234 56** **** 6789",
+        "expiration": "2023-12"
+    }
+}

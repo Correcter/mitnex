@@ -1,0 +1,21 @@
+{
+    "code": 0,
+    "data": [
+        {
+            "identifier": "1001",
+            "status": "active",
+            "amount": {
+                "value": "2000.00",
+                "currency": "RUB"
+            }
+        },
+        {
+            "identifier": "1002",
+            "status": "active",
+            "amount": {
+                "value": "3000.00",
+                "currency": "RUB"
+            }
+        }
+    ]
+}

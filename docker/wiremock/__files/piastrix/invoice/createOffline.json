@@ -1,0 +1,17 @@
+{
+    "data":
+    {
+        "data":
+        {
+            "en": "No manual. Please, pay invoice",
+            "ru": "Инструкция отсутствует. Пожалуйста, оплатите выставленный счет",
+            "uk": "Інструкція відсутня. Будь ласка, оплатіть рахунок"
+        },
+        "id": {{randomValue length=10 type='NUMERIC'}},
+        "method": "OFFLINE",
+        "url": "OFFLINE"
+    },
+    "error_code": 0,
+    "message": "Ok",
+    "result": true
+}

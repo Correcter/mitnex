@@ -1,0 +1,39 @@
+{
+    "mappings": [
+        {
+            "name": "Check Success",
+            "priority": 1,
+            "request": {
+                "urlPathPattern": "/octo_rbk/rbk/r/trans/pan2pan-confirm",
+                "bodyPatterns": [
+                    {
+                        "matchesJsonPath": "$[?(@.otp =~ /[1-7]([0-9]{5})/i)]"
+                    }
+                ],
+                "method": "POST"
+            },
+            "response": {
+                "status": 200,
+                "bodyFileName": "octo_rbk/check.json",
+                "transformers": ["response-template"]
+            }
+        },
+        {
+            "name": "Check Error",
+            "priority": 2,
+            "request": {
+                "urlPathPattern": "/octo_rbk/rbk/r/trans/pan2pan-confirm",
+                "bodyPatterns" : [
+                    {
+                        "matchesJsonPath" : "$[?(@.otp =~ /[8-9]([0-9]{5})/i)]"
+                    }
+                ],
+                "method": "POST"
+            },
+            "response": {
+                "status": 200,
+                "bodyFileName": "octo_rbk/check_error.json"
+            }
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+  "request": {
+    "urlPath": "/balance/operation/deposit",
+    "bodyPatterns": [],
+    "method": "POST"
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "mostbet-bonus/balance/deposit.json"
+  }
+}

@@ -1,0 +1,12 @@
+{
+    "request": {
+        "urlPath": "/directa24/v3/deposits",
+        "method": "POST"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "directa24/success.json",
+        "fixedDelayMilliseconds": 800,
+        "transformers": ["response-template"]
+    }
+}

@@ -1,0 +1,11 @@
+{
+  "request" : {
+    "url" : "/cupis/frontend-api/api/deposit/request",
+    "method" : "POST"
+  },
+  "response" : {
+    "status" : 200,
+    "bodyFileName": "cupis/frontend-api/deposit-request.json",
+    "transformers": ["response-template"]
+  }
+}

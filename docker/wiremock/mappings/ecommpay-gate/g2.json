@@ -1,0 +1,11 @@
+{
+    "request": {
+        "urlPath": "/ecommpay-gate/g2",
+        "bodyPatterns": [],
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "body" : "ecommpay-gate.local"
+    }
+}

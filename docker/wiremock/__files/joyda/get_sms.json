@@ -1,0 +1,11 @@
+{
+    "success":true,
+    "data":{
+        "status":"ok",
+        "amount":100000,
+        "operation_id":"{{randomValue length=6 type='NUMERIC'}}",
+        "receiver_name":"SHOIRA ATAJANOVA",
+        "message":"Код отправлен на 99893*****17"
+    },
+    "error":{}
+}

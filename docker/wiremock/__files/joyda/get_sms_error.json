@@ -1,0 +1,8 @@
+{
+    "success":false,
+    "data":{},
+    "error":{
+        "code":400,
+        "message":"СМС не отправлено"
+    }
+}

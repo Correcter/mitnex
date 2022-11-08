@@ -1,0 +1,36 @@
+---
+- name: Copy node_modules from previous release - remove
+  file: path={{symfony_current_release_dir}}/node_modules state=absent
+  when: symfony_project_copy_vendor == True
+
+- name: Copy node_modules from previous release - copy
+  shell: '[ -d "{{symfony_project_root}}/current/node_modules" ] && cp -r {{symfony_project_root}}/current/node_modules {{symfony_current_release_dir}}/ || echo "Nothing to copy"'
+  when: symfony_project_copy_vendor == True
+
+- name: Run frontend desktop assets builder
+  action: shell {{symfony_current_release_dir}}/frontend.sh desktop,mobile prod chdir={{symfony_current_release_dir}}
+  register: frontend_sh
+  failed_when: frontend_sh.rc != 0
+
+- name: Clear crontab
+  action: shell crontab -r
+  ignore_errors: yes
+
+- name: Wait for cron processes
+  action: shell bash -c 'flock /tmp/crontab_app_harvest_betradar-odds-live-cycle echo && flock /tmp/crontab_expire-pregame-lines echo'
+
+- name: Migrate database
+  action: shell export SYMFONY_APP={{symfony_project_app}} && {{symfony_project_php_path}} {{symfony_console}} doctrine:migrations:migrate --no-interaction
+  when: is_migration_host|bool
+
+- name: Install crontab
+  action: shell echo SYMFONY_ENV=prod | cat - {{symfony_current_release_dir}}{{symfony_project_crontab}} | crontab
+  when: is_crontab_host|bool
+
+- name: Run lexik stuff
+  action: shell export SYMFONY_APP={{symfony_project_app}} && {{symfony_project_php_path}} {{symfony_console}} lexik:translations:import --case-insensitive --domains=FOSUserBundle,HWIOAuthBundle,locales,slinewidget,messages,refill_method,security,validators,promo --no-interaction
+  when: is_migration_host|bool
+
+- name: Warmup translations cache
+  action: shell PHP_VALUE="memory_limit = 900M" DOCUMENT_ROOT={{symfony_current_release_dir}}/web DOCUMENT_URI=/app.php/api/v2/translations REQUEST_URI=/api/v2/translations QUERY_STRING="locales[]=en&locales[]=ru&locales[]=fr&locales[]=id&locales[]=tr&locales[]=sq&locales[]=uk&locales[]=sw&locales[]=kk&locales[]=pt_BR&locales[]=ka&locales[]=az&locales[]=be&locales[]=ro&locales[]=de&locales[]=es&locales[]=it&locales[]=th&locales[]=hi&locales[]=es_AG&locales[]=uz&locales[]=fa_IR&locales[]=cs&locales[]=pl&locales[]=bn&locales[]=no&locales[]=hu&locales[]=pt&locales[]=ur_PK&locales[]=hy&domains[]=messages&keys[]=scheb_two_factor.auth_code" SCRIPT_NAME=/app.php REQUEST_METHOD=GET SYMFONY_ENV=prod SERVER_PROTOCOL=HTTP/1.1 SCRIPT_FILENAME={{symfony_current_release_dir}}/web/app.php HTTP_HOST=uc3zxu6wdpmst.com REMOTE_ADDR=127.0.0.1 USER=www-data HOME=/var/www cgi-fcgi  -bind -connect /var/run/php/php7.1-fpm.sock
+  ignore_errors: yes

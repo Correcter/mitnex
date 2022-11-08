@@ -1,0 +1,21 @@
+---
+- name: hook | Reload php-fpm7.1
+  shell: sudo /usr/sbin/service php7.1-fpm reload
+  ignore_errors: yes
+
+- name: hook | Reload nginx
+  shell: sudo /usr/sbin/service nginx reload
+
+- name: restart supervisors
+  shell:
+    cmd: |
+      sudo supervisorctl status | grep -v STOPPED | awk '{ print $1 }' | xargs -n 1 -I {} -t sudo supervisorctl restart {}
+  ignore_errors: yes
+  when: is_supervisor_host|bool
+
+- name: update supervisors
+  shell:
+    cmd: |
+      sudo supervisorctl update
+  ignore_errors: yes
+  when: is_supervisor_host|bool

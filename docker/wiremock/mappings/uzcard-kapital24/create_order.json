@@ -1,0 +1,14 @@
+{
+    "request": {
+        "method": "POST",
+        "url": "/uzcard-kapital24/ru/api/index.php",
+        "bodyPatterns": [{
+            "matches": "(.*&|^)METHOD=fast_p2p.create($|&.*)"
+        }]
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "uzcard-kapital24/create.json",
+        "transformers": ["response-template"]
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "api": "true",
+    "error": "false",
+    "message": "Success",
+    "iframe_url": "https:\/\/www.payhera.com\/pay\/?provider={{formData request.body 'form' urlDecode=true}}{{form.site}}&username={{form.username}}&uid={{form.uid}}&transaction_id={{form.transaction_id}}",
+    "code": "200",
+    "request_id": "{{randomValue length=32 type='ALPHANUMERIC'}}"
+}

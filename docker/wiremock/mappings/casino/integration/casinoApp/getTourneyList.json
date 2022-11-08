@@ -1,0 +1,10 @@
+{
+  "request": {
+    "urlPath": "/v1/tourneys",
+    "method": "GET"
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "casino/integration/casinoApp/getTourneyList.json"
+  }
+}

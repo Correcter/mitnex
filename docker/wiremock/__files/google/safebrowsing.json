@@ -1,0 +1,40 @@
+{
+  "matches": [
+    {
+      "threatType": "SOCIAL_ENGINEERING",
+      "platformType": "WINDOWS",
+      "threat": {
+        "url": "http://s-mail-google.com/"
+      },
+      "cacheDuration": "300s",
+      "threatEntryType": "URL"
+    },
+    {
+      "threatType": "SOCIAL_ENGINEERING",
+      "platformType": "WINDOWS",
+      "threat": {
+        "url": "http://s-mail-google.com/one"
+      },
+      "cacheDuration": "300s",
+      "threatEntryType": "URL"
+    },
+    {
+      "threatType": "SOCIAL_ENGINEERING",
+      "platformType": "WINDOWS",
+      "threat": {
+        "url": "http://s-mail-google.com/two"
+      },
+      "cacheDuration": "300s",
+      "threatEntryType": "URL"
+    },
+    {
+      "threatType": "SOCIAL_ENGINEERING",
+      "platformType": "WINDOWS",
+      "threat": {
+        "url": "http://s-mail-google.com/three"
+      },
+      "cacheDuration": "300s",
+      "threatEntryType": "URL"
+    }
+  ]
+}

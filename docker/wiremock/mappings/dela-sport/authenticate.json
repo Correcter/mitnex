@@ -1,0 +1,10 @@
+{
+  "request": {
+    "urlPath": "/dela-sport/api/authenticate",
+    "method": "POST"
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "dela-sport/authenticate.json"
+  }
+}

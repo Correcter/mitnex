@@ -1,0 +1,55 @@
+---
+- hosts: "{{ variable_host }}"
+  roles:
+    - mostbet.symfony3
+
+  vars_files:
+    - grafana/credentials.yml
+
+  vars:
+    ignore_old_release: 'n'
+    ansible_user: mostbet
+    symfony_project_manage_composer: False
+
+    symfony_project_root: /var/www/mostbet
+    symfony_project_name: mostbet
+    symfony_project_console_command: 'bin/console'
+    symfony_project_composer_path: /usr/local/bin/composer
+    symfony_project_repo: git@gitlab.com:datsteam/mostbet/mostbet.com.git
+    symfony_project_env: prod
+
+    symfony_project_console_opts: '--no-debug'
+    symfony_project_copy_vendor: True
+    symfony_project_fire_migrations: false
+
+    symfony_project_branch: "{{ variable_branch }}"
+    symfony_project_lock: false
+    symfony_project_app: com
+    symfony_project_php_path: php
+    symfony_project_keep_releases: 5
+
+    symfony_project_crontab: /app/config/crontab/crontab
+
+    symfony_project_user:
+      - mostbet
+      - www-data
+
+    symfony_project_composer_opts: '--no-dev --optimize-autoloader --no-interaction'
+
+#    symfony_project_pre_run: hooks/prod/start_notification.yml
+#    symfony_project_post_run: hooks/prod/finish_notification.yml
+
+    symfony_project_post_folder_creation_tasks: hooks/post_folder_creation.yml
+    symfony_project_pre_cache_warmup_tasks: tasks/empty.yml
+    symfony_project_pre_live_switch_tasks: hooks/preprod/pre_live_switch_tasks.yml
+    symfony_project_post_live_switch_tasks: hooks/preprod/post_live_switch_my.yml
+
+    symfony_project_shared_folders:
+      - {name: logs, src: var/logs, path: var/logs}
+      - {name: odds, src: var/odds, path: var/odds}
+      - {name: secrets, src: var/secrets, path: var/secrets}
+      - {name: upload, src: web/upload, path: web/upload}
+
+    symfony_project_managed_folders:
+      - {name: cache, path: var/cache}
+      - {name: sessions, path: var/sessions}

@@ -1,0 +1,14 @@
+{
+    "request": {
+        "url": "/api/v2/guest/p2p/pay",
+        "method": "POST"
+    },
+    "response": {
+        "headers": {
+            "Content-Type": "APPLICATION/JSON;charset=\"utf-8\""
+        },
+        "status": 200,
+        "bodyFileName": "joyda/get_sms.json",
+        "transformers": ["response-template"]
+    }
+}

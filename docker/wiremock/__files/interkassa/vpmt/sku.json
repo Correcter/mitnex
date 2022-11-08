@@ -1,0 +1,38 @@
+{
+    "status": "ok",
+    "code": 0,
+    "data": [
+        {
+            "provider": "LIUA",
+            "skuCode": "UA_LI_TopUp",
+            "minSendPrice": 2,
+            "maxSendPrice": 40,
+            "minReceivePrice": 52.47,
+            "maxReceivePrice": 1049.43,
+            "sendCurrencyIso": "USD",
+            "receiveCurrencyIso": "UAH",
+            "description": "UAH 52.47-1049.43",
+            "benefits": "Mobile,Minutes",
+            "providerStatus": "active",
+            "fixedPrice": false,
+            "providerName": null,
+            "mode": "TopUp"
+        },
+        {
+            "provider": "LIUA",
+            "skuCode": "UA_LI_TopUp",
+            "minSendPrice": 2,
+            "maxSendPrice": 40,
+            "minReceivePrice": 52.47,
+            "maxReceivePrice": 1049.43,
+            "sendCurrencyIso": "USD",
+            "receiveCurrencyIso": "UAH",
+            "description": "UAH 52.47-1049.43",
+            "benefits": "Mobile,Minutes",
+            "providerStatus": "active",
+            "fixedPrice": true,
+            "providerName": null,
+            "mode": "TopUp"
+        }
+    ]
+}

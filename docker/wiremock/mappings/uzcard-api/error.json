@@ -1,0 +1,21 @@
+{
+    "request": {
+        "urlPath": "/api/public/get/pay/api.php",
+        "queryParameters" : {
+            "a" : {
+                "matches" : "^11[0-9][0-9][0-9](.[0]+)?$"
+            }
+        },
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "jsonBody": {
+            "error": true,
+            "message": "Нельзя перевести средства между одинаковыми картами"
+        },
+        "headers": {
+            "Content-Type": "application/json"
+        }
+    }
+}

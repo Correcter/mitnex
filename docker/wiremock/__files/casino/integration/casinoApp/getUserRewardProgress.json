@@ -1,0 +1,24 @@
+{
+    "items": [
+        {
+            "campaignId": 1,
+            "userId": 1,
+            "currency": "RUB",
+            "betCount": 30,
+            "betAmount": "300.04",
+            "progress": 3,
+            "rewardsGiven": 3,
+            "rewardsLimit": 15
+        },
+        {
+            "campaignId": 2,
+            "userId": 1,
+            "currency": "RUB",
+            "betCount": 3,
+            "betAmount": "900.55",
+            "progress": 7,
+            "rewardsGiven": 1,
+            "rewardsLimit": 10
+        }
+    ]
+}

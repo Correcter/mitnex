@@ -1,0 +1,44 @@
+- name: Send notification message via Telegram
+  delegate_to: localhost
+  ignore_errors: yes
+  telegram:
+    token: 480915656:AAFMd4U5IHDSqhkU05Y3wwH3lEb4DIV4hFQ
+    chat_id: -1001412478176
+    msg_format: markdown
+    msg: '{{ local_username.stdout }}@{{ local_hostname.stdout }}: deploy {{ inventory_hostname }} completed; Tag: {{ symfony_project_branch }}; '
+  tags:
+    - telegram
+
+- name: Send notification message via Telegram to dev command
+  telegram:
+      token: 480915656:AAFMd4U5IHDSqhkU05Y3wwH3lEb4DIV4hFQ
+      chat_id: "{{item.id}}"
+      msg_format: markdown
+      msg: '{{ local_username.stdout }}@{{ local_hostname.stdout }}: deploying {{symfony_project_branch}} to #{{ inventory_hostname }}'
+  delegate_to: localhost
+  ignore_errors: yes
+  tags:
+      - telegram
+  when: owner_chat_id is defined
+  with_items:
+      - {id: "{{ owner_chat_id }}"}
+
+- name: Notificate grafana about deployment finish
+  delegate_to: localhost
+  ignore_errors: yes
+  uri:
+      url: "{{item.url}}"
+      method: POST
+      headers:
+          Authorization: "{{item.token}}"
+      body:
+          text: >
+              {{ local_username.stdout }}@{{ local_hostname.stdout }}: deploy finished; branch {{ symfony_current_release }}
+              <a href="https://gitlab.com/datsteam/mostbet/mostbet.com/-/commit/{{ cloned_commit.stdout }}">link_to_commit</a>
+          tags:
+              - 'deploy_finished'
+              - '{{ inventory_hostname }}'
+      body_format: json
+      status_code: 200
+  with_items:
+      - {url: "{{ grafana_url }}", token: "{{ grafana_token }}"}

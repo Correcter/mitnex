@@ -1,0 +1,13 @@
+{
+  "request" : {
+    "url" : "/perfectmoney/acct/ev_activate.asp",
+    "method" : "POST"
+  },
+  "response" : {
+    "status" : 200,
+    "headers": {
+      "Content-Type": "text/html"
+    },
+    "body" : "<html>\n    <head>\n        <title>e-Voucher activate</title>\n    </head>\n    <body>\n        <h1>e-Voucher activate</h1>\n        <table border=1>\n            <tr>\n                <td>\n                    <b>Name</b>\n                </td>\n                <td>\n                    <b>Value</b>\n                </td>\n            </tr>\n            <tr>\n                <td>VOUCHER_NUM</td>\n                <td>4241846785</td>\n            </tr>\n            <tr>\n                <td>VOUCHER_AMOUNT</td>\n                <td>1.00</td>\n            </tr>\n            <tr>\n                <td>VOUCHER_AMOUNT_CURRENCY</td>\n                <td>1</td>\n            </tr>\n            <tr>\n                <td>Payee_Account</td>\n                <td>U19116772</td>\n            </tr>\n            <tr>\n                <td>PAYMENT_BATCH_NUM</td>\n                <td>277687086</td>\n            </tr>\n        </table>\n        <input name='VOUCHER_NUM' type='hidden' value='4241846785'>\n        <input name='VOUCHER_AMOUNT' type='hidden' value='1.00'>\n        <input name='VOUCHER_AMOUNT_CURRENCY' type='hidden' value='2'>\n        <input name='Payee_Account' type='hidden' value='U21447914'>\n        <input name='PAYMENT_BATCH_NUM' type='hidden' value='278682947'>\n    </body>\n</html>"
+  }
+}

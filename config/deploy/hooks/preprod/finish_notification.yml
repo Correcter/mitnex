@@ -1,0 +1,10 @@
+- name: Send notification message via Telegram
+  delegate_to: localhost
+  ignore_errors: yes
+  telegram:
+    token: 480915656:AAFMd4U5IHDSqhkU05Y3wwH3lEb4DIV4hFQ
+    chat_id: -1001376258088
+    msg_format: markdown
+    msg: '{{ local_username.stdout }}@{{ local_hostname.stdout }}: deploy {{ inventory_hostname }} completed; Tag: {{ symfony_project_branch }}; '
+  tags:
+    - telegram

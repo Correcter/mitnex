@@ -1,0 +1,10 @@
+{
+    "request": {
+        "urlPath": "/zetpay/payform",
+        "method": "POST"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "zetpay/payform.html"
+    }
+}

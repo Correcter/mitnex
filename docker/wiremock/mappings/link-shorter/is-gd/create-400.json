@@ -1,0 +1,10 @@
+{
+  "priority": 1,
+  "request": {
+    "urlPattern": "/is-gd/create.php\\?format=(.*)&url=cannot-shorten.com",
+    "method": "POST"
+  },
+  "response": {
+    "status": 400
+  }
+}

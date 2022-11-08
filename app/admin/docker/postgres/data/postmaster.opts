@@ -1,0 +1,1 @@
+/usr/lib/postgresql/14/bin/postgres "-c" "max_connections=100" "-c" "shared_buffers=1624MB" "-c" "listen_addresses=*"

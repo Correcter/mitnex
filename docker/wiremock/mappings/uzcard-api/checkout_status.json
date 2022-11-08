@@ -1,0 +1,24 @@
+{
+    "request": {
+        "urlPath": "/uzcard_checkout/api/public/get/pay/api.url.php",
+        "queryParameters" : {
+            "opid" : {
+                "matches" : ".*"
+            }
+        },
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "jsonBody": {
+            "error": false,
+            "status": "success",
+            "message": "Успешно",
+            "opid": "{{randomValue length=6 type='NUMERIC'}}"
+        },
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "transformers": ["response-template"]
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "result": {
+        "cheque": {
+            "_id": "{{randomValue length=10 type='NUMERIC'}}",
+            "state": "0"
+        }
+    }
+}

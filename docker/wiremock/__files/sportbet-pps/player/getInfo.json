@@ -1,0 +1,23 @@
+{
+  "code": 0,
+  "data": {
+    "playerId": "40001",
+    "nickName": "SWIP15",
+    "organization": "Demo",
+    "balance": "4000.00",
+    "currency": "RUB",
+    "homeCurrency": "RUB",
+    "gender": "MALE",
+    "country": "country",
+    "name": "name",
+    "surname": "surname",
+    "patronymic": "pat",
+    "birthday": "1978-12-30",
+    "birthPlace": "asd",
+    "docuemnt": "document",
+    "issuedBy": "2019-01-01",
+    "issuedDate": "2019-02-02",
+    "subdivisionCode": "1233",
+    "timeZone": "asd"
+  }
+}

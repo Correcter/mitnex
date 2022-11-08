@@ -1,0 +1,10 @@
+{
+  "request": {
+    "urlPath": "/v1/promocodes/list",
+    "method": "GET"
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "casino/integration/casinoApp/getPromocodes.json"
+  }
+}

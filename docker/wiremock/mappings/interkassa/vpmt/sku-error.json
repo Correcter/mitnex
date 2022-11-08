@@ -1,0 +1,11 @@
+{
+    "request": {
+        "urlPathPattern": "/interkassa/payout/replenish-info/error?([a-z]*)",
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "interkassa/vpmt/sku-error.json",
+        "transformers": ["response-template"]
+    }
+}

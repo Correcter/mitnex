@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<response>
+    <sp_salt>ijoi894j4ik39lo9</sp_salt>
+    <sp_status>ok</sp_status>
+    <sp_payment_id>15826</sp_payment_id>
+    <sp_redirect_url>https://api.brpay.io/pspay/payment_params?
+        customer=ccaa41a4f425d124a23c3a53a3140bdc15826</sp_redirect_url>
+    <sp_redirect_url_type>need data</sp_redirect_url_type>
+    <sp_sig>7033a97d19a358f0ee32f273e70440bf</sp_sig>
+</response>

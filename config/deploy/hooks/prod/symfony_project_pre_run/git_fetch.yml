@@ -1,0 +1,6 @@
+- name: Set symfony_current_release_dir.
+  set_fact: current_release_dir="{{symfony_project_root}}/current"
+
+- name: Checking git tag existence in master.
+  shell: cd {{current_release_dir}} && git fetch
+  run_once: true

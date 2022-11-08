@@ -1,0 +1,11 @@
+{
+    "request": {
+        "urlPattern": "/bonus/(.*)/rolling/validate",
+        "bodyPatterns": [],
+        "method": "POST"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "mostbet-bonus/bonus/validate.json"
+    }
+}

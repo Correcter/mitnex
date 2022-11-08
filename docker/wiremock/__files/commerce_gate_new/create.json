@@ -1,0 +1,7 @@
+{
+    "status": "redirect",
+    "paymentFormId": "{{randomValue type='UUID'}}",
+    "forwardUrl": "https://example.com/v1/pf/page",
+    "qrUrl": "https://example.com/v1/pf/qr-page",
+    "qrImageBase64": "base64 data"
+}

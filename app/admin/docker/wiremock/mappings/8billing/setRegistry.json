@@ -1,0 +1,19 @@
+{
+    "request": {
+        "urlPath": "/8billing/api/v1/",
+        "bodyPatterns": [
+            {
+                "matchesJsonPath": {
+                    "expression": "$.method",
+                    "equalTo": "setRegistry"
+                }
+            }
+        ],
+        "method": "POST"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "8billing/setRegistry.json",
+        "transformers": ["response-template"]
+    }
+}

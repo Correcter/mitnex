@@ -1,0 +1,49 @@
+- command: whoami
+  register: local_username
+  delegate_to: localhost
+  ignore_errors: yes
+  tags:
+    - telegram
+
+- command: hostname
+  register: local_hostname
+  delegate_to: localhost
+  ignore_errors: yes
+  tags:
+    - telegram
+
+- name: Send notification message via Telegram
+  telegram:
+    token: 480915656:AAFMd4U5IHDSqhkU05Y3wwH3lEb4DIV4hFQ
+    chat_id: -1001376258088
+    msg_format: markdown
+    msg: '{{ local_username.stdout }}@{{ local_hostname.stdout }}: deploying {{symfony_project_branch}} to {{ inventory_hostname }}'
+  delegate_to: localhost
+  ignore_errors: yes
+  tags:
+    - telegram
+
+- name: Notificate grafana about deployment start
+  delegate_to: localhost
+  ignore_errors: yes
+  uri:
+    url: "{{item.url}}"
+    method: POST
+    headers:
+      Authorization: "{{item.token}}"
+    body:
+      text: |
+        {{ local_username.stdout }}@{{ local_hostname.stdout }}: deploy started;
+        branch: {{symfony_project_branch}};
+        symfony_project_app: {{ symfony_project_app }};
+        symfony_project_parameters_file: {{ symfony_project_parameters_file }};
+        symfony_project_crontab: {{ symfony_project_crontab }};
+        mostbet_app: {{ mostbet_app }};
+      tags:
+        - 'deploy_started'
+        - '{{ inventory_hostname }}'
+        - 'mostbet_{{ mostbet_app }}'
+    body_format: json
+    status_code: 200
+  with_items:
+    - {url: "{{ grafana_url }}", token: "{{ grafana_token }}"}

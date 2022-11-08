@@ -1,0 +1,34 @@
+{
+  "jackpots": [
+    {
+      "id": 1,
+      "name": "mini",
+      "title": "mini",
+      "translationKey": "casino.jackpot.slotegrator.mini",
+      "amount": "1000",
+      "currency": "RUB",
+      "source": "slotegrator",
+      "provider": "GameArt",
+      "position": 0,
+      "gamesIds": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": 2,
+      "name": "maxi",
+      "title": "maxi",
+      "translationKey": "casino.jackpot.slotegrator.maxi",
+      "amount": "20",
+      "currency": "EUR",
+      "source": "slotegrator",
+      "provider": "GameArt",
+      "position": 1,
+      "gamesIds": [
+        5,
+        7
+      ]
+    }
+  ]
+}

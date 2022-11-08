@@ -1,0 +1,15 @@
+{
+    "data":
+    {
+        "data":
+        {
+            "session_id": "caa1c734ce1b4d119636ecad7b8ecb14"
+        },
+        "id": 1{{randomValue length=10 type='NUMERIC'}},
+        "method": "GET",
+        "url": "https://card.piastrix.com/pay/caa1c734ce1b4d119636ecad7b8ecb14"
+    },
+    "error_code": 0,
+    "message": "Ok",
+    "result": true
+}

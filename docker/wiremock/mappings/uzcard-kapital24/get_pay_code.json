@@ -1,0 +1,13 @@
+{
+    "request": {
+        "method": "POST",
+        "url": "/uzcard-kapital24/ru/api/index.php",
+        "bodyPatterns": [{
+            "matches": "(.*&|^)METHOD=fast_p2p.get_pay_code($|&.*)"
+        }]
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "uzcard-kapital24/get_pay_code.json"
+    }
+}

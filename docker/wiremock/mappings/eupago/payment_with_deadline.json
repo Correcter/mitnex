@@ -1,0 +1,21 @@
+{
+    "request": {
+        "urlPath": "/eupago/payment_with_deadline",
+        "method": "POST"
+    },
+    "response": {
+        "status": 200,
+        "jsonBody": {
+            "sucesso": true,
+            "estado": 0,
+            "resposta": "OK",
+            "referencia": "100106646",
+            "valor": "122.50000",
+            "entidade": "81961",
+            "valor_minimo": "122.5",
+            "valor_maximo": "122.5",
+            "data_inicio": "2016-09-26",
+            "data_fim": "2016-09-30"
+        }
+    }
+}

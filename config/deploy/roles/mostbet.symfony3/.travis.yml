@@ -1,0 +1,44 @@
+---
+language: python
+python: "2.7"
+
+sudo: false
+
+addons:
+  apt:
+    packages:
+    - php5-cli
+    - php5-common
+    - php5-curl
+
+install:
+  # Install Ansible.
+  - pip install ansible==1.9.4
+
+  # Add ansible.cfg to pick up roles path.
+  - "{ echo '[defaults]'; echo 'roles_path = ../'; } >> ansible.cfg"
+
+  # Install required dependencies.
+  - ansible-galaxy install geerlingguy.php
+
+script:
+  # Check the role/playbook's syntax.
+  #- "ansible-playbook -i tests/inventory tests/test_2_1.yml --syntax-check"
+  #- "ansible-playbook -i tests/inventory tests/test_2_2.yml --syntax-check"
+  #- "ansible-playbook -i tests/inventory tests/test_2_3.yml --syntax-check"
+  #- "ansible-playbook -i tests/inventory tests/test_2_4.yml --syntax-check"
+  - "ansible-playbook -i tests/inventory tests/test_2_5.yml --syntax-check"
+  - "ansible-playbook -i tests/inventory tests/test_2_6.yml --syntax-check"
+  - "ansible-playbook -i tests/inventory tests/test_2_7.yml --syntax-check"
+  - "ansible-playbook -i tests/inventory tests/test_2_8.yml --syntax-check"
+  - "ansible-playbook -i tests/inventory tests/test_3_0.yml --syntax-check"
+  # Run playbooks
+  #- "ansible-playbook -i tests/inventory tests/test_2_1.yml --connection=local"
+  #- "ansible-playbook -i tests/inventory tests/test_2_2.yml --connection=local"
+  #- "ansible-playbook -i tests/inventory tests/test_2_3.yml --connection=local"
+  #- "ansible-playbook -i tests/inventory tests/test_2_4.yml --connection=local"
+  - "ansible-playbook -i tests/inventory tests/test_2_5.yml --connection=local"
+  - "ansible-playbook -i tests/inventory tests/test_2_6.yml --connection=local"
+  - "ansible-playbook -i tests/inventory tests/test_2_7.yml --connection=local"
+  - "ansible-playbook -i tests/inventory tests/test_2_8.yml --connection=local"
+  #- "ansible-playbook -i tests/inventory tests/test_3_0.yml --connection=local"

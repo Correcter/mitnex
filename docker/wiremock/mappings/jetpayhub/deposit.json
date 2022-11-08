@@ -1,0 +1,39 @@
+{
+    "mappings": [
+        {
+            "request": {
+                "urlPath": "/functional-test/jetpayhub/deposit/",
+                "method": "POST"
+            },
+            "response": {
+                "status": 200,
+                "bodyFileName": "jetpayhub/response_success.json",
+                "transformers": ["response-template"]
+            }
+        },
+        {
+            "request": {
+                "url": "/jetpayhub/deposit/",
+                "method": "POST"
+            },
+            "response": {
+                "status": 200,
+                "bodyFileName": "jetpayhub/response_success.json",
+                "transformers": ["response-template"]
+            }
+        },
+        {
+            "request": {
+                "url": "/jetpayhub/redirect",
+                "method": "GET"
+            },
+            "response": {
+                "status": 200,
+                "body": "JetPayHub payment page here",
+                "headers": {
+                    "Content-Type": "text/plain"
+                }
+            }
+        }
+    ]
+}

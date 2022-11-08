@@ -1,0 +1,77 @@
+{
+    "code": "00",
+    "message": "Approved",
+    "activeAmount": [
+        {
+            "activeAmountId": 9663435,
+            "amount": 100.10,
+            "currency": "TRY"
+        },
+        {
+            "activeAmountId": 9663436,
+            "amount": 100.30,
+            "currency": "TRY"
+        },
+        {
+            "activeAmountId": 9663437,
+            "amount": 100.40,
+            "currency": "TRY"
+        },
+        {
+            "activeAmountId": 9663438,
+            "amount": 100.50,
+            "currency": "TRY"
+        },
+        {
+            "activeAmountId": 9663439,
+            "amount": 250.00,
+            "currency": "TRY"
+        },
+        {
+            "activeAmountId": 9663440,
+            "amount": 260.00,
+            "currency": "TRY"
+        },
+        {
+            "activeAmountId": 9663441,
+            "amount": 300.00,
+            "currency": "TRY"
+        },
+        {
+            "activeAmountId": 9663442,
+            "amount": 1000.00,
+            "currency": "TRY"
+        },
+        {
+            "activeAmountId": 9663443,
+            "amount": 1005.00,
+            "currency": "TRY"
+        },
+        {
+            "activeAmountId": 9663444,
+            "amount": 1100.00,
+            "currency": "TRY"
+        },
+        {
+            "activeAmountId": 9663445,
+            "amount": 1500.00,
+            "currency": "TRY"
+        },
+        {
+            "activeAmountId": 9663446,
+            "amount": 1600.00,
+            "currency": "TRY"
+        },
+        {
+            "activeAmountId": 9663447,
+            "amount": 2000.00,
+            "currency": "TRY"
+        },
+        {
+            "activeAmountId": 9663448,
+            "amount": 2500.00,
+            "currency": "TRY"
+        }
+    ],
+    "error": null
+}

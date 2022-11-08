@@ -1,0 +1,33 @@
+{
+    "success":true,
+    "data":{
+        "additional": [
+            {
+                "key":"Карта получателя",
+                "value":"986010******5342",
+                "type":"receiver_card"
+            },
+            {
+                "key":"Получатель",
+                "value":"SHOIRA ATAJANOVA",
+                "type":"receiver_name"
+            },
+            {
+                "key":"Стоимость услуги",
+                "value":"0.50",
+                "type":"commission"
+            },
+            {
+                "key":"Сумма",
+                "value":100000,
+                "type":"amount"
+            },
+            {
+                "key":"Курс",
+                "value":0,
+                "type":"rate"
+            }
+        ]
+    },
+    "error":{}
+}

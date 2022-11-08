@@ -1,0 +1,81 @@
+<?php
+$finder = PhpCsFixer\Finder::create()
+    ->in(__DIR__.'/src');
+
+return PhpCsFixer\Config::create()
+    ->setFinder($finder)
+    ->registerCustomFixers([
+        new EightBitGroup\Bundle\QABundle\PhpCsFixer\Fixer\PhpdocNoUselessSummaryFixer(),
+        new EightBitGroup\Bundle\QABundle\PhpCsFixer\Fixer\NoUselessDocblockFixer(),
+        new EightBitGroup\Bundle\QABundle\PhpCsFixer\Fixer\DocblockCollapsingFixer(),
+    ])
+    ->setRiskyAllowed(true)
+    ->setRules([
+        '@PSR2'    => true,
+        '@Symfony' => true,
+
+        //region Overrides
+        'binary_operator_spaces' => [
+            'operators' => [ // запрещаем ломать авторское выравнивание
+                '=>' => null,
+                '=' => null,
+            ],
+        ],
+        'phpdoc_align'   => false, // игнорируем вопросы выравнивания в phpdoc-блоках
+        'phpdoc_summary' => false, // точки не нужны
+        'yoda_style'     => false, // оставляем решение о применении Yoda Style за автором
+        'concat_space'   => ['spacing' => 'one'], // 'Конкатенация' . ' через ' . ' пробел'
+        'array_syntax'   => ['syntax' => 'short'], // Be on the edge, use php 5.4
+
+        //region Risky fixers
+        // Для безопасности значения выставлены явно (возможно, повторяют значения по умолчанию).
+        // Фиксеры, которые мы считаем безопасными, разрешены.
+        'comment_to_phpdoc'                             => false,
+        'date_time_immutable'                           => false,
+        'declare_strict_types'                          => false,
+        'dir_constant'                                  => true,
+        'ereg_to_preg'                                  => true,
+        'final_internal_class'                          => false,
+        'function_to_constant'                          => true,
+        'is_null'                                       => true,
+        'mb_str_functions'                              => false, // возможно, стоит включить
+        'modernize_types_casting'                       => true,
+        'native_function_invocation'                    => false, // возможно, стоит включить
+        'no_alias_functions'                            => true,
+        'no_homoglyph_names'                            => false,
+        'no_php4_constructor'                           => true,
+        'no_unreachable_default_argument_value'         => false,
+        'non_printable_character'                       => false,
+
+         //region PhpUnit: пока всё отключено без разбора
+        'php_unit_construct'                            => false,
+        'php_unit_dedicate_assert'                      => false,
+        'php_unit_expectation'                          => false,
+        'php_unit_mock'                                 => false,
+        'php_unit_namespaced'                           => false,
+        'php_unit_no_expectation_annotation'            => false,
+        'php_unit_set_up_tear_down_visibility'          => false,
+        'php_unit_strict'                               => false,
+        //endregion PhpUnit
+
+        'pow_to_exponentiation'                         => true,
+        'psr0'                                          => false,
+        'psr4'                                          => true,
+        'random_api_migration'                          => true,
+        'self_accessor'                                 => false,
+        'silenced_deprecation_error'                    => false,
+        'static_lambda'                                 => false,
+        'strict_comparison'                             => false,
+        'strict_param'                                  => false,
+        'string_line_ending'                            => false,
+        'void_return'                                   => false, // возможно, стоит включить
+        //endregion Risky fixers
+        //endregion Overrides
+
+        //region Custom fixers
+        'Mostbet/phpdoc_no_useless_summary' => true,
+        'Mostbet/no_useless_docblock'       => true,
+        'Mostbet/docblock_collapsing'       => true,
+        //endregion Custom fixers
+    ])
+    ->setCacheFile(__DIR__.'/var/.php_cs.cache');

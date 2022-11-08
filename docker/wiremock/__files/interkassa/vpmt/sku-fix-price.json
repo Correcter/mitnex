@@ -1,0 +1,70 @@
+{
+    "status": "ok",
+    "code": 0,
+    "data": [
+        {
+            "provider": "LIUA",
+            "skuCode": "UA_LI_TopUp3",
+            "minSendPrice": 2,
+            "maxSendPrice": 40,
+            "minReceivePrice": 200,
+            "maxReceivePrice": 1049.43,
+            "sendCurrencyIso": "USD",
+            "receiveCurrencyIso": "UAH",
+            "description": "UAH 52.47-1049.43",
+            "benefits": "Mobile,Minutes",
+            "providerStatus": "active",
+            "fixedPrice": true,
+            "providerName": null,
+            "mode": "TopUp"
+        },
+        {
+            "provider": "LIUA",
+            "skuCode": "UA_LI_TopUp4",
+            "minSendPrice": 2,
+            "maxSendPrice": 40,
+            "minReceivePrice": 5000,
+            "maxReceivePrice": 1049.43,
+            "sendCurrencyIso": "EUR",
+            "receiveCurrencyIso": "UAH",
+            "description": "UAH 52.47-1049.43",
+            "benefits": "Mobile,Minutes",
+            "providerStatus": "active",
+            "fixedPrice": true,
+            "providerName": null,
+            "mode": "TopUp"
+        },
+        {
+            "provider": "LIUA",
+            "skuCode": "UA_LI_TopUp1",
+            "minSendPrice": 2,
+            "maxSendPrice": 40,
+            "minReceivePrice": 10,
+            "maxReceivePrice": 1049.43,
+            "sendCurrencyIso": "USD",
+            "receiveCurrencyIso": "UAH",
+            "description": "UAH 52.47-1049.43",
+            "benefits": "Mobile,Minutes",
+            "providerStatus": "active",
+            "fixedPrice": true,
+            "providerName": null,
+            "mode": "TopUp"
+        },
+        {
+            "provider": "LIUA",
+            "skuCode": "UA_LI_TopUp2",
+            "minSendPrice": 2,
+            "maxSendPrice": 40,
+            "minReceivePrice": 90,
+            "maxReceivePrice": 1049.43,
+            "sendCurrencyIso": "EUR",
+            "receiveCurrencyIso": "UAH",
+            "description": "UAH 52.47-1049.43",
+            "benefits": "Mobile,Minutes",
+            "providerStatus": "active",
+            "fixedPrice": true,
+            "providerName": null,
+            "mode": "TopUp"
+        }
+    ]
+}

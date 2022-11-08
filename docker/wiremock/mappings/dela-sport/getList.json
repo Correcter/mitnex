@@ -1,0 +1,10 @@
+{
+  "request": {
+    "urlPath": "/dela-sport/api/list",
+    "method": "GET"
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "dela-sport/getList.json"
+  }
+}

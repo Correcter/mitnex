@@ -1,0 +1,7 @@
+{
+    "id": "{{randomValue length=6 type='NUMERIC'}}",
+    "payment_currency": "RUB",
+    "payment_currency_code": "RUB",
+    "token": "order_{{randomValue length=10 type='NUMERIC'}}",
+    "remote_id": "{{request.body.order_number}}"
+}

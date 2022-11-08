@@ -1,0 +1,11 @@
+{
+    "request": {
+        "urlPath": "/bestpay/communityBankTransferAdvanced/availableAmount",
+        "method": "POST"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "bestpay/amount.json",
+        "transformers": ["response-template"]
+    }
+}

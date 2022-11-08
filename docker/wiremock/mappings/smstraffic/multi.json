@@ -1,0 +1,10 @@
+{
+  "request" : {
+    "url" : "/smstraffic/multi.php",
+    "method" : "POST"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "<?xml version=\"1.0\" ?><reply><result>OK</result></reply>"
+  }
+}

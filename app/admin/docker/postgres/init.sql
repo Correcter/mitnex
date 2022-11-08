@@ -1,0 +1,2 @@
+CREATE DATABASE admin OWNER postgres;
+GRANT ALL PRIVILEGES ON DATABASE admin TO postgres;

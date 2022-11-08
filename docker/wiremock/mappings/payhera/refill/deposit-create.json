@@ -1,0 +1,11 @@
+{
+    "request": {
+        "urlPath": "/payhera/api/deposit/create",
+        "method": "POST"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "payhera/refill/deposit-create.json",
+        "transformers": ["response-template"]
+    }
+}

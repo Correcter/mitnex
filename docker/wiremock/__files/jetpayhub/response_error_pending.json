@@ -1,0 +1,7 @@
+{
+    "status": false,
+    "error": {
+        "msg": "This user has a pending request!",
+        "code": "pending"
+    }
+}

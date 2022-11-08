@@ -1,0 +1,25 @@
+- command: whoami
+  register: local_username
+  delegate_to: localhost
+  ignore_errors: yes
+  tags:
+    - telegram
+
+
+- command: hostname
+  register: local_hostname
+  delegate_to: localhost
+  ignore_errors: yes
+  tags:
+    - telegram
+
+- name: Send notification message via Telegram
+  telegram:
+    token: 480915656:AAFMd4U5IHDSqhkU05Y3wwH3lEb4DIV4hFQ
+    chat_id: -1001376258088
+    msg_format: markdown
+    msg: '{{ local_username.stdout }}@{{ local_hostname.stdout }}: deploying {{symfony_project_branch}} to {{ inventory_hostname }}'
+  delegate_to: localhost
+  ignore_errors: yes
+  tags:
+    - telegram

@@ -1,0 +1,11 @@
+{
+  "request": {
+    "urlPattern": "^/payop/transactions/([0-9]*)",
+    "method": "GET"
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "payop/get_transaction_callback.json",
+    "transformers": ["response-template"]
+  }
+}

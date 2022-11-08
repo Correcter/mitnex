@@ -1,0 +1,11 @@
+{
+    "request": {
+        "urlPathPattern": "/interkassa/payout/replenish-info/fix-price?([a-z]*)",
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "interkassa/vpmt/sku-fix-price.json",
+        "transformers": ["response-template"]
+    }
+}

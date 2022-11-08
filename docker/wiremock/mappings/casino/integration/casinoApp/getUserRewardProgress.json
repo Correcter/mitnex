@@ -1,0 +1,10 @@
+{
+  "request": {
+    "urlPattern": "/v1/users/([0-9]*)/rewards/progress",
+    "method": "GET"
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "casino/integration/casinoApp/getUserRewardProgress.json"
+  }
+}

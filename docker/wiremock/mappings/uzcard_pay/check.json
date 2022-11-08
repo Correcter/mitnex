@@ -1,0 +1,10 @@
+{
+    "request": {
+        "url": "/uzcardpay/check",
+        "method": "POST"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "uzcard_pay/check.json"
+    }
+}

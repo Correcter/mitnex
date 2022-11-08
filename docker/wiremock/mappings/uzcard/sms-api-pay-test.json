@@ -1,0 +1,19 @@
+{
+    "request": {
+        "url": "/uzcard/sms-api",
+        "bodyPatterns": [
+            {
+                "matchesJsonPath": {
+                    "expression": "$.method",
+                    "equalTo": "fast_p2p.pay"
+                }
+            }
+        ],
+        "method": "POST"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "uzcard/pay.json",
+        "transformers": ["response-template","body-transformer"]
+    }
+}

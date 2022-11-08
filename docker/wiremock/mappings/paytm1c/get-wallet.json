@@ -1,0 +1,10 @@
+{
+    "request": {
+        "urlPathPattern": "/paytm1c/GetWallet",
+        "method": "POST"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "paytm1c/get-wallet.html"
+    }
+}

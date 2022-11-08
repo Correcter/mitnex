@@ -1,0 +1,4 @@
+- name: Run migrations rollback.
+  shell: "{{symfony_project_root}}/current/{{symfony_project_console_command}} doctrine:migrations:migrate -q -n {{symfony_old_migration_version}}"
+  when: migrations is defined and migrations is match("true") and symfony_old_migration_version != ""
+  run_once: true

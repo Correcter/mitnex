@@ -1,0 +1,7 @@
+{
+    "status": false,
+    "error": {
+        "msg": "Some internal error",
+        "code": "some-error-code"
+    }
+}

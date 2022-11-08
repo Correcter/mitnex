@@ -1,0 +1,15 @@
+{
+    "mappings": [
+        {
+            "request": {
+                "urlPath": "/birpay_gate/refill/requisite",
+                "method": "POST"
+            },
+            "response": {
+                "status": 200,
+                "bodyFileName": "birpay_gate/response_requisite.json",
+                "transformers": ["response-template"]
+            }
+        }
+    ]
+}

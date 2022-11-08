@@ -1,0 +1,16 @@
+{
+    "data": {
+        "data": {
+            "session_id": "12345"
+        },
+        "id": 1,
+        "method": "GET",
+        "url": "https://localhost/ru/payform/12345"
+    },
+    "error_code": 0,
+    "message": "Ok",
+    "result": true,
+    "shop_id": 1,
+    "transfer_id": null,
+    "withdraw_id": null
+}

@@ -1,0 +1,10 @@
+{
+    "request": {
+        "urlPathPattern": "/paytm1c/refill/add",
+        "method": "POST"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "paytm1c/add.json"
+    }
+}

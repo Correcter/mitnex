@@ -1,0 +1,11 @@
+{
+    "request": {
+        "urlPath": "/ggamemoney/invoice/status",
+        "method": "POST"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "gamemoney/status.json",
+        "transformers": ["response-template"]
+    }
+}

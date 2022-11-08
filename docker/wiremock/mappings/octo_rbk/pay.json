@@ -1,0 +1,42 @@
+{
+    "mappings": [
+        {
+            "name": "Retrieve Items - Success",
+            "priority": 1,
+            "request": {
+            "urlPathPattern": "/octo_rbk/rbk/r/trans/pan2pan-pre-transfer",
+            "bodyPatterns": [
+                {
+                    "matchesJsonPath": "$[?(@.amount =~ /[1-4]([0-9]{1,6})/i)]"
+                }
+            ],
+            "method": "POST"
+            },
+            "response": {
+                "status": 200,
+                "bodyFileName": "octo_rbk/pay.json",
+                "transformers": ["response-template"],
+                "transformerParameters" : {
+                    "Amount" : "{{jsonPath request.body '$.amount'}}"
+                }
+            }
+        },
+        {
+            "name": "Retrieve Items - Error",
+            "priority": 2,
+            "request": {
+                "urlPathPattern": "/octo_rbk/rbk/r/trans/pan2pan-pre-transfer",
+                "bodyPatterns" : [
+                    {
+                        "matchesJsonPath" : "$[?(@.amount =~ /[5-9]([0-9]{6,20})/i)]"
+                    }
+                ],
+                "method": "POST"
+            },
+            "response": {
+                "status": 200,
+                "bodyFileName": "octo_rbk/pay_error.json"
+            }
+        }
+    ]
+}

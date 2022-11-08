@@ -1,0 +1,12 @@
+{
+    "code": 0,
+    "data": {
+      "playerId": "40000001",
+      "nickName": "SWIP",
+      "organization": "Demo",
+      "balance": "4000.00",
+      "currency": "EUR",
+      "homeCurrency": "EUR",
+      "orderTimeout": "1"
+    }
+}

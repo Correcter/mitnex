@@ -1,0 +1,7 @@
+---
+- include: 00-facts.yml
+
+- include: "{{symfony_project_pre_run | default('empty.yml')}}"
+
+- include: 10-migrations.yml
+- include: 20-rollback.yml

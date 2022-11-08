@@ -1,0 +1,33 @@
+{
+  "elements": [
+    {
+      "code": "shared",
+      "endDate": "2020-09-30T12:14:48.000+0000",
+      "games": [],
+      "coefficient": "0",
+      "type": "shared",
+      "currency": "RUB",
+      "amount": 350.0000,
+      "parameters": {
+        "variantsCount": 0,
+        "betType": "all"
+      }
+    },
+    {
+      "code": "some_code",
+      "endDate": "2020-09-26T09:33:03.000+0000",
+      "games": [
+        8,
+        5
+      ],
+      "coefficient": "0",
+      "type": "personal",
+      "currency": "RUB",
+      "amount": 150.0000,
+      "parameters": {
+        "variantsCount": 0,
+        "betType": "express"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+    "result": {
+        "cheque": {
+            "_id": "{{jsonPath request.body '$.params.id'}}",
+            "pay_time": "{{randomValue length=9 type='NUMERIC'}}",
+            "state": 4,
+            "amount": "20000",
+            "account": [
+                {
+                    "name": "card",
+                    "value": "1234567812345678"
+                }
+            ]
+        }
+    }
+}

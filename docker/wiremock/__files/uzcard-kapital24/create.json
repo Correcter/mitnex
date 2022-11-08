@@ -1,0 +1,7 @@
+{
+    "RESULT": "OK",
+    "MESSAGE": "Success: php cheque created!",
+    "TRANSACTION_ID": {{randomValue length=6 type='NUMERIC'}},
+    "TERMS": "https:\/\/cdn.payme.uz\/terms\/ru\/asaka-p2p.htm",
+    "AMOUNT": 5050
+}

@@ -1,0 +1,12 @@
+{
+    "request": {
+        "urlPath": "/pimpay/rest/paymentgate/order/info/",
+        "bodyPatterns": [],
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "pimpay/rest/order_info_with_recurrent_token.json",
+        "transformers": ["response-template"]
+    }
+}

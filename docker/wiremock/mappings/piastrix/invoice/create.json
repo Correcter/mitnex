@@ -1,0 +1,11 @@
+{
+    "request": {
+      "urlPath": "/piastrix/invoice/create",
+      "method": "POST"
+    },
+    "response": {
+      "status": 200,
+      "bodyFileName": "piastrix/invoice/create.json",
+      "transformers": ["response-template"]
+    }
+}

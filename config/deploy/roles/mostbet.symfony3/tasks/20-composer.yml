@@ -1,0 +1,31 @@
+---
+- name: Check if composer exists.
+  stat: path={{symfony_project_composer_path}}
+  register: composer_file
+  when: symfony_project_manage_composer == True
+
+- name: Install composer.
+  get_url: url=https://getcomposer.org/composer.phar dest={{symfony_project_composer_path}} mode=0755 validate_certs=no
+  when: symfony_project_manage_composer == True and composer_file.stat.exists == False
+
+- name: Update composer if already exists.
+  shell: "{{symfony_project_composer_path}} selfupdate"
+  when: symfony_project_manage_composer == True and composer_file.stat.exists == True
+
+- name: Add github token
+  shell: "{{symfony_project_composer_path}} config -g github-oauth.github.com {{symfony_project_github_token}}"
+  when: symfony_project_github_token != None
+
+- name: Link composer to project dir.
+  file: state=link src={{symfony_project_composer_path}} path={{symfony_current_release_dir}}/composer
+  when: symfony_project_manage_composer == True
+
+- name: Copy vendors from previous release
+#  shell: rm -fr {{symfony_current_release_dir}}/vendor ; cp -r {{symfony_project_root}}/current/vendor {{symfony_current_release_dir}}/
+  shell: '[ -d "{{symfony_current_release_dir}}/vendor" ] && rm -fr {{symfony_current_release_dir}}/vendor ; [ -d "{{symfony_project_root}}/current/vendor" ] && rsync -aW --no-compress {{symfony_project_root}}/current/vendor {{symfony_current_release_dir}}/'
+  when: symfony_project_copy_vendor == True
+  ignore_errors: yes
+
+- name: Run composer install.
+  shell: cd {{symfony_current_release_dir}} && export SYMFONY_ENV={{symfony_project_env}} && export SYMFONY_APP={{symfony_project_app}}; {{symfony_project_php_path}} {{symfony_project_composer_path}} install {{symfony_project_composer_opts}}
+  when: symfony_project_composer_run_install == True

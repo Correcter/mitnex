@@ -1,0 +1,13 @@
+{
+    "data": {
+        "add_ons_config": {},
+        "manual": {},
+        "payer_price": 10.0,
+        "paymethod_id": 3,
+        "paymethod_name": "Visa/MasterCard",
+        "ps_currency": 643
+    },
+    "error_code": 0,
+    "message": "Ok",
+    "result": true
+}

@@ -1,0 +1,60 @@
+{
+    "code": "00",
+    "message": "Approved",
+    "status": null,
+    "error": null,
+    "availableBanks": [
+        {
+            "bankName": "Hayhay Wallet",
+            "swiftCode": "HAYHAY"
+        },
+        {
+            "bankName": "Test Bank",
+            "swiftCode": "TESTXXX"
+        },
+        {
+            "bankName": "Ininal",
+            "swiftCode": "ININAL"
+        },
+        {
+            "bankName": "Ziraat Bankası",
+            "swiftCode": "TCZBTR2A"
+        },
+        {
+            "bankName": "AK Bank",
+            "swiftCode": "AKBKTRIS"
+        },
+        {
+            "bankName": "Halk Bank",
+            "swiftCode": "TRHBTR2A"
+        },
+        {
+            "bankName": "Peppara",
+            "swiftCode": "PEPPARA"
+        },
+        {
+            "bankName": "Papara",
+            "swiftCode": "PAPARA"
+        },
+        {
+            "bankName": "Yapı Kredi Bankası",
+            "swiftCode": "YAPITRISFEX"
+        },
+        {
+            "bankName": "Fups",
+            "swiftCode": "FUPS"
+        },
+        {
+            "bankName": "İş Bankası",
+            "swiftCode": "ISBKTRIS"
+        },
+        {
+            "bankName": "Garanti Bankası",
+            "swiftCode": "TGBATRIS"
+        },
+        {
+            "bankName": "Türkiye Ekonomi Bankası",
+            "swiftCode": "TEBUTRIS"
+        }
+    ]
+}

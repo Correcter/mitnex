@@ -1,0 +1,10 @@
+{
+  "request": {
+    "urlPath": "/pspay/init_payment",
+    "method": "POST"
+  },
+  "response": {
+    "status": 200,
+    "fixedDelayMilliseconds": 35000
+  }
+}

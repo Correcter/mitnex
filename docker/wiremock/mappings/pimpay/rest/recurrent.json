@@ -1,0 +1,12 @@
+{
+    "request": {
+        "urlPath": "/pimpay/rest/paymentgate/recurrent/createpayment/",
+        "bodyPatterns": [],
+        "method": "POST"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "pimpay/rest/recurrent.json",
+        "transformers": ["response-template"]
+    }
+}

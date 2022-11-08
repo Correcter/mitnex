@@ -1,0 +1,11 @@
+{
+    "request": {
+        "urlPath": "/wallet/api/users/operations/rollback",
+        "method": "POST"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "wallet/users/operations/rollback.json",
+        "transformers": ["response-template"]
+    }
+}

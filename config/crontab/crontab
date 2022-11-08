@@ -1,0 +1,367 @@
+* * * * * flock -n /tmp/crontab_expire-pregame-lines /var/www/mostbet/current/bin/console mostbet:expire-pregame-lines >> /var/log/project_log/mostbet_expire-pregame-lines.log 2>&1
+* * * * * flock -n /tmp/crontab_ticket_gateway_send-tickets /var/www/mostbet/current/bin/console ticket:gateway:send-tickets >> /var/log/project_log/ticket_gateway_send-tickets.log 2>&1
+* * * * * flock -n /tmp/crontab_ticket_gateway_get-tickets /usr/bin/runalarm -t 3600 /var/www/mostbet/current/bin/console ticket:gateway:get-tickets >> /var/log/project_log/ticket_gateway_get-tickets.log 2>&1
+* * * * * flock -n /tmp/crontab_ticket_gateway_get-fresh-tickets /usr/bin/runalarm -t 3600 /var/www/mostbet/current/bin/console ticket:gateway:get-fresh-tickets >> /var/log/project_log/ticket_gateway_get-fresh-tickets.log 2>&1
+* * * * * flock -n /tmp/crontab_p2p-dispute_gateway_send-disputes /var/www/mostbet/current/bin/console p2p-dispute:gateway:send-disputes >> /var/log/project_log/p2p-dispute_gateway_send-disputes.log 2>&1
+* * * * * flock -n /tmp/crontab_p2p-dispute_gateway_get-disputes /usr/bin/runalarm -t 3600 /var/www/mostbet/current/bin/console p2p-dispute:gateway:get-disputes >> /var/log/project_log/p2p-dispute_gateway_get-disputes.log 2>&1
+* * * * * flock -n /tmp/crontab_app_payouts_process /usr/bin/runalarm -t 390 /var/www/mostbet/current/bin/console app:payouts:process -vvv >> /var/log/project_log/app_payouts_process.log 2>&1
+* * * * * flock -n /tmp/crontab_app_payment_requisite_deactivate /usr/bin/runalarm -t 390 /var/www/mostbet/current/bin/console app:payment-requisite:deactivate -vvv >> /var/log/project_log/app_payment_requisite_deactivate.log 2>&1
+* * * * * flock -n /tmp/crontab_app_payment_requisite_update_balance /usr/bin/runalarm -t 390 /var/www/mostbet/current/bin/console app:payment-requisite:update-balance -vvv >> /var/log/project_log/app_payment_requisite_update_balance.log 2>&1
+* * * * * flock -n /tmp/ultraplay_alias-by-group /var/www/mostbet/current/bin/console ultraplay:alias-by-group >> /var/log/project_log/ultraplay_alias-by-group.log 2>&1
+* * * * * flock -n /tmp/crontab_app_toto_check_open_events /var/www/mostbet/current/bin/console app:toto:check_open_events >> /var/log/project_log/app_toto_check_open_events.log 2>&1
+#10 0 * * * flock -n /tmp/new_registration_report /var/www/mostbet/current/bin/console app:new_registration_daily_report >> /var/log/project_log/new_registration_report.log 2>&1
+
+# Mirrors
+#33 */3 * * * flock -n /tmp/check-mirrors /var/www/mostbet/current/bin/console mirrors:check >> /var/log/project_log/check-mirrors.log 2>&1
+59 * * * * flock -n /tmp/mirrors-safe-browsing-check /var/www/mostbet/current/bin/console mirrors:safe-browsing:check >> /var/log/project_log/mirrors-safe-browsing-check.log 2>&1
+#03 */3 * * * flock -n /tmp/check-mobile-mirrors /var/www/mostbet/current/bin/console mirrors:check -m mobile >> /var/log/project_log/mobile-check-mirrors.log 2>&1
+*/30 * * * * flock -n /tmp/cloudflare-mirror-update /var/www/mostbet/current/bin/console cloudflare:mirror:update >> /var/log/project_log/cloudflare-mirror-update.log 2>&1
+*/5 * * * * flock -n /tmp/notify-too-few-mirrors /var/www/mostbet/current/bin/console mirrors:notify-too-few-mirrors >> /var/log/project_log/notify-too-few-mirrors.log 2>&1
+# Moved to other cron 50 * * * * flock -n /tmp/mirrors-rotate-by-type-api /var/www/mostbet/current/bin/console mirrors:rotate:by-type api >> /var/log/project_log/mirrors-rotate-by-type-api.log 2>&1
+
+1 0 * * 1 flock -n /tmp/update-user-aggregations-weekly /usr/bin/runalarm -t 21600 /var/www/mostbet/current/bin/console app:update-user-aggregations weekly daily >> /var/log/project_log/update-user-aggregations-weekly.log 2>&1
+1 0 * * 2-7 flock -n /tmp/update-user-aggregations-daily /usr/bin/runalarm -t 21600 /var/www/mostbet/current/bin/console app:update-user-aggregations daily >> /var/log/project_log/update-user-aggregations-daily.log 2>&1
+*/5 * * * * flock -n /tmp/update-dusupay-refill-status /var/www/mostbet/current/bin/console app:update-dusupay-refill-status >> /var/log/project_log/update-dusupay-refill-status.log 2>&1
+#temporary while betbach.ru is not ready
+* * * * * flock -n /tmp/collect-metrics /var/www/mostbet/current/bin/console app:collect-metrics >> /var/log/project_log/app_collect_metrics.log 2>&1
+47 * * * * flock -n /tmp/session-cleanup /var/www/mostbet/current/bin/console app:maintenance:session-cleanup >> /var/log/project_log/app_maintenance_session-cleanup.log 2>&1
+10 0 * * * flock -n /tmp/currency-rates-update /var/www/mostbet/current/bin/console app:currency-rates:update >> /var/log/project_log/currency-rates-update.log 2>&1
+* * * * * flock -n /tmp/exchange-rates-update /var/www/mostbet/current/bin/console app:exchange:update-rates >> /var/log/project_log/exchange-rates-update.log 2>&1
+
+# rebuild match search indexes
+#*/1 * * * * flock -n /tmp/rebuild-live-match-search-index /var/www/mostbet/current/bin/console app:search:index_rebuild --line_type=2 >> /var/log/project_log/rebuild-live-match-search-index.log 2>&1
+#*/30 * * * * flock -n /tmp/rebuild-pregame-match-search-index /var/www/mostbet/current/bin/console app:search:index_rebuild --line_type=1 >> /var/log/project_log/rebuild-pregame-match-search-index.log 2>&1
+
+# optimize line_match_dictionary
+#35 3 * * * flock -n /tmp/optimize-line-match-dictionary /var/www/mostbet/current/bin/console app:maintenance:optimize-line-match-dictionary >> /var/log/project_log/optimize-line-match-dictionary.log 2>&1
+
+# update team logos
+* * * * * flock -n /tmp/team-logos-update /var/www/mostbet/current/bin/console app:team_logos_update >> /var/log/project_log/team-logos-update.log 2>&1
+
+# update search index by teams in elastica
+0 */1 * * * flock -n /tmp/search-populate-matches /var/www/mostbet/current/bin/console search:populate:matches >> /var/log/project_log/search-populate-matches.log 2>&1
+
+# clean statistics table
+25 3 * * * flock -n /tmp/clean_statistics /var/www/mostbet/current/bin/console app:maintenance:clean-statistics >> /var/log/project_log/clean_statistics.log 2>&1
+
+# clean old line outcomes with their status history
+* 4,5,6,7,8 * * * flock -n /tmp/app-maintenance-outcome-clear /var/www/mostbet/current/bin/console app:maintenance:outcome:clear --sleep 500 >> /var/log/project_log/app-maintenance-outcome-clear.log 2>&1
+
+*/5 * * * * flock -n /tmp/bonus_refill_qualified_purify /var/www/mostbet/current/bin/console app:bonus_refill_qualified:purify >> /var/log/project_log/bonus_refill_qualified_purify.log 2>&1
+
+# create events for calculating campaign leaderboard
+*/30 * * * * flock -n /tmp/crontab_app_campaign_calculate_leaderboard /usr/bin/runalarm -t 390 /var/www/mostbet/current/bin/console app:campaign:calculate_leaderboard -vvv >> /var/log/project_log/app_campaign_calculate_leaderboard.log 2>&1
+
+17 3 * * * flock -n /tmp/favorites_remove_finished_matches /var/www/mostbet/current/bin/console app:maintenance:user:favorites:remove-finished-matches >> /var/log/project_log/favorites_remove_finished_matches.log 2>&1
+
+#Casino
+0 1 * * * flock -n /tmp/casino_start_game_error_report /var/www/mostbet/current/bin/console casino:game-start-error-report >> /var/log/project_log/casino_start_game_error_report.log 2>&1
+
+# Check refill statuses
+#*/2 * * * * flock -n /tmp/check_refill_status_type_jeton /var/www/mostbet/current/bin/console app:finance:check_refill_status --refill_type=jeton >> /var/log/project_log/check_refill_status_type_jeton.log 2>&1
+
+# Cancel old unprocessed refills
+*/15 * * * * flock -n /tmp/cancel_old_unprocessed_connectum_refills /var/www/mostbet/current/bin/console app:maintenance:finance:cancel-old-unprocessed-connectum-refills >> /var/log/project_log/cancel_old_unprocessed_connectum_refills.log 2>&1
+
+# push messages to the queue
+* * * * * flock -n /tmp/sms_campaign_enqueue_messages /var/www/mostbet/current/bin/console sms-campaign:enqueue-messages >> /var/log/project_log/sms_campaign_enqueue_messages.log 2>&1
+
+# push birthday notifications to the queue
+#7 * * * * flock -n /tmp/notify_users /var/www/mostbet/current/bin/console app:notify-users --type=birthday >> /var/log/project_log/notify_users.log 2>&1
+
+# finish schedules
+11 * * * * flock -n /tmp/finish_schedules /var/www/mostbet/current/bin/console sms-campaign:finish-schedules >> /var/log/project_log/finish_schedules.log 2>&1
+
+10 0 * * * flock -n /tmp/sms_campaign_clear /var/www/mostbet/current/bin/console app:sms_campaign:clear >> /var/log/project_log/sms_campaign_clear.log 2>&1
+
+# managing pregame coupons count
+*/10 * * * * flock -n /tmp/update_pregame_bet_counts /var/www/mostbet/current/bin/console app:maintenance:update-pregame-bet-counts >> /var/log/project_log/update_pregame_bet_counts.log 2>&1
+30 2 * * * flock -n /tmp/delete_finished_lines_bet_counts /var/www/mostbet/current/bin/console app:maintenance:delete-finished-lines-bet-counts >> /var/log/project_log/delete_finished_lines_bet_counts.log 2>&1
+
+# send balance corrections report email
+15 0 * * * flock -n /tmp/report-balance-corrections-by-day /var/www/mostbet/current/bin/console app:reports:balance-corrections-by-day >> /var/log/project_log/report-balance-corrections-by-day.log 2>&1
+
+# command_queue
+* * * * * flock -n /tmp/command_queue_retry_scheduler /var/www/mostbet/current/bin/console --no-interaction app:maintenance:command_queue:retry_scheduler >> /var/log/project_log/command_queue_retry_scheduler.log 2>&1
+* * * * * flock -n /tmp/command_queue_cleaner /var/www/mostbet/current/bin/console --no-interaction app:maintenance:command_queue:cleaner >> /var/log/project_log/command_queue_cleaner.log 2>&1
+
+# Pimpay
+*/1 * * * * flock -n /tmp/finance_pimpay_refill_update_status_command /var/www/mostbet/current/bin/console app:finance:pimpay:refill:update-status --min-age=5 --max-age=60 --frequency=1 >> /var/log/project_log/finance_pimpay_refill_update_status_command.log 2>&1
+*/1 * * * * flock -n /tmp/finance_pimpay_refill_update_status_command_60 /var/www/mostbet/current/bin/console app:finance:pimpay:refill:update-status --min-age=60 --max-age=480 --frequency=30 >> /var/log/project_log/finance_pimpay_refill_update_status_command_60.log 2>&1
+*/1 * * * * flock -n /tmp/finance_pimpay_refill_update_status_command_480 /var/www/mostbet/current/bin/console app:finance:pimpay:refill:update-status --min-age=480 --max-age=10080 --frequency=180 >> /var/log/project_log/finance_pimpay_refill_update_status_command_480.log 2>&1
+
+#*/10 * * * * flock -n /tmp/finance_pimpay_refill_update_payment_details_command /var/www/mostbet/current/bin/console app:finance:pimpay:refill:update-payment-details >> /var/log/project_log/finance_pimpay_refill_update_payment_details_command.log 2>&1
+* * * * * flock -n /tmp/finance_pimpay_refill_update_payment_details_async_command /var/www/mostbet/current/bin/console app:finance:pimpay:refill:update-payment-details-async >> /var/log/project_log/finance_pimpay_refill_update_payment_details_async_command.log 2>&1
+
+# Directa24
+* * * * * flock -n /tmp/finance_directa24_refill_update_payment_details_command /var/www/mostbet/current/bin/console app:finance:directa24:refill:update >> /var/log/project_log/finance_directa24_refill_update_payment_details_command.log 2>&1
+
+# softgamings
+0 14 * * *  flock -n /tmp/softgamings-send-updated-users /var/www/mostbet/current/bin/console app:softgamings:send-updated-users >> /var/log/project_log/softgamings-send-updated-users.log 2>&1
+15 14 * * *  flock -n /tmp/softgamings-send-new-users /var/www/mostbet/current/bin/console app:softgamings:send-new-users >> /var/log/project_log/softgamings-send-new-users.log 2>&1
+15 14 * * *  flock -n /tmp/softgamings-send-new-turnovers /var/www/mostbet/current/bin/console app:softgamings:send-new-turnovers >> /var/log/project_log/softgamings-send-new-turnovers.log 2>&1
+15 0 * * *  flock -n /tmp/softgamings-send-licensing-report /var/www/mostbet/current/bin/console app:softgamings:send-licensing-report >> /var/log/project_log/softgamings-send-new-licensing-report.log 2>&1
+
+# delasport
+# */2 * * * * flock -n /tmp/delasport_data_update /var/www/mostbet/current/bin/console delasport:data-update >> /var/log/project_log/delasport_data_update.log 2>&1
+
+#sportplayer
+*/2 * * * * flock -n /tmp/sportplayer_data_update /var/www/mostbet/current/bin/console sportplayer:data-update >> /var/log/project_log/sportplayer_data_update.log 2>&1
+
+# monitoring
+* * * * *  flock -n /tmp/app_monitoring_count_open_ticket /var/www/mostbet/current/bin/console app:monitoring:count-open-ticket >>  /var/log/project_log/app_monitoring_count_open_ticket.log 2>&1
+*/1 * * * *  flock -n /tmp/app_monitoring_bonus_coupon_request_lifetime /var/www/mostbet/current/bin/console bonus:monitoring:lifetime_open_coupon_requests >> /var/log/project_log/app_monitoring_bonus_coupon_request_lifetime.log 2>&1
+
+# zeroing user balance
+# MST-46607
+# 10 2 * * * flock -n /tmp/finance_balance_zeroing /var/www/mostbet/current/bin/console --no-interaction app:finance:balance-zeroing -v >> /var/log/project_log/finance_balance_zeroing.log 2>&1
+
+#uzcard
+*/1 * * * * flock -n /tmp/finance_uzcard_refill_decline_command /var/www/mostbet/current/bin/console app:finance:uzcard:refill:decline >> /var/log/project_log/finance_uzcard_refill_decline_command.log 2>&1
+*/1 * * * * flock -n /tmp/finance_uzcard_payout_decline_command /var/www/mostbet/current/bin/console app:finance:uzcard:payout:decline >> /var/log/project_log/finance_uzcard_payout_decline_command.log 2>&1
+0 2 * * * flock -n /tmp/finance_uzcard_payout_report_send /var/www/mostbet/current/bin/console app:finance:uzcard:payout-report:send --emailTo billing@mostbet.com >> /var/log/project_log/finance_uzcard_payout_report_send.log 2>&1
+0 2 * * * flock -n /tmp/finance_uzcard_refill_report_send /var/www/mostbet/current/bin/console app:finance:uzcard:refill-report:send --emailTo billing@mostbet.com >> /var/log/project_log/finance_uzcard_refill_report_send.log 2>&1
+
+#mpesa
+*/1 * * * * flock -n /tmp/finance_mpesa_refill_decline_command /var/www/mostbet/current/bin/console app:finance:mpesa:refill:decline >> /var/log/project_log/finance_mpesa_refill_decline_command.log 2>&1
+*/1 * * * * flock -n /tmp/finance_mpesa_payout_decline_command /var/www/mostbet/current/bin/console app:finance:mpesa:payout:decline >> /var/log/project_log/finance_mpesa_payout_decline_command.log 2>&1
+0 2 * * * flock -n /tmp/finance_mpesa_payout_report_send /var/www/mostbet/current/bin/console app:finance:mpesa:payout-report:send --emailTo billing@mostbet.com >> /var/log/project_log/finance_mpesa_payout_report_send.log 2>&1
+0 2 * * * flock -n /tmp/finance_mpesa_refill_report_send /var/www/mostbet/current/bin/console app:finance:mpesa:refill-report:send --emailTo billing@mostbet.com >> /var/log/project_log/finance_mpesa_refill_report_send.log 2>&1
+
+# QuartPay
+*/1 * * * * flock -n /tmp/finance_quartpay_refill_update_status_command /var/www/mostbet/current/bin/console app:finance:quartpay_status_update >> /var/log/project_log/finance_quartpay_refill_update_status_command.log 2>&1
+
+# Octopay
+* * * * * flock -n /tmp/finance_octopay_refill_update_status_command /var/www/mostbet/current/bin/console app:finance:octopay_status_update >> /var/log/project_log/finance_octopay_refill_update_status_command.log 2>&1
+
+#manual_request
+*/1 * * * * flock -n /tmp/finance_manual_request_refill_decline_command /var/www/mostbet/current/bin/console app:finance:manual-request:refill:decline >> /var/log/project_log/finance_manual_request_refill_decline_command.log 2>&1
+*/1 * * * * flock -n /tmp/finance_manual_request_payout_decline_command /var/www/mostbet/current/bin/console app:finance:manual-request:payout:decline >> /var/log/project_log/finance_manual_request_payout_decline_command.log 2>&1
+0 2 * * * flock -n /tmp/finance_manual_request_payout_report_send /var/www/mostbet/current/bin/console app:finance:manual-request:payout-report:send --emailTo billing@mostbet.com >> /var/log/project_log/finance_manual_request_payout_report_send.log 2>&1
+0 2 * * * flock -n /tmp/finance_manual_request_refill_report_send /var/www/mostbet/current/bin/console app:finance:manual-request:refill-report:send --emailTo billing@mostbet.com >> /var/log/project_log/finance_manual_request_refill_report_send.log 2>&1
+
+# top matches
+*/5 * * * * flock -n /tmp/top_matches_dynamic_update_command /var/www/mostbet/current/bin/console top-matches:dynamic:update >> /var/log/project_log/top_matches_dynamic_update_command.log 2>&1
+
+# live streams update
+* * * * * flock -n /tmp/live_stream_update_list /var/www/mostbet/current/bin/console live-stream:update-list >> /var/log/project_log/live_stream_update_list.log 2>&1
+
+# coupon default amount
+43 5 * * * flock -n /tmp/coupon_default_amount /var/www/mostbet/current/bin/console app:update:coupon_default_amount >> /var/log/project_log/coupon_default_amount.log 2>&1
+
+# papara manual transaction
+*/1 * * * * flock -n /tmp/finance_papara_mt_refill_decline_command /var/www/mostbet/current/bin/console app:finance:papara_mt:refill:decline >> /var/log/project_log/finance_papara_mt_refill_decline_command.log 2>&1
+*/1 * * * * flock -n /tmp/finance_papara_mt_payout_decline_command /var/www/mostbet/current/bin/console app:finance:papara_mt:payout:decline >> /var/log/project_log/finance_papara_mt_payout_decline_command.log 2>&1
+0 2 * * * flock -n /tmp/finance_papara_mt_refill_report_send /var/www/mostbet/current/bin/console app:finance:papara_mt:refill-report:send --emailTo billing@mostbet.com >> /var/log/project_log/finance_papara_mt_refill_report_send.log 2>&1
+0 2 * * * flock -n /tmp/finance_papara_mt_payout_report_send /var/www/mostbet/current/bin/console app:finance:papara_mt:payout-report:send --emailTo billing@mostbet.com >> /var/log/project_log/finance_papara_mt_payout_report_send.log 2>&1
+
+# cmt manual transaction
+*/1 * * * * flock -n /tmp/finance_cmt_refill_decline_command /var/www/mostbet/current/bin/console app:finance:cmt:refill:decline >> /var/log/project_log/finance_cmt_refill_decline_command.log 2>&1
+*/1 * * * * flock -n /tmp/finance_cmt_payout_decline_command /var/www/mostbet/current/bin/console app:finance:cmt:payout:decline >> /var/log/project_log/finance_cmt_payout_decline_command.log 2>&1
+0 2 * * * flock -n /tmp/finance_cmt_refill_report_send /var/www/mostbet/current/bin/console app:finance:cmt:refill-report:send --emailTo billing@mostbet.com >> /var/log/project_log/finance_cmt_refill_report_send.log 2>&1
+0 2 * * * flock -n /tmp/finance_cmt_payout_report_send /var/www/mostbet/current/bin/console app:finance:cmt:payout-report:send --emailTo billing@mostbet.com >> /var/log/project_log/finance_cmt_payout_report_send.log 2>&1
+
+# paytm manual transaction
+*/1 * * * * flock -n /tmp/finance_pay_tm_refill_decline_command /var/www/mostbet/current/bin/console app:finance:pay_tm:refill:decline >> /var/log/project_log/finance_pay_tm_refill_decline_command.log 2>&1
+*/1 * * * * flock -n /tmp/finance_pay_tm_payout_decline_command /var/www/mostbet/current/bin/console app:finance:pay_tm:payout:decline >> /var/log/project_log/finance_pay_tm_payout_decline_command.log 2>&1
+0 2 * * * flock -n /tmp/finance_pay_tm_refill_report_send /var/www/mostbet/current/bin/console app:finance:pay_tm:refill-report:send --emailTo billing@mostbet.com >> /var/log/project_log/finance_pay_tm_refill_report_send.log 2>&1
+0 2 * * * flock -n /tmp/finance_pay_tm_payout_report_send /var/www/mostbet/current/bin/console app:finance:pay_tm:payout-report:send --emailTo billing@mostbet.com >> /var/log/project_log/finance_pay_tm_payout_report_send.log 2>&1
+
+# move all dynamically created outcomes to single outcome_type_group. require until MBL-1352
+*/5 * * * * flock -n /tmp/outcome_type_to_single_group_mover /var/www/mostbet/current/bin/console app:outcome-type-to-single-group-mover >> /var/log/project_log/outcome_type_to_single_group_mover.log 2>&1
+
+# approve cryptopay refills
+*/2 * * * * flock -n /tmp/cryptopay_refill_approve /var/www/mostbet/current/bin/console app:finance:cryptopay:refill:clarify >> /var/log/project_log/cryptopay_refill_approve.log 2>&1
+
+#paynet
+*/1 * * * * flock -n /tmp/finance_paynet_mt_refill_decline_command /var/www/mostbet/current/bin/console app:finance:paynet_mt:refill:decline >> /var/log/project_log/finance_paynet_mt_refill_decline_command.log 2>&1
+0 2 * * * flock -n /tmp/finance_paynet_mt_refill_report_send /var/www/mostbet/current/bin/console app:finance:paynet_mt:refill-report:send --emailTo billing@mostbet.com >> /var/log/project_log/finance_paynet_mt_refill_report_send.log 2>&1
+
+# inovapay clarify
+# * * * * * flock -n /tmp/inovapay_clarify /var/www/mostbet/current/bin/console app:finance:inovapay:refill:approve >> /var/log/project_log/inovapay_clarify.log 2>&1
+
+#emarsys
+15 4 * * * flock -n /tmp/emarsys_disable_email_notification /var/www/mostbet/current/bin/console --no-interaction emarsys:disable-email-notification -v >> /var/log/project_log/emarsys_disable_email_notification.log 2>&1
+45 4 * * * flock -n /tmp/emarsys_delete_inactive_contacts /var/www/mostbet/current/bin/console --no-interaction emarsys:delete-inactive-contacts -v >> /var/log/project_log/emarsys_delete_inactive_contacts.log 2>&1
+*/30 * * * * flock -n /tmp/emarsys_notify_user_has_uncompleted_refill /var/www/mostbet/current/bin/console --no-interaction emarsys:notify-user-has-uncompleted_refill -v >> /var/log/project_log/emarsys_notify_user_has_uncompleted_refill.log 2>&1
+0 6 * * * flock -n /tmp/emarsys_update_user_active_hours_aggregation /var/www/mostbet/current/bin/console --no-interaction emarsys:update_user_active_hours_aggregation -v >> /var/log/project_log/emarsys_update_user_active_hours_aggregation.log 2>&1
+0 5 * * * flock -n /tmp/emarsys_import_email_campaigns /var/www/mostbet/current/bin/console --no-interaction emarsys:import-email-campaigns -v >> /var/log/project_log/emarsys_import_email_campaigns.log 2>&1
+
+#olap
+10 1 * * * flock -n /tmp/olap_collect_refill_constants /var/www/mostbet/current/bin/console --no-interaction app:maintenance:olap:collect_refill_constants >> /var/log/project_log/olap_collect_refill_constants.log 2>&1
+
+# send report of add role ROLE_IGNORE_PAYOUT_TURNOVER_VALIDATOR to users
+17 0 * * * flock -n /tmp/report-role_turnover_by_day /var/www/mostbet/current/bin/console app:reports:role_turnover_by_day >> /var/log/project_log/report-role_turnover_by_day.log 2>&1
+
+#india manual transaction
+*/1 * * * * flock -n /tmp/finance_pay_tm_refill_decline_command /var/www/mostbet/current/bin/console app:finance:bank_transfer_mt:refill:decline >> /var/log/project_log/finance_pay_tm_refill_decline_command.log 2>&1
+*/1 * * * * flock -n /tmp/finance_pay_tm_refill_decline_command /var/www/mostbet/current/bin/console app:finance:upi_mt:refill:decline >> /var/log/project_log/finance_pay_tm_refill_decline_command.log 2>&1
+*/1 * * * * flock -n /tmp/finance_pay_tm_payout_decline_command /var/www/mostbet/current/bin/console app:finance:bank_transfer_mt:payout:decline >> /var/log/project_log/finance_pay_tm_payout_decline_command.log 2>&1
+*/1 * * * * flock -n /tmp/finance_pay_tm_payout_decline_command /var/www/mostbet/current/bin/console app:finance:upi_mt:payout:decline >> /var/log/project_log/finance_pay_tm_payout_decline_command.log 2>&1
+0 2 * * * flock -n /tmp/finance_pay_tm_refill_report_send /var/www/mostbet/current/bin/console app:finance:india_manual:refill-report:send --emailTo billing@mostbet.com >> /var/log/project_log/finance_pay_tm_refill_report_send.log 2>&1
+0 2 * * * flock -n /tmp/finance_pay_tm_payout_report_send /var/www/mostbet/current/bin/console app:finance:india_manual:payout-report:send --emailTo billing@mostbet.com >> /var/log/project_log/finance_pay_tm_payout_report_send.log 2>&1
+
+*/10 * * * * flock -n /tmp/campaign_register_all_active_users /var/www/mostbet/current/bin/console campaign:register-all-active-users  >> /var/log/project_log/campaign_register_all_active_users.log 2>&1
+
+# user_notification
+0 */1 * * * flock -n /tmp/user_notification_expiration_check /var/www/mostbet/current/bin/console app:user_notification:expiration_check >> /var/log/project_log/user_notification_expiration_check.log 2>&1
+0 */1 * * * flock -n /tmp/user_notification_send /var/www/mostbet/current/bin/console app:user_notification:send >> /var/log/project_log/user_notification_send.log 2>&1
+
+#capitalist update card details
+*/10 * * * * flock -n /tmp/finance_capitalist_refill_update_payment_details_hash /var/www/mostbet/current/bin/console app:finance:capitalist:refill:update-payment-details-hash >> /var/log/project_log/finance_capitalist_refill_update_payment_details_hash.log 2>&1
+
+# trigger campaign
+* * * * * flock -n /tmp/trigger_campaign_reward_create_async_command /var/www/mostbet/current/bin/console app:trigger_campaign:reward:create-async >> /var/log/project_log/trigger_campaign_reward_create_async_command.log 2>&1
+*/30 * * * * flock -n /tmp/trigger_campaign_update_black_list /var/www/mostbet/current/bin/console --no-interaction trigger-campaign:update-black-list -v >> /var/log/project_log/trigger_campaign_update_black_list.log 2>&1
+* * * * * flock -n /tmp/trigger_campaign_update_black_list_from_recent_mults /var/www/mostbet/current/bin/console --no-interaction trigger-campaign:update-black-list-from-recent-mults -v >> /var/log/project_log/trigger_campaign_update_black_list_from_recent_mults.log 2>&1
+30 10 * * * flock -n /tmp/trigger_campaign_emarsys_import_segment /var/www/mostbet/current/bin/console --no-interaction emarsys:import-segment -v >> /var/log/project_log/trigger_campaign_emarsys_import_segment.log 2>&1
+
+#generate outcome type weights by mixer source weights
+0 * * * *  flock -n /tmp/generate_outcome_type_weights /var/www/mostbet/current/bin/console app:generate_outcome_type_weights >> /var/log/project_log/generate_outcome_type_weights.log 2>&1
+
+# Block multi-account for the referral-program
+0 */1 * * * flock -n /tmp/partner_program_blocking_multi_account /var/www/mostbet/current/bin/console --no-interaction partner-program:block-multi-account --days-before=1 --split-by-day=1 -vvv >> /var/log/project_log/partner_program_block_multi_account_command.log 2>&1
+* * * * * flock -n /tmp/partner_program_update_pid /var/www/mostbet/current/bin/console --no-interaction partner-program:update-partner-ids --minutes-ago=10 -vvv >> /var/log/project_log/partner_program_update_partner_ids.log 2>&1
+
+# Announcement
+0 */1 * * * flock -n /tmp/announcement_update_status /var/www/mostbet/current/bin/console app:announcement:update_status >> /var/log/project_log/announcement_update_status.log 2>&1
+
+# Async task
+0 4 * * * flock -n /tmp/async_task_clear_old_tasks /var/www/mostbet/current/bin/console async_task:maintenance:clear_old_tasks >> /var/log/project_log/async_task_clear_old_tasks.log 2>&1
+
+# ProfileDATA
+# 0 */1 * * * flock -n /tmp/profiledata_import_users_phones /var/www/mostbet/current/bin/console profiledata:import-users-phones --modifier=-1hour >> /var/log/project_log/profiledata_import_users_phones.log 2>&1
+
+# FAQ
+0 */1 * * * flock -n /tmp/search-populate-posts /var/www/mostbet/current/bin/console search:populate:posts >> /var/log/project_log/search-populate-posts.log 2>&1
+
+# manual operator BDT
+*/1 * * * * flock -n /tmp/finance_manual_operator_bdt_refill_decline_command /var/www/mostbet/current/bin/console app:finance:manual_operator_bdt:refill:decline >> /var/log/project_log/finance_manual_operator_bdt_refill_decline_command.log 2>&1
+0 2 * * * flock -n /tmp/finance_manual_operator_bdt_refill_report_send /var/www/mostbet/current/bin/console app:finance:manual_operator_bdt:refill-report:send --emailTo billing@mostbet.com >> /var/log/project_log/finance_manual_operator_bdt_refill_report_send.log 2>&1
+*/1 * * * * flock -n /tmp/finance_nagad_mt_payout_decline_command /var/www/mostbet/current/bin/console app:finance:bkash_mt:payout:decline >> /var/log/project_log/finance_bkash_mt_payout_decline_command.log 2>&1
+*/1 * * * * flock -n /tmp/finance_bkash_mt_payout_decline_command /var/www/mostbet/current/bin/console app:finance:nagad_mt:payout:decline >> /var/log/project_log/finance_nagad_mt_payout_decline_command.log 2>&1
+*/1 * * * * flock -n /tmp/finance_rocket_mt_payout_decline_command /var/www/mostbet/current/bin/console app:finance:rocket_mt:payout:decline >> /var/log/project_log/finance_rocket_mt_payout_decline_command.log 2>&1
+0 2 * * * flock -n /tmp/finance_manual_operator_bdt_payout_report_send /var/www/mostbet/current/bin/console app:finance:manual_operator_bdt:payout-report:send --emailTo billing@mostbet.com >> /var/log/project_log/finance_manual_operator_bdt_payout_report_send.log 2>&1
+
+# manual operator BDT 2
+*/1 * * * * flock -n /tmp/finance_manual_operator_bdt_2_refill_decline_command /var/www/mostbet/current/bin/console app:finance:manual_operator_bdt_2:refill:decline >> /var/log/project_log/finance_manual_operator_bdt_2_refill_decline_command.log 2>&1
+0 2 * * * flock -n /tmp/finance_manual_operator_bdt_2_refill_report_send /var/www/mostbet/current/bin/console app:finance:manual_operator_bdt_2:refill-report:send --emailTo billing@mostbet.com >> /var/log/project_log/finance_manual_operator_bdt_2_refill_report_send.log 2>&1
+*/1 * * * * flock -n /tmp/finance_nagad_mt_2_payout_decline_command /var/www/mostbet/current/bin/console app:finance:bkash_mt_2:payout:decline >> /var/log/project_log/finance_bkash_mt_2_payout_decline_command.log 2>&1
+*/1 * * * * flock -n /tmp/finance_bkash_mt_2_payout_decline_command /var/www/mostbet/current/bin/console app:finance:nagad_mt_2:payout:decline >> /var/log/project_log/finance_nagad_mt_2_payout_decline_command.log 2>&1
+*/1 * * * * flock -n /tmp/finance_rocket_mt_2_payout_decline_command /var/www/mostbet/current/bin/console app:finance:rocket_mt_2:payout:decline >> /var/log/project_log/finance_rocket_mt_2_payout_decline_command.log 2>&1
+0 2 * * * flock -n /tmp/finance_manual_operator_bdt_2_payout_report_send /var/www/mostbet/current/bin/console app:finance:manual_operator_bdt_2:payout-report:send --emailTo billing@mostbet.com >> /var/log/project_log/finance_manual_operator_bdt_2_payout_report_send.log 2>&1
+
+# manual operator BDT 3
+*/1 * * * * flock -n /tmp/finance_manual_operator_bdt_3_refill_decline_command /var/www/mostbet/current/bin/console app:finance:manual_operator_bdt_3:refill:decline >> /var/log/project_log/finance_manual_operator_bdt_3_refill_decline_command.log 2>&1
+0 2 * * * flock -n /tmp/finance_manual_operator_bdt_3_refill_report_send /var/www/mostbet/current/bin/console app:finance:manual_operator_bdt_3:refill-report:send --emailTo billing@mostbet.com >> /var/log/project_log/finance_manual_operator_bdt_3_refill_report_send.log 2>&1
+*/1 * * * * flock -n /tmp/finance_nagad_mt_3_payout_decline_command /var/www/mostbet/current/bin/console app:finance:bkash_mt_3:payout:decline >> /var/log/project_log/finance_bkash_mt_3_payout_decline_command.log 2>&1
+*/1 * * * * flock -n /tmp/finance_bkash_mt_3_payout_decline_command /var/www/mostbet/current/bin/console app:finance:nagad_mt_3:payout:decline >> /var/log/project_log/finance_nagad_mt_3_payout_decline_command.log 2>&1
+*/1 * * * * flock -n /tmp/finance_rocket_mt_3_payout_decline_command /var/www/mostbet/current/bin/console app:finance:rocket_mt_3:payout:decline >> /var/log/project_log/finance_rocket_mt_3_payout_decline_command.log 2>&1
+0 2 * * * flock -n /tmp/finance_manual_operator_bdt_3_payout_report_send /var/www/mostbet/current/bin/console app:finance:manual_operator_bdt_3:payout-report:send --emailTo billing@mostbet.com >> /var/log/project_log/finance_manual_operator_bdt_3_payout_report_send.log 2>&1
+
+# manual operator PKR
+*/1 * * * * flock -n /tmp/finance_manual_operator_pkr_refill_decline_command /var/www/mostbet/current/bin/console app:finance:manual_operator_pkr:refill:decline >> /var/log/project_log/finance_manual_operator_pkr_refill_decline_command.log 2>&1
+*/1 * * * * flock -n /tmp/finance_manual_easypaisa_payout_decline_command /var/www/mostbet/current/bin/console app:finance:manual_easypaisa:payout:decline >> /var/log/project_log/finance_manual_easypaisa_payout_decline_command.log 2>&1
+*/1 * * * * flock -n /tmp/finance_manual_jazzcash_payout_decline_command /var/www/mostbet/current/bin/console app:finance:manual_jazzcash:payout:decline >> /var/log/project_log/finance_manual_jazzcash_payout_decline_command.log 2>&1
+*/1 * * * * flock -n /tmp/finance_manual_bank_transfer_pkr_payout_decline_command /var/www/mostbet/current/bin/console app:finance:manual_bank_transfer_pkr:payout:decline >> /var/log/project_log/finance_manual_bank_transfer_pkr_payout_decline_command.log 2>&1
+0 2 * * * flock -n /tmp/finance_manual_operator_pkr_payout_report_send /var/www/mostbet/current/bin/console app:finance:manual_operator_pkr:payout-report:send --emailTo billing@mostbet.com >> /var/log/project_log/finance_manual_operator_pkr_payout_report_send.log 2>&1
+
+# instapays callback
+*/1 * * * * flock -n /tmp/finance_instapays_refill_decline_command /var/www/mostbet/current/bin/console app:finance:instapays:refill:decline >> /var/log/project_log/finance_instapays_refill_decline_command.log 2>&1
+
+*/1 * * * * flock -n /tmp/finance_manual_phone_pe_mt_refill_decline_command /var/www/mostbet/current/bin/console app:finance:phone_pe_mt:refill:decline >> /var/log/project_log/finance_phone_pe_mt_refill_decline_command.log 2>&1
+0 2 * * * flock -n /tmp/finance_manual_phone_pe_mt_refill_report_send /var/www/mostbet/current/bin/console app:finance:phone_pe_mt:refill-report:send --emailTo billing@mostbet.com >> /var/log/project_log/finance_manual_phone_pe_mt_refill_report_send.log 2>&1
+*/1 * * * * flock -n /tmp/finance_manual_g_pay_mt_refill_decline_command /var/www/mostbet/current/bin/console app:finance:g_pay_mt:refill:decline >> /var/log/project_log/finance_g_pay_mt_refill_decline_command.log 2>&1
+0 2 * * * flock -n /tmp/finance_manual_g_pay_mt_refill_report_send /var/www/mostbet/current/bin/console app:finance:g_pay_mt:refill-report:send --emailTo billing@mostbet.com >> /var/log/project_log/finance_g_pay_mt_refill_report_send.log 2>&1
+0 2 * * * flock -n /tmp/finance_manual_operator_phone_pe_mt_payout_report_send /var/www/mostbet/current/bin/console app:finance:phone_pe_mt:payout-report:send --emailTo billing@mostbet.com >> /var/log/project_log/finance_manual_operator_phone_pe_mt_payout_report_send.log 2>&1
+*/1 * * * * flock -n /tmp/finance_phone_pe_mt_payout_decline_command /var/www/mostbet/current/bin/console app:finance:phone_pe_mt:payout:decline >> /var/log/project_log/finance_phone_pe_mt_payout_decline_command.log 2>&1
+
+# Card mask report
+0 6 * * * flock -n /tmp/finance_azn_rub_report /var/www/mostbet/current/bin/console app:finance:mask-report:send --emailTo billing@mostbet.com >> /var/log/project_log/mask_report_send.log 2>&1
+
+# Bonus
+0 4 * * *  flock -n /tmp/bonus_partition_create_bonus_balance_operation_command /var/www/mostbet/current/bin/console bonus:maintenance:partition_create_bonus_balance_operation >> /var/log/project_log/bonus.log 2>&1
+10 4 * * *  flock -n /tmp/bonus_partition_archive_bonus_balance_operation_command /var/www/mostbet/current/bin/console bonus:maintenance:partition_archive_bonus_balance_operation >> /var/log/project_log/bonus.log 2>&1
+0 5 * * *  flock -n /tmp/bonus_partition_monitoring_bonus_balance_operation_command /var/www/mostbet/current/bin/console bonus:maintenance:partition_monitoring_bonus_balance_operation >> /var/log/project_log/bonus.log 2>&1
+*/10 * * * *  flock -n /tmp/bonus_event_cancel_failures /var/www/mostbet/current/bin/console bonus_wager_request:cancel-failures  >> /var/log/project_log/bonus_event_cancel_failures.log 2>&1
+
+# Bonus packet
+* * * * * flock -n /tmp/bonus_packet_reward_issue /var/www/mostbet/current/bin/console bonus_packet:reward:issue >> /var/log/project_log/bonus_packet_reward_issue.log 2>&1
+* * * * * flock -n /tmp/bonus_packet_publish /var/www/mostbet/current/bin/console bonus_packet:publish >> /var/log/project_log/bonus_packet_publish.log 2>&1
+* * * * * flock -n /tmp/bonus_packet_deactivate /var/www/mostbet/current/bin/console bonus_packet:deactivate >> /var/log/project_log/bonus_packet_deactivate.log 2>&1
+
+# Tournament
+* * * * * flock -n /tmp/tournament_sport_event_log_create1 /var/www/mostbet/current/bin/console tournament:sport_tournament:event_log:create --limit=5000 >> /var/log/project_log/tournament_sport_event_log_create.log 2>&1
+* * * * * flock -n /tmp/tournament_sport_event_log_create2 /var/www/mostbet/current/bin/console tournament:sport_tournament:event_log:create --limit=5000 >> /var/log/project_log/tournament_sport_event_log_create.log 2>&1
+* * * * * flock -n /tmp/tournament_sport_event_log_create3 /var/www/mostbet/current/bin/console tournament:sport_tournament:event_log:create --limit=5000 >> /var/log/project_log/tournament_sport_event_log_create.log 2>&1
+* * * * * flock -n /tmp/tournament_sport_event_log_create4 /var/www/mostbet/current/bin/console tournament:sport_tournament:event_log:create --limit=5000 >> /var/log/project_log/tournament_sport_event_log_create.log 2>&1
+* * * * * flock -n /tmp/tournament_sport_event_log_create5 /var/www/mostbet/current/bin/console tournament:sport_tournament:event_log:create --limit=5000 >> /var/log/project_log/tournament_sport_event_log_create.log 2>&1
+
+*/10 * * * * flock -n /tmp/tournament_sport_leaderboard_update /var/www/mostbet/current/bin/console tournament:sport_tournament:leaderboard_update >> /var/log/project_log/tournament_sport_leaderboard_update.log 2>&1
+*/10 * * * * flock -n /tmp/tournament_sport_update_status /var/www/mostbet/current/bin/console tournament:sport_tournament:status:update >> /var/log/project_log/tournament_sport_update_status.log 2>&1
+
+# User rewards
+* * * * * flock -n /tmp/user_reward_create_async_command /var/www/mostbet/current/bin/console app:user:reward:create-async >> /var/log/project_log/user_reward_create_async_command.log 2>&1
+
+# Database partition management
+0 1 5 * * flock -n /tmp/archiver_archive_transaction_command /var/www/mostbet/current/bin/console app:archiver:archive:transaction --date="-3 month" >> /var/log/project_log/archiver_archive_transaction_command.log 2>&1
+0 1 26 * * flock -n /tmp/archiver_prepare_transaction_command /var/www/mostbet/current/bin/console app:archiver:prepare:transaction --date="+1 month" >> /var/log/project_log/archiver_prepare_transaction_command.log 2>&1
+0 1 27 * * flock -n /tmp/archiver_prepare_transaction_command /var/www/mostbet/current/bin/console app:archiver:prepare:transaction --date="+2 month" >> /var/log/project_log/archiver_prepare_transaction_command.log 2>&1
+0 1 28 * * flock -n /tmp/archiver_prepare_transaction_command /var/www/mostbet/current/bin/console app:archiver:prepare:transaction --date="+3 month" >> /var/log/project_log/archiver_prepare_transaction_command.log 2>&1
+30 * * * * flock -n /tmp/archiver_monitoring_transaction_command /var/www/mostbet/current/bin/console app:archiver:monitoring:transaction >> /var/log/project_log/archiver_monitoring_transaction_command.log 2>&1
+
+0 1 * * * flock -n /tmp/archiver_archive_wallet_transaction_command /var/www/mostbet/current/bin/console wallet:archiver:archive:wallet_transaction --date="-3 day" >> /var/log/project_log/archiver_archive_wallet_transaction_command.log 2>&1
+0 2 * * * flock -n /tmp/archiver_archive_wallet_transaction_command /var/www/mostbet/current/bin/console wallet:archiver:prepare:wallet_transaction --date="+1 day" >> /var/log/project_log/archiver_archive_wallet_transaction_command.log 2>&1
+10 2 * * * flock -n /tmp/archiver_archive_wallet_transaction_command /var/www/mostbet/current/bin/console wallet:archiver:prepare:wallet_transaction --date="+2 day" >> /var/log/project_log/archiver_archive_wallet_transaction_command.log 2>&1
+20 2 * * * flock -n /tmp/archiver_archive_wallet_transaction_command /var/www/mostbet/current/bin/console wallet:archiver:prepare:wallet_transaction --date="+3 day" >> /var/log/project_log/archiver_archive_wallet_transaction_command.log 2>&1
+30 * * * * flock -n /tmp/archiver_monitoring_wallet_transaction_command /var/www/mostbet/current/bin/console wallet:archiver:monitoring:wallet_transaction >> /var/log/project_log/archiver_monitoring_wallet_transaction_command.log 2>&1
+
+# User metadata management
+#0 1 * * * flock -n /tmp/user_metadata_update_last_transaction_date_command /var/www/mostbet/current/bin/console user:metadata:update_last_transaction_date >> /var/log/project_log/user_metadata_update_last_transaction_date_command.log 2>&1
+*/1 * * * * flock -n /tmp/user_metadata_update_last_casino_coupon_date_command /var/www/mostbet/current/bin/console user:metadata:update_last_casino_coupon_date >> /var/log/project_log/user_metadata_update_last_casino_coupon_date_command.log 2>&1
+*/1 * * * * flock -n /tmp/user_metadata_update_last_casino_spin_date_command /var/www/mostbet/current/bin/console user:metadata:update_last_casino_spin_date >> /var/log/project_log/user_metadata_update_last_casino_spin_date_command.log 2>&1
+
+# Events
+*/10 * * * * flock -n /tmp/event_archive_irrelevant /var/www/mostbet/current/bin/console app:event:archive_irrelevant >> /var/log/project_log/event_archive_irrelevant.log 2>&1
+
+*/5 * * * * flock -n /tmp/publish_user_last_seen_command /var/www/mostbet/current/bin/console app:publish-user-last-seen >> /var/log/project_log/publish_user_last_seen_command.log 2>&1
+
+# UserWhiteListIp
+0 4 * * * flock -n /tmp/user_white_list_ip_process_activity /var/www/mostbet/current/bin/console app:userwhitelistip:process_activity >> /var/log/project_log/user_white_list_ip_process_activity.log 2>&1
+
+# Cashback point
+*/1 * * * * flock -n /tmp/cashback_point_charge_schedule_enqueue_users /var/www/mostbet/current/bin/console cashback-point-charge-schedule:enqueue-users >> /var/log/project_log/cashback_point_charge_schedule_enqueue_users.log 2>&1
+*/1 * * * * flock -n /tmp/cashback_point_charge_schedule_finish_schedules /var/www/mostbet/current/bin/console cashback-point-charge-schedule:finish-schedules >> /var/log/project_log/cashback_point_charge_schedule_finish_schedules.log 2>&1
+
+#close old lines
+0,10,20,30,40,50 5 * * * flock -n /tmp/close_pregame /var/www/mostbet/current/bin/console app:maintenance:line:close_old --type=1 --exclude-line-category=outrights  --interval="-7 days" >> /var/log/project_log/close_pregame_lines.log 2>&1
+1,11,21,31,41,51 5 * * * flock -n /tmp/close_live /var/www/mostbet/current/bin/console app:maintenance:line:close_old --type=2 --exclude-line-category=outrights --exclude-line-category=cricket --interval="-2 days" >> /var/log/project_log/close_live_lines.log 2>&1
+2,12,22,32,42,52 5 * * * flock -n /tmp/close_cricket_live /var/www/mostbet/current/bin/console app:maintenance:line:close_old --type=2 --line-category=cricket --interval="-7 days" >> /var/log/project_log/close_cricket_live_lines.log 2>&1
+
+# Recovery passwords ru users
+*/1 * * * * flock -n /tmp/recovery_password_ru_users /var/www/mostbet/current/bin/console app:recovery-password-ru-users >> /var/log/project_log/recovery_password_ru_users.log 2>&1
+
+# agent BDT
+*/1 * * * * flock -n /tmp/finance_agent_bdt_refill_decline_command /var/www/mostbet/current/bin/console app:finance:agent_bdt:refill:decline >> /var/log/project_log/finance_agent_bdt_refill_decline_command.log 2>&1
+0 2 * * * flock -n /tmp/finance_agent_bdt_refill_report_send /var/www/mostbet/current/bin/console app:finance:agent_bdt:refill-report:send --emailTo billing@mostbet.com >> /var/log/project_log/finance_agent_bdt_refill_report_send.log 2>&1
+*/1 * * * * flock -n /tmp/finance_agent_bdt_bkash_payout_decline_command /var/www/mostbet/current/bin/console app:finance:agent_bdt_bkash:payout:decline >> /var/log/project_log/finance_agent_bdt_bkash_payout_decline_command.log 2>&1
+*/1 * * * * flock -n /tmp/finance_agent_bdt_nagad_payout_decline_command /var/www/mostbet/current/bin/console app:finance:agent_bdt_nagad:payout:decline >> /var/log/project_log/finance_agent_bdt_nagad_payout_decline_command.log 2>&1
+*/1 * * * * flock -n /tmp/finance_agent_bdt_rocket_payout_decline_command /var/www/mostbet/current/bin/console app:finance:agent_bdt_rocket:payout:decline >> /var/log/project_log/finance_agent_bdt_rocket_payout_decline_command.log 2>&1
+0 2 * * * flock -n /tmp/finance_agent_bdt_payout_report_send /var/www/mostbet/current/bin/console app:finance:agent_bdt:payout-report:send --emailTo billing@mostbet.com >> /var/log/project_log/finance_agent_bdt_payout_report_send.log 2>&1
+
+# payout moderation user notification
+* * * * * flock -n /tmp/user_payout_moderation_notification /var/www/mostbet/current/bin/console app:payout:notify-moderation >> /var/log/project_log/user_payout_moderation_notification.log 2>&1
+
+# Uzcardapi checkout
+* * * * * flock -n /tmp/finance_uzcardapi_checkout_refill_update_status_command /var/www/mostbet/current/bin/console app:finance:uzcardapi-refill-update --limit=10000 >> /var/log/project_log/finance_uzcardapi_checkout_refill_update_payment_details_command.log 2>&1
+
+# Kesspay
+* * * * * flock -n /tmp/finance_kesspay_refill_update_status_command /var/www/mostbet/current/bin/console app:finance:kesspay-refill-update >> /var/log/project_log/finance_kesspay_refill_update_status_command.log 2>&1
+
+# agent PKR
+*/1 * * * * flock -n /tmp/finance_agent_pkr_refill_decline_command /var/www/mostbet/current/bin/console app:finance:agent_pkr:refill:decline >> /var/log/project_log/finance_agent_pkr_refill_decline_command.log 2>&1
+0 2 * * * flock -n /tmp/finance_agent_pkr_refill_report_send /var/www/mostbet/current/bin/console app:finance:agent_pkr:refill-report:send --emailTo billing@mostbet.com >> /var/log/project_log/finance_agent_pkr_refill_report_send.log 2>&1
+*/1 * * * * flock -n /tmp/finance_agent_pkr_jazzcash_payout_decline_command /var/www/mostbet/current/bin/console app:finance:agent_pkr_jazzcash:payout:decline >> /var/log/project_log/finance_agent_pkr_jazzcash_payout_decline_command.log 2>&1
+*/1 * * * * flock -n /tmp/finance_agent_pkr_easypaisa_payout_decline_command /var/www/mostbet/current/bin/console app:finance:agent_pkr_easypaisa:payout:decline >> /var/log/project_log/finance_agent_pkr_easypaisa_payout_decline_command.log 2>&1
+*/1 * * * * flock -n /tmp/finance_agent_pkr_bank_transfer_payout_decline_command /var/www/mostbet/current/bin/console app:finance:agent_pkr_bank_transfer:payout:decline >> /var/log/project_log/finance_agent_pkr_bank_transfer_payout_decline_command.log 2>&1
+0 2 * * * flock -n /tmp/finance_agent_pkr_payout_report_send /var/www/mostbet/current/bin/console app:finance:agent_pkr:payout-report:send --emailTo billing@mostbet.com >> /var/log/project_log/finance_agent_pkr_payout_report_send.log 2>&1

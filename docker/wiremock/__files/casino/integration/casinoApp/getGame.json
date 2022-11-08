@@ -1,0 +1,57 @@
+{
+  "id": 5,
+  "position": 26,
+  "name": "Dolphins pearl deluxe",
+  "hasLobby": false,
+  "image": "https://providers.safebitcasino.com//game/icons/DolphinsPearlDeluxe_300_221.jpg",
+  "category": 1,
+  "categoryTag": {
+    "id": 1,
+    "name": "slots",
+    "type": "category"
+  },
+  "gameInfo": {
+    "id": 5,
+    "name": "Dolphins pearl deluxe",
+    "externalId": "gsdr8fNg",
+    "category": 1,
+    "source": "slotegrator"
+  },
+  "hasDemo": true,
+  "badges": ["new"],
+  "provider": {
+    "id": 5,
+    "name": "Novomatic Deluxe",
+    "position": 0,
+    "title": "provider_title",
+    "image": "/upload/casino/provider/5.png",
+    "banner": "/upload/casino/provider/5_banner.png"
+  },
+  "productType": "casino",
+  "features": [
+    42
+  ],
+  "genres": [],
+  "tags": [
+    1,
+    42
+  ],
+  "currencyLimit": {
+    "min": null,
+    "max": null
+  },
+  "minBalanceLimit": 5,
+  "hasBonusMode": true,
+  "availableCurrencies": [
+    "EUR",
+    "BYN",
+    "USD",
+    "UAH",
+    "RUB",
+    "UZS"
+  ],
+  "extraParams": {
+    "hasFreespins": true
+  },
+  "fallbackCurrencyEnabled": true
+}

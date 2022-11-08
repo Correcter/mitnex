@@ -1,0 +1,9 @@
+{
+    "sucesso": true,
+    "estado": 0,
+    "resposta": "OK",
+    "valor": "3.00000",
+    "referencia": "{{randomValue length=10 type='NUMERIC'}}",
+    "url": "https://www.example.com",
+    "url_paysafeCard": "https://www.example.com"
+}

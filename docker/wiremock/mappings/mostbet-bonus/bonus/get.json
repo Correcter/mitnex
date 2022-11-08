@@ -1,0 +1,11 @@
+{
+    "request": {
+        "urlPath": "/bonus",
+        "bodyPatterns": [],
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "mostbet-bonus/bonus/get.json"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "request": {
+        "urlPattern": "/referral-program/participant/byExternalId/(.*)",
+        "method": "GET",
+        "headers": {
+            "projectUUID": {
+                "equalTo": "44ef2811-5927-423d-bc9f-f69bbaf7773e"
+            }
+        }
+    },
+    "response": {
+        "status": 404,
+        "bodyFileName": "referral-program/participant/getByExternalId.json"
+    }
+}

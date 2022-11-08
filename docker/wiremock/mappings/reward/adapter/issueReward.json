@@ -1,0 +1,9 @@
+{
+  "request": {
+      "urlPath": "/reward-service/v1/rewards",
+      "method": "POST"
+  },
+  "response": {
+    "status": 200
+  }
+}

@@ -1,0 +1,13 @@
+{
+    "request": {
+        "urlPathPattern": "/paysys/ru",
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Set-Cookie": ["ci_session=lqdmqso4i94r1fp5srllpc533s4a7ist; path=/; Secure; HttpOnly"]
+        },
+        "bodyFileName": "paysys/base.html"
+    }
+}

@@ -1,0 +1,16 @@
+---
+- hosts: ru_prod
+  roles:
+    - mostbet.symfony3_rollback
+
+  vars_files:
+    - grafana/credentials.yml
+
+  vars:
+    ansible_user: mostbet
+
+    symfony_project_root: /var/www/mostbet
+    symfony_project_console_command: bin/console
+    migrations: "{{ lookup('env', 'migrations') }}"
+
+    symfony_project_pre_run: hooks/prod/rollback_notification.yml

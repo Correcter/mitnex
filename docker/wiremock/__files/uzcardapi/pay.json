@@ -1,0 +1,8 @@
+{
+    "error": false,
+    "opid": "{{randomValue length=8 type='NUMERIC'}}",
+    "status": "success",
+    "commission": 0.5,
+    "name": "Иван Иванов ",
+    "message": "Код успешно отправлен!"
+}

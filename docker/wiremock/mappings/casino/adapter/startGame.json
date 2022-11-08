@@ -1,0 +1,10 @@
+{
+    "request": {
+        "urlPath": "/casino/adapter/startGame",
+        "method": "POST"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "casino/adapter/startGame.json"
+    }
+}

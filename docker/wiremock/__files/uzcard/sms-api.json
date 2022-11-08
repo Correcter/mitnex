@@ -1,0 +1,12 @@
+{
+    "result": {
+        "phone": "+79{{randomValue length=9 type='NUMERIC'}}",
+        "sent": true,
+        "wait": 6000,
+        "cheque": {
+            "_id": "{{jsonPath request.body '$.params.id'}}",
+            "pay_time": "{{randomValue length=9 type='NUMERIC'}}",
+            "state": 4
+        }
+    }
+}

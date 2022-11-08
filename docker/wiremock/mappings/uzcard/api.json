@@ -1,0 +1,19 @@
+{
+    "request": {
+        "url": "/uzcard/api",
+        "bodyPatterns": [
+            {
+                "matchesJsonPath": {
+                    "expression": "$.method",
+                    "equalTo": "fast_p2p.create"
+                }
+            }
+        ],
+        "method": "POST"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "uzcard/api.json",
+        "transformers": ["response-template"]
+    }
+}

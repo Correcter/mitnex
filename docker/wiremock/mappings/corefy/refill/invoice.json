@@ -1,0 +1,10 @@
+{
+    "request": {
+        "urlPath": "/corefy/api/payment-invoices",
+        "method": "POST"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "corefy/refill/invoice.json"
+    }
+}

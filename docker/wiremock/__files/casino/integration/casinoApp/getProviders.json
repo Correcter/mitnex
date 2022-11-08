@@ -1,0 +1,126 @@
+{
+    "items":[
+        {
+            "id":5,
+            "name":"Novomatic Deluxe",
+            "position":0,
+            "image":"",
+            "banner":"",
+            "badges": null
+        },
+        {
+            "id":6,
+            "name":"Playtech",
+            "position":0,
+            "image":"",
+            "banner":"",
+            "badges": [
+                "NEWEST"
+            ]
+        },
+        {
+            "id":7,
+            "name":"Igrosoft",
+            "position":0,
+            "image":"",
+            "banner":"",
+            "badges": [
+                "NEWEST"
+            ]
+        },
+        {
+            "id":15,
+            "name":"Playson",
+            "position":0,
+            "image":"",
+            "banner":"",
+            "badges": [
+                "NEWEST"
+            ]
+        },
+        {
+            "id":18,
+            "name":"Habanero",
+            "position":0,
+            "image":"",
+            "banner":"",
+            "badges": [
+                "NEWEST"
+            ]
+        },
+        {
+            "id":19,
+            "name":"Endorphina",
+            "position":0,
+            "image":"",
+            "banner":"",
+            "badges": [
+                "NEWEST"
+            ]
+        },
+        {
+            "id":25,
+            "name":"XProgaming",
+            "position":0,
+            "image":"",
+            "banner":"",
+            "badges": null
+        },
+        {
+            "id":38,
+            "name":"RedTigerGaming",
+            "position":0,
+            "image":"",
+            "banner":"",
+            "badges": null
+        },
+        {
+            "id":40,
+            "name":"PragmaticPlay",
+            "position":0,
+            "image":"",
+            "banner":"",
+            "badges": null
+        },
+        {
+            "id":41,
+            "name":"Fugaso",
+            "position":0,
+            "image":"",
+            "banner":"",
+            "badges": null
+        },
+        {
+            "id":58,
+            "name":"Goldenrace_casino",
+            "position":0,
+            "image":"",
+            "banner":"",
+            "badges": null
+        },
+        {
+            "id":59,
+            "name":"Easy money games",
+            "position":0,
+            "image":"",
+            "banner":"",
+            "badges": null
+        },
+        {
+            "id":60,
+            "name":"aviator",
+            "position":0,
+            "image":"",
+            "banner":"",
+            "badges": null
+        },
+        {
+            "id":61,
+            "name":"Leapgaming",
+            "position":0,
+            "image":"",
+            "banner":"",
+            "badges": null
+        }
+    ]
+}

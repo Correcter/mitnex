@@ -1,0 +1,22 @@
+{
+    "request": {
+        "urlPath": "/uzcardapi/check-status",
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "jsonBody": {
+            "error": false,
+            "id": 2152,
+            "status": "success",
+            "summa": 20000.00,
+            "comision": 11.08,
+            "totolAmount": 20011.08,
+            "card": "8600123456789012",
+            "time": 1611126844
+        },
+        "headers": {
+            "Content-Type": "application/json"
+        }
+    }
+}

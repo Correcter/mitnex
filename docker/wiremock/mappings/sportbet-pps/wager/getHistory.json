@@ -1,0 +1,11 @@
+{
+  "request": {
+    "urlPath": "/history",
+    "bodyPatterns": [],
+    "method": "GET"
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "sportbet-pps/wager/getHistory.json"
+  }
+}

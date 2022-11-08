@@ -1,0 +1,75 @@
+{
+    "controller": {},
+    "version": 2,
+    "workers": [
+        {
+            "type": "router",
+            "realms": [
+                {
+                    "name": "mostbet",
+                    "roles": [
+                        {
+                            "name": "anonymous",
+                            "permissions": [
+                                {
+                                    "uri": "*",
+                                    "allow": {
+                                        "call": true,
+                                        "publish": true,
+                                        "register": true,
+                                        "subscribe": true
+                                    },
+                                    "disclose": {
+                                        "caller": false,
+                                        "publisher": false
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "transports": [
+                {
+                    "type": "websocket",
+                    "endpoint": {
+                        "port": 8000,
+                        "type": "tcp"
+                    },
+                    "debug": true
+                },
+                {
+                    "type": "web",
+                    "endpoint": {
+                        "port": 8080,
+                        "type": "tcp"
+                    },
+                    "paths": {
+                        "call": {
+                            "type": "caller",
+                            "realm": "mostbet",
+                            "role": "anonymous",
+                            "options": {
+                                "debug": true
+                            }
+                        },
+                        "pub": {
+                            "type": "publisher",
+                            "realm": "mostbet",
+                            "role": "anonymous",
+                            "options": {
+                                "debug": true
+                            }
+                        },
+                        "long-polling": {
+                            "type": "longpoll",
+                            "options": {
+                                "session_timeout": 30
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

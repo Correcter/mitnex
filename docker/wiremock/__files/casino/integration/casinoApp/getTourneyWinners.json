@@ -1,0 +1,84 @@
+{
+    "items": [
+        {
+            "name": "22331",
+            "place": 1,
+            "score": null,
+            "prize": {
+                "place": 1,
+                "count": 500,
+                "title": null,
+                "type": "EUR"
+            }
+        },
+        {
+            "name": "22505",
+            "place": 2,
+            "score": null,
+            "prize": {
+                "place": 2,
+                "count": null,
+                "title": null,
+                "type": null
+            }
+        },
+        {
+            "name": "22226",
+            "place": 3,
+            "score": null,
+            "prize": {
+                "place": 3,
+                "count": null,
+                "title": null,
+                "type": null
+            }
+        },
+        {
+            "name": "22508",
+            "place": 4,
+            "score": null,
+            "prize": {
+                "place": 4,
+                "count": null,
+                "title": null,
+                "type": null
+            }
+        },
+        {
+            "name": "22506",
+            "place": 5,
+            "score": null,
+            "prize": {
+                "place": 5,
+                "count": null,
+                "title": null,
+                "type": null
+            }
+        },
+        {
+            "name": "22504",
+            "place": 6,
+            "score": null,
+            "prize": {
+                "place": 6,
+                "count": null,
+                "title": null,
+                "type": null
+            }
+        },
+        {
+            "name": "22223",
+            "place": 7,
+            "score": null,
+            "prize": {
+                "place": 7,
+                "count": null,
+                "title": null,
+                "type": null
+            }
+        }
+    ],
+    "totalPages": 2,
+    "totalElements": 14,
+    "page": 1
+}

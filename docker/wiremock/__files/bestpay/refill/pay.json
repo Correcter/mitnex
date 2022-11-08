@@ -1,0 +1,11 @@
+{
+    "code": "{{randomValue length=5 type='NUMERIC'}}",
+    "message": "WAITING",
+    "status": "PENDING",
+    "type": "3DAUTH",
+    "redirectUrl": "https://sandbox-checkout.paymentspace.net/test/start/a0149375-17bb-4f4c-8367-9c4eb08fc65e",
+    "transactionId": "{{randomValue length=32 type='ALPHANUMERIC'}}",
+    "reference": "{{randomValue length=4 type='NUMERIC'}}",
+    "actualAmount": "1100.00",
+    "actualCurrency": "TRY"
+}

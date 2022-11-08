@@ -1,0 +1,16 @@
+{
+    "items": [
+        {
+            "id": 1,
+            "name": "bbb",
+            "title": "aaa",
+            "type": "fantasy_sport_ticket",
+            "status": "published",
+            "settings": {
+                "nominal": 77.8
+            },
+            "createdAt": "2021-11-23 15:00:00",
+            "updatedAt": "2021-11-23 15:00:00"
+        }
+    ]
+}

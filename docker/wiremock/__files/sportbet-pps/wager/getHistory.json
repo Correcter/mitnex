@@ -1,0 +1,25 @@
+{
+    "code": 0,
+    "data": [
+        {
+          "reference": "40000001",
+          "wagerDate": "2016-06-30 15:30:00",
+          "amount": "4000.00",
+          "win": "5000.00",
+          "bets": [
+              {
+                  "betid": "123545",
+                  "betType": "Single",
+                  "odds": "3.23",
+                  "status": "Won"
+              },
+              {
+                  "betid": "4234234",
+                  "betType": "Multiple",
+                  "odds": "3.2",
+                  "status": "Lose"
+              }
+          ]
+        }
+    ]
+}

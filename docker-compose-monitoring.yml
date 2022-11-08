@@ -1,0 +1,38 @@
+version: '2'
+
+services:
+    telegraf:
+        container_name: mitnex_telegraf
+        image: telegraf:1.10.3
+        ports:
+            - 9273:9273
+            - 8094:8094
+        volumes:
+            - ./app/config/docker/monitoring/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
+
+    prometheus:
+        image: prom/prometheus:v2.2.1
+        ports:
+            - 9090:9090
+        volumes:
+            - ./app/config/docker/monitoring/prometheus:/etc/prometheus:ro
+        depends_on:
+            - telegraf
+
+    grafana:
+        container_name: mitnex_grafana
+        image: grafana/grafana:6.1.3
+        ports:
+            - 3000:3000
+        volumes:
+            - ./app/config/docker/monitoring/grafana/provisioning:/etc/grafana/provisioning:ro
+            - ./app/config/docker/monitoring/grafana/config.ini:/etc/grafana/config.ini:ro
+            - ./app/config/docker/monitoring/grafana/dashboards:/var/lib/grafana/dashboards:ro
+        environment:
+            - GF_AUTH_BASIC_ENABLED=false
+            - GF_AUTH_PROXY_ENABLED=false
+            - GF_AUTH_ANONYMOUS_ENABLED=true
+            - GF_AUTH_ANONYMOUS_ORG_NAME=Main Org.
+            - GF_AUTH_ANONYMOUS_ORG_ROLE=Editor
+        depends_on:
+            - prometheus

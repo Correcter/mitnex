@@ -1,0 +1,11 @@
+{
+    "signature": "{{formData request.body 'form' urlDecode=true}}{{form.signature}}",
+    "data": {
+        "method": "GET",
+        "params": {
+            "hash": "{{form.signature}}",
+            "id": 2222
+        },
+        "redirect_url": "https://cepbank-form-test.instapays.co/deposit"
+    }
+}

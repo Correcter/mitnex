@@ -1,0 +1,30 @@
+[
+  {
+    "title": "100 Monkeys",
+    "desktop_id": "100_monkeys",
+    "mobile_id": "100_monkeys_mob",
+    "desktop_platform": "html5",
+    "game_type": "slot",
+    "producer": "Igromat",
+    "giftspins_desktop": "yes",
+    "giftspins_mobile": "yes",
+    "giftspins_lines": "20",
+    "logo_square": "http://igromat.com/images/100_monkeys_square.jpg",
+    "logo_rectangular": "http://igromat.com/images/100_monkeys_rectangular.jpg",
+    "promo": "http://igromat.com/uploads/promo/100_Monkeys.zip"
+  },
+  {
+    "title": "3 Card Blackjack",
+    "desktop_id": "blackjack_threecard_new",
+    "mobile_id": "blackjack_threecard_new_mob",
+    "desktop_platform": "html5",
+    "game_type": "card",
+    "producer": "Igromat",
+    "giftspins_desktop": "no",
+    "giftspins_mobile": "no",
+    "giftspins_lines": null,
+    "logo_square": "http://igromat.com/images/blackjack_threecard_new_square.jpg",
+    "logo_rectangular": "http://igromat.com/images/blackjack_threecard_new_rectangular.jpg",
+    "promo": "http://igromat.com/uploads/promo/3_Card_Blackjack.zip"
+  }
+]

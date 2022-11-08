@@ -1,0 +1,37 @@
+---
+- name: Check if config dir exists.
+  stat: path={{symfony_current_release_dir}}/{{symfony_project_config_dir}}
+  register: config_dir
+
+- name: Set shared config dir.
+  set_fact: symfony_shared_config_dir={{symfony_shared_dir}}/{{symfony_project_config_dir}}
+
+- name: Set config dir.
+  set_fact: symfony_config_dir={{symfony_current_release_dir}}/{{symfony_project_config_dir}}
+
+- name: Link configs dir if not yet exists.
+  file: state=link src={{symfony_shared_config_dir}} path={{symfony_config_dir}}
+  when: config_dir.stat.exists == false
+
+- name: Check if parameters file exists.
+  stat: path={{symfony_shared_config_dir}}/{{symfony_project_parameters_file}}
+  register: symfony_parameters
+
+- name: Create symlink for parameters file from shared directory.
+  file: state=link src={{symfony_shared_config_dir}}/{{symfony_project_parameters_file}} path={{symfony_config_dir}}/{{symfony_project_parameters_file}}
+  when: symfony_parameters.stat.exists
+
+- name: Get previous migration version.
+  shell: "{{symfony_project_root}}/current/{{symfony_project_console_command}} doctrine:migrations:status|grep 'Current Version' | awk '{print $6}' | sed 's/[^0-9]*//g'"
+  register: symfony_old_migration_version
+
+- name: Get previous version directory.
+  shell: "readlink -f {{symfony_project_root}}/current"
+  register: symfony_old_release_dir
+
+- name: Prepare old migration file
+  copy: content="{{symfony_old_migration_version.stdout}}" dest="{{symfony_current_release_dir}}/OLD_MIGRATION_VERSION" mode=644
+
+- name: Prepare old release directory file
+  copy: content="{{symfony_old_release_dir.stdout}}" dest="{{symfony_current_release_dir}}/OLD_RELEASE_DIRECTORY" mode=644
+
